@@ -1,5 +1,5 @@
 ## Instruction on Running automated test for jaguar database
-Updated by Andrew Zhang, 11/12/2017 (Draft)
+Updated by Andrew Zhang, 12/4/2017 (Draft)
 
 ##### Motivation: 
 Able to run anywhere on the one of the server that has jaguar server installed. 
@@ -15,7 +15,7 @@ We can download the test anywhere on the server, for example:
 
 ```
 /home/andrew/t/azhang
-(andrew@ssd)\>git clone https://github.com/andrewzhang1/Jaguar_QA_Home.git
+(andrew@ssd)\>git clone https://github.com/datajaguar/jaguarqa.git
 ```
 Structure and Descriptions: 
 ```
@@ -36,12 +36,12 @@ QA_HOME
 Also update the PATH accordingly. For example (on andrew@ssd): 
 ```
 export JAGUAR_HOME=/home/$LOGNAME/jaguar
-export QA_HOME=/home/andrew/t/azhang/qa
+export QA_HOME=/home/andrew/t/azhang/jaguarqa`
 export PATH=$QA_HOME/bin:$QA_HOME/sh:$JAGUAR_HOME/bin:$PATH
 ```
 
 ##### Tips for a successful env settings:
-Before we start to run the automated test, please make sure all the following four command can be found as a verificaiton:
+Before we start to run the automated test, please make sure all the following four commands can be run and obtain a reasonable outputs as a verificaiton :
 
 ```
 /home/andrew
@@ -50,15 +50,15 @@ Before we start to run the automated test, please make sure all the following fo
 
 /home/andrew
 (andrew@ssd)\>echo $QA_HOME
-/home/andrew/t/azhang/Jaguar_QA_HOME
+/home/andrew/t/azhang/jaguarqa
 
 /home/andrew
 (andrew@ssd)\>which jag
 ~/jaguar/bin/jag
 
-/home/andrew
+/home/andrew/t/azhang/jaguarqa
 (andrew@ssd)\>which loginj
-~/t/azhang/Jaguar_QA_HOME/bin/loginj
+~/t/azhang/jaguarqa/bin/loginj
 ```
 
 #### 4) Run the test from the $QA_HOME/sh
@@ -175,7 +175,12 @@ which: loginj: unknown command
 ```
 
 ### In progress..
-- Creating more test cases 
-- Trying to fix binary diff files or find a workaround
+- Clean up diff files;
+- Creating more test cases;
+- Trying to fix binary diff files or find a workaround;
 - Add status at the end of test, such as: total *suc files and *diff files
 
+Your comments and advice are warmly welcome! 
+
+Andrew Zhang
+agz1117@hotmail.com
