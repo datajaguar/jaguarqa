@@ -1,0 +1,2 @@
+'10000', 'Beijingshan', 'English', 'official', 'U.S. Board on Geographic Names', '1553271', '1001', '2017-10-02'
+'10004', 'Bac Kinh', 'English', 'colloquial', 'U.S. Board on Geographic Names', '1816670', '1002', '2017-10-03'

@@ -1,0 +1,10 @@
+1001, 'Aaron Lambie Names Inc', 'Canada', 95,'aaron.lambie@spatialq.com'
+1002, 'Christophe Boutreux Inc', 'France', 80,'christophe@geonames.org'
+1003, 'Marc Wick Inc', 'Switzerland', 90,'marc@geonames.org'
+1004, 'EuroSense Inc', 'Belgium', 70,'Phone: (+32)-2-460-70-00'
+1005, 'Zenrin Co., Ltd.', 'Japan', 87,'Phone: (+81)-93-882-9050'
+1006, 'Indiacom Ltd', 'India', 95,'Phone: (+91)-20-26603800'
+1007, 'Infogroup Inc', 'USA', 80,'Phone: 1-402-836-5290'
+1008, 'The Digital Globe Inc', 'USA', 90,'Phone: 1-800-655-7929'
+1009, 'King Lee Inc', 'China', NULL, NULL
+1010, 'Park Kim Inc', 'Korea', NULL, NULL
