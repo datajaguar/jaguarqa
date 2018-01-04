@@ -1,4 +1,4 @@
-Table t1 is created successfully
+Table t1 name was used already in current database or create error
 table test.t1
 (
   key:
@@ -9,7 +9,7 @@ table test.t1
     spare_ char(13)
 );
 
-Table t2 is created successfully
+Table t2 name was used already in current database or create error
 table test.t2
 (
   key:
