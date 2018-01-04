@@ -1,8 +1,12 @@
+# A utility to check time passed in sec.
+
 t1=`date +%s`
 echo "Now is t1: $t1"
 echo "Sleep 10 sec"
 
 #sleep 82
+
+# Test for 71 sec
 
 num=71
 for i in i$(seq "$num")
