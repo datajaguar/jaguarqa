@@ -1,27 +1,26 @@
-# A utility to check time passed in sec.
+# A utility to check time passed in sec and hour:min:sec.
 
 t1=`date +%s`
 echo "Now is t1: $t1"
-echo "Sleep 10 sec"
 
-#sleep 82
+# Some tests here....
 
-# Test for 71 sec
-
-num=71
-for i in i$(seq "$num")
+# A test:
+num=2
+for i in $(seq "$num")
 do
     echo "Time passed in sec: $i"
     sleep 1
 done
 
-
-
 t2=`date +%s`
-echo "Now is t2: $t2"
+let deltatime=t2-t1
+let hours=deltatime/3600
+let minutes=(deltatime/60)%60
+let seconds=deltatime%60
 
-echo "Time passed is: t2 - t2:" 
+echo -e "\nTotal time in second: $deltatime"
+printf "Total time in hour:min:sec: %d:%02d:%02d \n" $hours $minutes $seconds
 
-expr $t2 - $t1
 
 
