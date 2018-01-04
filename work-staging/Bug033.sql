@@ -1,12 +1,9 @@
-/*
-Script Name: Bug033.sql 
-Date: 12/01/2017
-Features:
-1. Automate bug fix for Bug033_20171130
-2. Need to restart to verify the select syntax.
-3.
- 
- */
+# Script Name: Bug033.sql 
+# Date: 12/01/2017
+# Features:
+# 1. Automate bug fix for Bug033_20171130
+# 2. Need to restart to verify the select syntax.
+# Updated: 12/28/2017
 
 spool Bug033.out;
 

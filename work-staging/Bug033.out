@@ -1,0 +1,15 @@
+Database new_database2 exists already or create error
+Database is changed successfully
+Table table2 name was used already in current database or create error
+table new_database2.table2
+(
+  key:
+    uid2 char(16),
+  value:
+    adddr2 char(32),
+    spare_ char(14)
+);
+
+uid2:[Mike Lee] adddr2:[WA, USA] 
+uid2:[John Smith] adddr2:[CA, USA] 
+uid2:[Mike Lee] adddr2:[WA, USA] 
