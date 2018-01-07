@@ -8,7 +8,7 @@ work-performance (performance related test scripts; we compare with other databa
 
 This framework consists of the following components/folders:
 ```
-bin: all the utililty and customized functions.
+bin: utililty and customized functions.
 sh: shell scripts for running the test.
 work: test result files and logs.
 data: data files for testing.
