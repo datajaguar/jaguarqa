@@ -7,14 +7,14 @@ work-staging (some testing script are still in trial)
 work-performance (performance related test scripts; we compare with other databases, such mongoDb and Cassandra)
 
 This framework consists of the following components/folders:
-
+```
 bin: all the utililty and customized functions.
 sh: shell scripts for running the test.
 work: test result files and logs.
 data: data files for testing.
 bas: storrs baseline for the comparison
 sql: sql scripts
-
+```
 
 ##### Motivation: 
 Able to run anywhere on the one of the server that has jaguar server installed. 
