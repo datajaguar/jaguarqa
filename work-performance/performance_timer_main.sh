@@ -1,6 +1,9 @@
 # Script Name: performance_timer_main.sh 
 # Purppse: Test performance timer for jaguar and other db: select, update, insert, delete etc.
+
+###################
 # Command line:
+###################
 
 # jaguar:
 ########### 
@@ -10,6 +13,10 @@
 # After delete, we might re-insert the 10000 line to re-start:
 #    insert: nohup performance_timer_main.sh > jaguar_insert_10000from700million_tail.sh.out &
 
+# MonogoDB:
+######################
+# Select: nohup performance_timer_main.sh > mongoDB_select_10000_700million_tail.sql.out &
+# Update: nohup performance_timer_main.sh > mongoDB_update_10000_700million_tail.sql.out &
 
 # Note:
 # Performance test should be run one script at time!
@@ -30,16 +37,35 @@ echo -e "\n==> Starting time is t1: $t1, `date` \n"
 # jaguar_update_10000from700million_tail.sh
 
 # 3-Delete
-jaguar_delete_10000from700million_tail.sh
+# jaguar_delete_10000from700million_tail.sh
 
 # 4-Insert
 #jaguar_insert_10000from700million_tail.sh
-wait
+# sleep 4
+# wait
 
 # ####################################
 # Part Two: MongoDB Performace
 ######################################
 
+# A test
+
+# mongo --host localhost < mondoDB_jagdb.xaa10000_row.select1.sql 
+
+# 1) Create Index on uid
+# mongo --host localhost < mondoDB_jagdb.xaa700m_row.createIndexUID.sql
+
+# 2) Select last 10000 rows from a 700 million row table
+# mongo --host localhost < mongoDB_select_10000_700million_tail.sql
+
+# 3) Update last 10000 10000 rows from a 700 million row table
+# mongo --host localhost < mongoDB_update_10000_700million_tail.sql
+
+
+# Run a python untility to sampl2 10000 from the 700,000,000 row table
+python  getRandom_10000.py 
+
+wait
 
 # Calc the time required:
 t2=`date +%s`

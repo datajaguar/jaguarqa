@@ -1,0 +1,20 @@
+
+==> Starting time is t1: 1515347960, Sun Jan  7 09:59:20 PST 2018 
+
+MongoDB shell version v3.4.10
+connecting to: mongodb://localhost:27017/
+MongoDB server version: 3.4.10
+2018-01-07T09:59:20.279-0800 E QUERY    [thread1] SyntaxError: illegal character @(shell):1:0
+switched to db jagdb
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+
+
+ ===> Ending time is t2: 1515352892, Sun Jan  7 11:21:32 PST 2018
+
+Total time in second: 4932
+Total time in hour:min:sec: 1:22:12 

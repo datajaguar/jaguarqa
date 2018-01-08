@@ -1,0 +1,13 @@
+Starting time is t1: 1515193071
+Jaguar Server 2.8.4 140359245985536 / Client 2.8.4
+
+jaguar:test> jaguar:test> jaguar:test> Done in 66 microseconds 
+jaguar:test> jaguar:test> Done in 55 milliseconds 
+jaguar:test> Done in 5 milliseconds 
+jaguar:db_mongo_jaguar> jaguar:db_mongo_jaguar> Done in 5 milliseconds 
+jaguar:db_mongo_jaguar> jaguar:db_mongo_jaguar> Done in 21 milliseconds 
+jaguar:db_mongo_jaguar> jaguar:db_mongo_jaguar> Done in 55381 seconds 
+jaguar:db_mongo_jaguar> jaguar:db_mongo_jaguar> Done in 1371 microseconds 
+jaguar:db_mongo_jaguar> jaguar:db_mongo_jaguar> 
+Total time in second: 55383
+Total time in hour:min:sec: 15:23:03 
