@@ -1,3 +1,4 @@
+use jagdb 
 db.xaa700m_row.find({uid : "g0S3q3WkwueSm4AT"})
 db.xaa700m_row.find({uid : "BNN4RM7m14m8O6fk"})
 db.xaa700m_row.find({uid : "VuABUL9gaoK0CbEp"})

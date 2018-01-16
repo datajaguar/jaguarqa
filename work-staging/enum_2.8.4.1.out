@@ -1,0 +1,15 @@
+Table t1 is dropped successfully
+Table t1 is created successfully
+table test.t1
+(
+  key:
+    uid int,
+  value:
+    c2 enum('aa1','aa2'),
+    c3 char(32) DEFAULT 'dddd',
+    spare_ char(13)
+);
+
+Table t2 is dropped successfully
+Table t2 is created successfully
+tet2 does not exist

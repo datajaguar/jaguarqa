@@ -1,0 +1,22 @@
+
+==> Starting time is t1: 1515546704, Tue Jan  9 17:11:44 PST 2018 
+
+MongoDB shell version v3.4.10
+connecting to: mongodb://localhost:27017/
+MongoDB server version: 3.4.10
+2018-01-09T17:11:44.442-0800 E QUERY    [thread1] SyntaxError: illegal character @(shell):1:0
+switched to db jagdb
+WriteResult({
+	"nRemoved" : 0,
+	"writeError" : {
+		"code" : 175,
+		"errmsg" : "Operation aborted because: all indexes on collection dropped"
+	}
+})
+bye
+
+
+ ===> Ending time is t2: 1515549809, Tue Jan  9 18:03:29 PST 2018
+
+Total time in second: 3105
+Total time in hour:min:sec: 0:51:45 

@@ -1,0 +1,84 @@
+Table table2 is created successfully
+Table table3 is created successfully
+Table table4 is created successfully
+table test.table1
+(
+  key:
+    uid char(16),
+  value:
+    adddr char(32),
+    spare_ char(14)
+);
+
+table test.table2
+(
+  key:
+    uid2 char(16),
+  value:
+    adddr2 char(32),
+    spare_ char(14)
+);
+
+table test.table3
+(
+  key:
+    col1 char(16),
+    col2 int,
+  value:
+    v1 char(32),
+    spare_ char(17)
+);
+
+table test.table4
+(
+  key:
+    k1 char(16),
+  value:
+    col3 char(16),
+    col4 int,
+    v2 double(12,5),
+    spare_ char(17)
+);
+
+uid2:[John Smith] adddr2:[CA, USA] 
+uid2:[Mike Lee] adddr2:[WA, USA] 
+test.table1 contains 2 rows
+test.table1 contains 2 rows
+uid:[John Smith] adddr:[CA, USA] 
+uid:[Mike Lee] adddr:[WA, USA] 
+k1:[Jason] col3:[M] col4:[35] v2:[125.410000] 
+k1:[Kevin] col3:[M] col4:[24] v2:[141.980000] 
+k1:[Bao] col3:[M] col4:[40] v2:[145.400000] 
+k1:[Jane] col3:[F] col4:[24] v2:[125.410000] 
+k1:[Andy] col3:[M] col4:[52] v2:[144.260000] 
+k1:[Bob] col3:[M] col4:[50] v2:[156.560000] 
+k1:[Jeremy] col3:[M] col4:[36] v2:[135.400000] 
+k1:[Zora] col3:[F] col4:[46] v2:[125.410000] 
+test.table4 contains 8 rows
+test.table3 contains 0 rows
+test.table3 contains 8 rows
+col1:[M] col2:[40] v1:[] 
+col1:[M] col2:[50] v1:[] 
+col1:[F] col2:[46] v1:[] 
+col1:[M] col2:[35] v1:[] 
+col1:[M] col2:[52] v1:[] 
+col1:[F] col2:[24] v1:[] 
+col1:[M] col2:[24] v1:[] 
+col1:[M] col2:[36] v1:[] 
+avg(col4):[38.375000] 
+avg(v2):[137.478750] 
+sum(v2):[1099.830000] 
+test.table4 contains 8 rows
+Sex:[F] count(col3):[2.000000] 
+Sex:[M] count(col3):[6.000000] 
+test.table4 contains 8 rows
+Sex:[F] Number of M/F:[2.000000] 
+Sex:[M] Number of M/F:[6.000000] 
+test.table4 contains 8 rows
+k1:[Andy] col3:[M] col4:[52] v2:[144.260000] 
+k1:[Bao] col3:[M] col4:[40] v2:[145.400000] 
+k1:[Bob] col3:[M] col4:[50] v2:[156.560000] 
+k1:[Jason] col3:[M] col4:[35] v2:[125.410000] 
+k1:[Jeremy] col3:[M] col4:[36] v2:[135.400000] 
+k1:[Kevin] col3:[M] col4:[24] v2:[141.980000] 
+k1:[Zora] col3:[F] col4:[46] v2:[125.410000] 

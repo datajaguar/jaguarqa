@@ -1,0 +1,12 @@
+Database new_database2 is created successfully
+Database is changed successfully
+Table table2 is created successfully
+table new_database2.table2
+(
+  key:
+    uid2 char(16),
+  value:
+    adddr2 char(32),
+    spare_ char(14)
+);
+

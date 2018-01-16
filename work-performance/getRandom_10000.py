@@ -24,7 +24,7 @@ with open("/home/andrew/QA_HOME/test_100milion/xaa700m_row.csv", "rb") as f:
 #print rows
 
 # Write an output file:
-file = open("sample_10000row.txt", "wb")
+file = open("xaa700m_row_10000_random_col1.csv", "wb")
 
 for item in rows:
     file.write(item)

@@ -11,7 +11,8 @@ drop table if exists table2;
 drop table if exists table3;
 drop table if exists table4;
 
-spool $QA_HOME/work/create_4tables.sql.out;
+#spool $QA_HOME/work/create_4tables.sql_2.8.4.1.out;
+spool create_4tables.sql_2.8.4.1.out;
 
 create table table1 
 (
@@ -108,7 +109,7 @@ select * from table4 group by col4 order by k1;
 
 # Test 5: Test the fix of Bug027_20171120(Core dump generated with wrong syntax)
 # This next query result "Invalid order by syntax [20]" is not in the output from the spool?
-select col3 as "Sex", count(col3) from table4 group by col3 order by k1;
+# select col3 as "Sex", count(col3) from table4 group by col3 order by k1;
 sleep 2;
 
 spool off;

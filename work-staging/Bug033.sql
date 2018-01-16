@@ -5,7 +5,7 @@
 # 2. Need to restart to verify the select syntax.
 # Updated: 12/28/2017
 
-spool Bug033.out;
+spool Bug033_2.8.4.1.out;
 
 createdb new_database2;
 use new_database2;

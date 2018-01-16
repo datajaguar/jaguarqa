@@ -1,0 +1,14 @@
+
+==> Starting time is t1: 1515783290, Fri Jan 12 10:54:50 PST 2018 
+
+MongoDB shell version v3.4.10
+connecting to: mongodb://localhost:27017/
+MongoDB server version: 3.4.10
+switched to db jagdb
+bye
+
+
+ ===> Ending time is t2: 1515783302, Fri Jan 12 10:55:02 PST 2018
+
+Total time in second: 12
+Total time in hour:min:sec: 0:00:12 

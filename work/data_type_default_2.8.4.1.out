@@ -1,0 +1,37 @@
+Table data_type_default is created successfully
+table test.data_type_default
+(
+  key:
+    key1 int,
+    key2 char(32),
+  value:
+    v1_char char(32),
+    v2_boolean boolean,
+    v3_ingeter int,
+    v3_1_int int,
+    v4_big_integer bigint,
+    v5_small_integer smallint,
+    v6_tiny_int tinyint,
+    v7_medium_integer mediumint,
+    v8_float float(10,2),
+    v9_double double(16,4),
+    v11_datetimenano datetimenano,
+    v12_date date,
+    v13_time time,
+    v14_timenamn timenano,
+    v15_timestamp timestamp,
+    v16_real double(38,8),
+    v17_text char(1024),
+    v18_tinytext char(256),
+    v19_mediumtext char(2048),
+    v20_longtext char(10240),
+    v21_blob char(1024),
+    v22_tinyblob char(256),
+    v23_mediumblob char(2048),
+    v24_longblob char(10240),
+    v25_string char(64),
+    v26_varchar char(32),
+    v27_bit bit,
+    spare_ char(8253)
+);
+
