@@ -1,6 +1,6 @@
 ## Instruction on Running automated test for jaguar database
 Updated by Andrew Zhang, 12/4/2017 (Draft)
-UPdated: 01/05/2008
+Updated: 01/05/2008
 
 Added two folders: 
 work-staging (some testing script are still in trial)
@@ -11,8 +11,10 @@ This framework consists of the following components/folders:
 bin: utililty and customized functions.
 sh: shell scripts for running the test.
 work: test result files and logs.
+work-performance: performance related scripts and data.
+work-staging: the testing scripts currently still under development.
 data: data files for testing.
-bas: storrs baseline for the comparison
+bas: baselines files for the comparison.
 sql: sql scripts
 ```
 
