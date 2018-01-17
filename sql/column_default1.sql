@@ -1,11 +1,10 @@
 # Test new schema
-# Script Name: column_default.sql
-# command line: loginj < column_default.sql
-
-
-spool $QA_HOME/work/column_default.out;
+# Script Name: column_default1.sql
+# command line: loginj < column_default1.sql
 
 drop table if exists column_default; 
+
+spool $QA_HOME/work/column_default1.out;
 
 create table column_default
 (
@@ -19,7 +18,8 @@ create table column_default
             UUID uuid
 );
 
-dssc column_default;
+desc column_default;
+
 insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('101','Jason','Zhang','94588','20','M','','');
 insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('1011','Mike','','94588','40','m1','0','');
 insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('102','Andrew','Zhang','94588','','','1','');

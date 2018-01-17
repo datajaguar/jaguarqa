@@ -1,6 +1,6 @@
-Database jag_data_load is created successfully
+Database jag_data_load exists already or create error
 Database is changed successfully
-Table data_load is created successfully
+Table data_load name was used already in current database or create error
 table jag_data_load.data_load
 (
   key:

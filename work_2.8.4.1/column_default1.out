@@ -1,0 +1,27 @@
+Table column_default is created successfully
+table test.column_default
+(
+  key:
+    emp_id int,
+  value:
+    first_name char(10),
+    last_name char(10),
+    zip_code char(5),
+    age int DEFAULT '9',
+    sex char(2) DEFAULT 'M',
+    category bit DEFAULT b'1',
+    uuid uuid,
+    spare_ char(27)
+);
+
+emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[9g51ZUqbkscxDMTzO6azAk8d3bz5696619665515] 
+emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[eXgNrxa7TLSjly74upZXgFmH7Oj5696619665515] 
+emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[8Pdf3auOCZXHTIAc46j6AG6xWJR5696619665515] 
+emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[CQEVWr69seDgODdwwW6GYcX4KD85696619665515] 
+emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[fxP59FJ2z88JAlkQ9X2FrWJ7ST45696619665515] 
+emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[UBF1RdQWmuDn3LtKlO39YY9Bq3j5696619665515] 
+emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[vVayOMbPDoFxJ7a49TxRcmUliTt5696619665515] 
+emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[RhwaKslgg5s3IOGdvOlzXe7MqrH5696619665515] 
+emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[JJycyNJJv92Mn7cqN060uUj3Px85696619665515] 
+emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[whnGoDLpAFQLYiVvTHorusB12W75696619665515] 
+emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[CXzhGgPRPAAw5JwR6B1uo2AmwtF5696619665515] 

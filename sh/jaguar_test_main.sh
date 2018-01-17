@@ -31,7 +31,7 @@
 export ADMIN_PASSWORD=jaguar
 
 FILE=jaguar_test_main
-logf="$JAGUAR_TEST_HOME/work/${FILE}.log"
+logf="$QA_HOME/work/${FILE}.log"
 
 # Clean old log and work direcry::
 rm  $QA_HOME/work/*.*
@@ -53,25 +53,38 @@ create_db1_egift.sh 2>&1 | tee -a $logf
 echo ""  2>&1 | tee -a $logf
 echo "Runing import_export_csv.sh now " 2>&1 | tee -a $logf
 echo "============================"  2>&1 | tee -a $logf
-import_export_csv.sh  2>&1 | tee -a $logf
+
+# import_export_csv.sh  2>&1 | tee -a $logf
 
 echo ""  2>&1 | tee -a $logf
 echo "Runing import_export_sql.sh  now " 2>&1 | tee -a $logf
 echo "============================"  2>&1 | tee -a $logf
-import_export_sql.sh 2>&1 | tee -a $logf
+# import_export_sql.sh 2>&1 | tee -a $logf
 
 #echo ""  2>&1 | tee -a $logf
 echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
-echo "Runing column_default.sh  now " 2>&1 | tee -a $logf
+echo "Runing column_default1.sh  now " 2>&1 | tee -a $logf
 echo "============================"  2>&1 | tee -a $logf
-column_default.sh 2>&1 | tee -a $logf
+column_default1.sh 2>&1 | tee -a $logf
 
 #  time_stamp.sh  2>&1 | tee -a $logf
 
 
+echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
+echo "Runing column_default2.sh  now " 2>&1 | tee -a $logf
+echo "============================"  2>&1 | tee -a $logf
+column_default2.sh 2>&1 | tee -a $logf
 
 
+echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
+echo "Runing column_default3.sh  now " 2>&1 | tee -a $logf
+echo "============================"  2>&1 | tee -a $logf
+column_default3.sh 2>&1 | tee -a $logf
 
 
+echo -e "\nNew Feature in 2.8.3 " 2>&1 | tee -a $logf
+echo "Runing function1.sh  now " 2>&1 | tee -a $logf
+echo "============================"  2>&1 | tee -a $logf
+function1.sh 2>&1 | tee -a $logf
 
 
