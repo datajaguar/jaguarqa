@@ -1,10 +1,6 @@
 ## Instruction on Running automated test for jaguar database
-Updated by Andrew Zhang, 12/4/2017 (Draft)
-Updated: 01/05/2008
-
-Added two folders: 
-work-staging (some testing script are still in trial)
-work-performance (performance related test scripts; we compare with other databases, such mongoDb and Cassandra)
+### Create by Andrew Zhang, 12/4/2017 
+### Updated: 01/05/2008
 
 This framework consists of the following components/folders:
 ```
@@ -14,13 +10,13 @@ data: data files for testing.
 sh: shell scripts for running the test.
 sql: sql scripts
 work: test result files and logs.
-work-performance: performance related scripts and data.
+work-performance: performance related scripts and data (we compare with other databases, such as mongoDb and Cassandra, etc)
 work-staging: the testing scripts currently still under development.
 ```
 
 ##### Motivation: 
-Able to run anywhere on the one of the server that has jaguar server installed. 
-Automated test cases will check the results (successful or failure) at the end of the test under the work directory 
+Able to run anywhere on the one of the servers that has jaguar server installed. 
+Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
 
