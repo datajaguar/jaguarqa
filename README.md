@@ -1,6 +1,6 @@
 ## Instruction on Running automated test for jaguar database
 ### Create by Andrew Zhang, 12/4/2017 
-### Updated: 01/05/2018
+
 
 This framework consists of the following components/folders:
 ```
