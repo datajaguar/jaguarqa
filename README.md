@@ -20,7 +20,7 @@ Automated test cases will check the results (successful or failure) at the end o
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
 
-Here are a few requirement and dependencies  
+Here are a few requirement and dependencies:
 #### 1) Succesful Installation
 Make sure to have a successful installation either on a single server or cluster, and all server started/stopped without errors 
 #### 2) Download the test framework
