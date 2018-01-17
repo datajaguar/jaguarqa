@@ -8,14 +8,14 @@ work-performance (performance related test scripts; we compare with other databa
 
 This framework consists of the following components/folders:
 ```
+bas: baselines files for the comparison.
 bin: utililty and customized functions.
+data: data files for testing.
 sh: shell scripts for running the test.
+sql: sql scripts
 work: test result files and logs.
 work-performance: performance related scripts and data.
 work-staging: the testing scripts currently still under development.
-data: data files for testing.
-bas: baselines files for the comparison.
-sql: sql scripts
 ```
 
 ##### Motivation: 
