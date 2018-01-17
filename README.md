@@ -12,6 +12,8 @@ sql: sql scripts
 work: test result files and logs.
 work-performance: performance related scripts and data (we compare with other databases, such as mongoDb and Cassandra, etc)
 work-staging: the testing scripts currently still under development.
+work_version#: test result archives
+
 ```
 
 ##### Motivation: 
