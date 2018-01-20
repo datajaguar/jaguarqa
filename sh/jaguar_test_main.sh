@@ -59,24 +59,22 @@ do
     i=$(($i+1))
     
     echo "#################################################" 2>&1 | tee -a $logf
-    echo "# Test $i `ls  $line`"  2>&1 | tee -a $logf
+    echo "# Starting Test Case $i `ls  $line`"  2>&1 | tee -a $logf
     echo -e "#################################################\n" 2>&1 | tee -a $logf
 
     $line 2>&1 | tee -a $logf 
     wait
     
+    echo -e "#################################################" 2>&1 | tee -a $logf
+    echo " Test Case $i `ls  $line` is done" 2>&1 | tee -a $logf
     echo -e "#################################################\n" 2>&1 | tee -a $logf
-    echo "Test $i `ls  $line` is done" 2>&1 | tee -a $logf
-
+    echo -e "\n Move to the next test cases, if this is not the last one. \n" 2>&1 | tee -a $logf
 done
 
-echo "done with test"
-
-echo -e "\n#################################################\n" 2>&1 | tee -a $logf
+echo -e "\n\n#################################################\n" 2>&1 | tee -a $logf
 echo "# Summary:" 2>&1 | tee -a $logf
 echo "# Total excuted tests:"  2>&1 | tee -a $logf
 echo "`ls $QA_HOME/work/*.log`" 2>&1 | tee -a $logf
 
 echo -e "Total suc files: `ls $QA_HOME/work/*.suc`"  2>&1 | tee -a $logf
 echo "Total dif files: `ls $QA_HOME/work/*.dif`" 2>&1 | tee -a $logf
-

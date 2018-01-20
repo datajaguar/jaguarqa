@@ -1,6 +1,6 @@
 ## Instruction on Running automated test for jaguar database
 
-This framework consists of the following components/folders:
+The testing framework consists of the following components/folders:
 ```
 bas: baselines files for the comparison.
 bin: utililty and customized functions.

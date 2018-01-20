@@ -3,13 +3,13 @@ ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
 jaguar server is running on ssd
 jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=1  jaguar off=0
 Jaguar on hosts:  192.168.7.120
-Fri Jan 19 17:33:47 PST 2018
+Fri Jan 19 17:58:53 PST 2018
 There are still 1 jaguar servers running, wait ...
 
 Shutdown of jaguar server on current host ssd ...
-ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
-Fri Jan 19 17:33:52 PST 2018
+Fri Jan 19 17:58:58 PST 2018
 
+ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
 jaguar server is NOT running on ssd
 jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=0  jaguar off=1
 Jaguar off hosts:  192.168.7.120
@@ -19,28 +19,28 @@ Jaguar database server is being started on all hosts ...
 jaguar server is running on ssd
 
 1. Create table and load data
-Jaguar Server 2.8.4.1 140673513285376 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140496777639680 / Client 2.8.4.1
 
 jaguar:test> jaguar:test> Table import_export is dropped successfully
-Done in 7 milliseconds 
-jaguar:test> Done in 300 microseconds 
+Done in 6 milliseconds 
+jaguar:test> Done in 297 microseconds 
 jaguar:test> jaguar:test> Done in 4 milliseconds 
-jaguar:test> jaguar:test> Done in 481 milliseconds 
-jaguar:test> jaguar:test> Done in 304 microseconds 
+jaguar:test> jaguar:test> Done in 480 milliseconds 
+jaguar:test> jaguar:test> Done in 292 microseconds 
 jaguar:test> 
 
 2-1. export by jagexportcsv...
 
-Fri Jan 19 17:34:16 PST 2018
+Fri Jan 19 17:59:22 PST 2018
 
-Jaguar Server 2.8.4.1 140673506981632 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140496431212288 / Client 2.8.4.1
 
 jaguar:test> spool /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv;
-Done in 34 microseconds 
+Done in 32 microseconds 
 jaguar:test> select * from test.import_export timeout 1000000 exportcsv;
 Done in 46 milliseconds (10005 rows) 
 jaguar:test> spool off;
-Done in 292 microseconds 
+Done in 298 microseconds 
 jaguar:test> quit;
 Done
 Exported CSV data is saved in 
@@ -48,35 +48,35 @@ The exported file can be imported back to database with the command:
 
     ./jagimportcsv -d test -t test.import_export -f /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv
 
-Fri Jan 19 17:34:18 PST 2018
+Fri Jan 19 17:59:24 PST 2018
 
 2-2. Clean data...
 ============================== 
 
-Jaguar Server 2.8.4.1 140673504880384 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140496408098560 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 39 microseconds 
+jaguar:test> jaguar:test> Done in 41 microseconds 
 jaguar:test> jaguar:test> jaguar:test> Done in 6 microseconds 
 jaguar:test> 
 
 2-3. Import by jagimportsql...
 ============================== 
 
-Fri Jan 19 17:34:34 PST 2018
-Jaguar Server 2.8.4.1 140673481766656 / Client 2.8.4.1
+Fri Jan 19 17:59:40 PST 2018
+Jaguar Server 2.8.4.1 140496397592320 / Client 2.8.4.1
 
 jaguar:test> load /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv into test.import_export quote terminated by '"' ;
-Done in 401 milliseconds 
+Done in 399 milliseconds 
 jaguar:test> quit;
-Fri Jan 19 17:34:36 PST 2018
+Fri Jan 19 17:59:42 PST 2018
 
 2-4. Check Correctness...
 ============================== 
 
-Jaguar Server 2.8.4.1 140673390982912 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140496382883584 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 39 microseconds 
-jaguar:test> jaguar:test> Done in 155 microseconds 
+jaguar:test> jaguar:test> Done in 45 microseconds 
+jaguar:test> jaguar:test> Done in 156 microseconds 
 jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> jaguar:test> Done in 14 microseconds 

@@ -1,4 +1,4 @@
 ssh 192.168.7.120 grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=10008 diskarray=10005
-selectcount type=0 import_export keychecker=10008 diskarray=10005
+selectcount type=0 import_export keychecker=10005 diskarray=10005
+selectcount type=0 import_export keychecker=10005 diskarray=10005
 ================================================================

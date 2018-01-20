@@ -1,36 +1,36 @@
 
 1. Create table and load data
-Jaguar Server 2.8.4.1 140145726461696 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140701960447744 / Client 2.8.4.1
 
 jaguar:test> jaguar:test> jaguar:test> jaguar:test> Table column_default2 is dropped successfully
 Done in 5 milliseconds 
-jaguar:test> jaguar:test> Done in 280 microseconds 
+jaguar:test> jaguar:test> Done in 257 microseconds 
 jaguar:test> jaguar:test> Done in 4 milliseconds 
-jaguar:test> jaguar:test> Done in 392 microseconds 
-jaguar:test> jaguar:test> Done in 10 microseconds 
-jaguar:test> Done in 5 microseconds 
-jaguar:test> Done in 5 microseconds 
-jaguar:test> Done in 5 microseconds 
-jaguar:test> Done in 5 microseconds 
+jaguar:test> jaguar:test> Done in 335 microseconds 
 jaguar:test> jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 4 microseconds 
+jaguar:test> Done in 5 microseconds 
 jaguar:test> Done in 6 microseconds 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 213 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 198 microseconds 
 jaguar:test> Done in 16 milliseconds (7 rows) 
-jaguar:test> jaguar:test> Done in 18 microseconds 
+jaguar:test> jaguar:test> Done in 14 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 
 
 18c18
-< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926107] tm2:[2018-01-19 17:33:40.926107] tm3:[1969-12-31 16:00:00.000000] 
+< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514662] tm2:[2018-01-19 17:58:48.514662] tm3:[1969-12-31 16:00:00.000000] 
 ---
 > id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648905] tm2:[2018-01-16 20:38:16.648905] tm3:[1969-12-31 16:00:00.000000] 
 20,24c20,24
-< id:[4OECHm6CGxFG5GJReoiyFL6JcUJ5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926066] tm2:[2018-01-19 17:33:40.926066] tm3:[1969-12-31 16:00:00.000000] 
-< id:[8PmazBrh2osc0277mck6AjUf5W25696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.925981] tm2:[2018-01-19 17:33:40.925981] tm3:[1969-12-31 16:00:00.000000] 
-< id:[AYaH6X4hxDGOD2gO0gV8C8qGGHA5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926023] tm2:[2018-01-19 17:33:40.926023] tm3:[1969-12-31 16:00:00.000000] 
-< id:[KgPHkBkUiGZSnwy1BcItr5JXKs25696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926086] tm2:[2018-01-19 17:33:40.926086] tm3:[1969-12-31 16:00:00.000000] 
-< id:[VKuVkt51x13MyFsmitA6tO0zo8X5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926046] tm2:[2018-01-19 17:33:40.926046] tm3:[1969-12-31 16:00:00.000000] 
+< id:[YSRW3FIXREChwusk1k46xXH79Ed5696686013528] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514604] tm2:[2018-01-19 17:58:48.514604] tm3:[1969-12-31 16:00:00.000000] 
+< id:[dQNUeWFpUUbOxUM5fSCCeZ6c1Mc5696686013528] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514582] tm2:[2018-01-19 17:58:48.514582] tm3:[1969-12-31 16:00:00.000000] 
+< id:[mGXwEQnzT3hPUTp9pUAHTSK0qFH5696686013528] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514623] tm2:[2018-01-19 17:58:48.514623] tm3:[1969-12-31 16:00:00.000000] 
+< id:[p8NdYfOUDIXAl8zponuY4I0X6GY5696686013528] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514547] tm2:[2018-01-19 17:58:48.514547] tm3:[1969-12-31 16:00:00.000000] 
+< id:[xOjJ8ZGFCu0bo1qbUhA1GsBlmu55696686013528] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:58:48.514643] tm2:[2018-01-19 17:58:48.514643] tm3:[1969-12-31 16:00:00.000000] 
 ---
 > id:[95xmJRH53QaYJ857SZalVfENaGX5696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648883] tm2:[2018-01-16 20:38:16.648883] tm3:[1969-12-31 16:00:00.000000] 
 > id:[Dkmob94XTY7qMW3vW4jSX1bwGG95696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648863] tm2:[2018-01-16 20:38:16.648863] tm3:[1969-12-31 16:00:00.000000] 

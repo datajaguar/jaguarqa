@@ -1,4 +1,5 @@
 template.sh
 core*
 .*swp
-
+work_
+work/*.*
