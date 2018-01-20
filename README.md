@@ -76,7 +76,8 @@ Before we start to run the automated test, please make sure all the following fo
 ```
 
 #### 4) Run the test from the $QA_HOME/sh
-We should be able run test cases from anywhere on the server where we have test cases downloaded; however, it's easier to kick out the test from: jaguar_test_main.sh, such as following:
+We should be able run test cases from anywhere on the server where we have test cases downloaded; however, 
+it's easier to kick out the test from: jaguar_test_main.sh, such as following:
 
 ```
 /home/andrew/t/azhang/jaguarqa/sh
