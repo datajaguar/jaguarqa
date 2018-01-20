@@ -29,7 +29,7 @@
 
 export ADMIN_PASSWORD=jaguar
 
-FILE=jaguar_test_main
+FILE=jaguar_test_main_test
 logf="$QA_HOME/work/${FILE}.log"
 
 # Back up and Clean old log and work direcry:
@@ -62,21 +62,24 @@ do
     echo "# Test $i `ls  $line`"  2>&1 | tee -a $logf
     echo -e "#################################################\n" 2>&1 | tee -a $logf
 
-    $line 2>&1 | tee -a $logf 
-    wait
+# Just check to see if loop to the end:
+#    $line 2>&1 | tee -a $logf 
+    ls  $line >&1 | tee -a $logf
+wait
     
     echo -e "#################################################\n" 2>&1 | tee -a $logf
-    echo "Test $i `ls  $line` is done" 2>&1 | tee -a $logf
-
+    echo "Test_$i `ls  $line` is done" 2>&1 | tee -a $logf
 done
 
 echo "done with test"
 
+exit
+
 echo -e "\n#################################################\n" 2>&1 | tee -a $logf
 echo "# Summary:" 2>&1 | tee -a $logf
-echo "# Total excuted tests:"  2>&1 | tee -a $logf
-echo "`ls $QA_HOME/work/*.log`" 2>&1 | tee -a $logf
+echo "# Total exexuted tests:"  2>&1 | tee -a $logf
+echo "ls $QA_HOME/work/*.log" 2>&1 | tee -a $logf
 
-echo -e "Total suc files: `ls $QA_HOME/work/*.suc`"  2>&1 | tee -a $logf
+echo -e "Total suc files: `ls $QA_HOME/work/*.suc |wc`"  2>&1 | tee -a $logf
 echo "Total dif files: `ls $QA_HOME/work/*.dif`" 2>&1 | tee -a $logf
 

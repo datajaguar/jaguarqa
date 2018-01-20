@@ -1,7 +1,7 @@
 ##################################################################
 #
 # Automated regression test for jaguar database version 2.8.4.1
-# Date: Fri Jan 19 17:05:56 PST 2018
+# Date: Fri Jan 19 17:33:22 PST 2018
 #
 #################################################################
 
@@ -9,7 +9,7 @@
 # Test 1 data_load.sh
 #################################################
 
-Jaguar Server 2.8.4.1 140637357725440 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140146403854080 / Client 2.8.4.1
 
 jaguar:test> # SQL Name: data_load1.sql
 
@@ -20,55 +20,55 @@ jaguar:test> drop table if exists data_load;
 Done in 2 milliseconds 
 jaguar:test> 
 jaguar:test> spool  $QA_HOME/work/data_load1.out; 
-Done in 266 microseconds 
+Done in 321 microseconds 
 jaguar:test> 
 jaguar:test> createdb jag_data_load;
-Done in 2 milliseconds 
+Done in 1475 microseconds 
 jaguar:test> use jag_data_load;
-Done in 1513 microseconds 
+Done in 1244 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
 Done in 2 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> desc data_load;  
-Done in 70 microseconds 
+Done in 56 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> load $QA_HOME/data/10kLine.txt into data_load;
-Done in 403 milliseconds 
+Done in 404 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> sleep 5;
 jaguar:jag_data_load> 
 jaguar:jag_data_load> select count(*) from  data_load;
-Done in 464 microseconds 
+Done in 466 microseconds 
 jaguar:jag_data_load> select * from data_load  where v3 = "Apple31234567890";
-Done in 20 milliseconds (1 row) 
+Done in 21 milliseconds (1 row) 
 jaguar:jag_data_load> select * from jag_data_load.data_load  where v3 = 'Apple31234567890';
 Done in 21 milliseconds (1 row) 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> show create table data_load;
-Done in 107 microseconds 
+Done in 128 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> use test;
 Done in 2 milliseconds 
 jaguar:test> sleep 2;
 jaguar:test> 
 jaguar:test> spool off;
-Done in 50 microseconds 
+Done in 40 microseconds 
 jaguar:test> 
 jaguar:test> quit;
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstart
 Jaguar database server is being started on all hosts ...
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstart
 Jaguar database server is being started on all hosts ...
-Jaguar Server 2.8.4.1 140637437310720 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140146562094848 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 38 microseconds 
+jaguar:test> jaguar:test> Done in 34 microseconds 
 jaguar:test> jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> test.data_load does not exist [300] [30]
 jaguar:test> jaguar:test> Done in 2 milliseconds 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 21 milliseconds (1 row) 
-jaguar:jag_data_load> Done in 21 milliseconds (1 row) 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 22 microseconds 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 22 milliseconds (1 row) 
+jaguar:jag_data_load> Done in 22 milliseconds (1 row) 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 21 microseconds 
 jaguar:jag_data_load> jaguar is already RUNNING on ssd
 jaguar is already RUNNING on ssd
 
@@ -77,9 +77,248 @@ Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load1.out
 Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load2.out
 #################################################
 
-Test_1 data_load.sh is done
+Test 1 data_load.sh is done
 #################################################
-# Test 2 import_export_sql.sh
+# Test 2 create_db1_egift.sh
+#################################################
+
+Jaguar Server 2.8.4.1 140146458486528 / Client 2.8.4.1
+
+jaguar:test> drop table if exist starbucks.egift_item;
+Done in 2 milliseconds 
+jaguar:test> 
+jaguar:test> spool  $QA_HOME/work/create_db1_egift.out;
+Done in 308 microseconds 
+jaguar:test> createdb starbucks;
+Done in 2 milliseconds 
+jaguar:test> use starbucks;
+Done in 1381 microseconds 
+jaguar:starbucks> create table starbucks.egift_item
+(
+  key:
+    prod_id integer,
+    code_no char(100),
+    status tinyint,
+    log_time datetime,
+    uuid char(40),
+  value:
+    card_id char(50),
+    prod_no char(50),
+    prod_name char(150),
+    prod_type char(10),
+    price double(10,2),
+    code_check_no char(100),
+    card_cover char(100),
+    log_time_ms bigint,
+    log_time_ymd char(8),
+    log_time_y integer,
+    log_time_q tinyint,
+    log_time_m tinyint,
+    log_time_d tinyint,
+    log_time_w tinyint,
+    log_time_h tinyint,
+    log_time_1 tinyint,
+    log_time_5 tinyint,
+    log_time_10 tinyint,
+    log_time_30 tinyint,
+    order_id char(50),
+    order_no char(50),
+    merchant_id char(50),
+    merchant_type char(10),
+    pos_id char(50),
+    consume_serial_no char(50),
+    store_name char(300),
+    swap_type char(50),
+    from_user char(50),
+    to_user char(50),
+    accept_type tinyint,
+    use_amt double(10,2),
+    refund_amt double(10,2),
+    balance_amt double(10,2),
+    ext_char1 char(100),
+    ext_char2 char(100),
+    ext_char3 char(1000),
+    ext_char4 char(1000),
+    ext_double1 double(18,2),
+    ext_double2 double(18,2),
+    ext_bigint1 bigint,
+    ext_bigint2 bigint,
+    ext_int1 integer,
+    ext_int2 integer,
+    ext_time1 datetime,
+    ext_time2 datetime
+);
+Done in 4 milliseconds 
+jaguar:starbucks> 
+jaguar:starbucks> desc starbucks.egift_item;
+Done in 459 microseconds 
+jaguar:starbucks> drop table  starbucks.egift_item;
+Done in 1503 milliseconds 
+jaguar:starbucks> 
+jaguar:starbucks> use test;
+Done in 3 milliseconds 
+jaguar:test> 
+jaguar:test> dropdb starbucks;
+Done in 2 milliseconds 
+jaguar:test> 
+jaguar:test> spool off;
+Done in 298 microseconds 
+jaguar:test> quit;
+
+Success comparing /home/andrew/t/azhang/jaguarqa/work/create_db1_egift.out
+#################################################
+
+Test 2 create_db1_egift.sh is done
+#################################################
+# Test 3 
+#################################################
+
+/home/andrew/t/azhang/jaguarqa/sh/jaguar_test_main.sh: line 65: function1.sql: command not found
+#################################################
+
+Test 3  is done
+#################################################
+# Test 4 column_default1.sh
+#################################################
+
+
+1. Create table and load data
+============================== 
+
+Jaguar Server 2.8.4.1 140145743271680 / Client 2.8.4.1
+
+jaguar:test> jaguar:test> Table column_default is dropped successfully
+Done in 6 milliseconds 
+jaguar:test> jaguar:test> Done in 282 microseconds 
+jaguar:test> jaguar:test> Done in 4 milliseconds 
+jaguar:test> jaguar:test> Done in 390 microseconds 
+jaguar:test> jaguar:test> Done in 11 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 16 milliseconds (11 rows) 
+jaguar:test> jaguar:test> Done in 17 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+17,27c17,27
+< emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[ldWacecZZfMGIa8wS0qkSrPhnyD5696660512016] 
+< emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[QTprpZYfWJX2GVjAOOjpZa6GRNN5696660512016] 
+< emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[VmkMab9CA8yN2hK4VDmwraNOaWU5696660512016] 
+< emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[ONHAI3Sse3BOEJmpMCaOxLa1blP5696660512016] 
+< emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[ZtJShwzRdBJDNNfBpWVOGxWv5GF5696660512016] 
+< emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[4PYROpAEH5cwiNgTA189o34cJA95696660512016] 
+< emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[eDNSHCOzoe73Tcfps0DmACsH0vJ5696660512016] 
+< emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[dfhkrU7hAH695ig8brlyTlcfTOG5696660512016] 
+< emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[yNbi0oziOsn5249b7rpeAQz9IVj5696660512016] 
+< emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[vCzQXKK7XYhWVxJBdTJHJH73zwT5696660512016] 
+< emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[VM7BlULDS9a8XCt1CvaLDAbR8Zq5696660512016] 
+---
+> emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[Fgh1AleJsNqQ5TqRJHXhbmBXHVU5696692057703] 
+> emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[ROGLKVczQPDJ23PYTIjzFuFurqf5696692057703] 
+> emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[Dkmob94XTY7qMW3vW4jSX1bwGG95696692057703] 
+> emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[95xmJRH53QaYJ857SZalVfENaGX5696692057703] 
+> emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[HkDOtGmOpdvvelDc2Jf9BchW5uz5696692057703] 
+> emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[TFdOkxp8Z5uNtGgWSBz3BgiKRvZ5696692057703] 
+> emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[Lyukr9xdt5CB2G4N9I35ACEDdUU5696692057703] 
+> emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[VJnUuVoNlvkyYn9ynPCaYkd1UPD5696692057703] 
+> emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[w0vqVeLOGGctZIMyE9HcxuOFs6T5696692057703] 
+> emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[VfqPUF6Vdp8WSTmIYd6PXNLeW7N5696692057703] 
+> emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[tZG6vHBTANCotizVifHOTOt4jXQ5696692057703] 
+
+Failure comparing /home/andrew/t/azhang/jaguarqa/work/column_default1.out
+End of test column_default1.sh
+#################################################
+
+Test 4 column_default1.sh is done
+#################################################
+# Test 5 column_default2.sh
+#################################################
+
+
+1. Create table and load data
+============================== 
+
+Jaguar Server 2.8.4.1 140145726461696 / Client 2.8.4.1
+
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Table column_default2 is dropped successfully
+Done in 5 milliseconds 
+jaguar:test> jaguar:test> Done in 280 microseconds 
+jaguar:test> jaguar:test> Done in 4 milliseconds 
+jaguar:test> jaguar:test> Done in 392 microseconds 
+jaguar:test> jaguar:test> Done in 10 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 213 microseconds 
+jaguar:test> Done in 16 milliseconds (7 rows) 
+jaguar:test> jaguar:test> Done in 18 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+18c18
+< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926107] tm2:[2018-01-19 17:33:40.926107] tm3:[1969-12-31 16:00:00.000000] 
+---
+> id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648905] tm2:[2018-01-16 20:38:16.648905] tm3:[1969-12-31 16:00:00.000000] 
+20,24c20,24
+< id:[4OECHm6CGxFG5GJReoiyFL6JcUJ5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926066] tm2:[2018-01-19 17:33:40.926066] tm3:[1969-12-31 16:00:00.000000] 
+< id:[8PmazBrh2osc0277mck6AjUf5W25696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.925981] tm2:[2018-01-19 17:33:40.925981] tm3:[1969-12-31 16:00:00.000000] 
+< id:[AYaH6X4hxDGOD2gO0gV8C8qGGHA5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926023] tm2:[2018-01-19 17:33:40.926023] tm3:[1969-12-31 16:00:00.000000] 
+< id:[KgPHkBkUiGZSnwy1BcItr5JXKs25696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926086] tm2:[2018-01-19 17:33:40.926086] tm3:[1969-12-31 16:00:00.000000] 
+< id:[VKuVkt51x13MyFsmitA6tO0zo8X5696665212020] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-19 17:33:40.926046] tm2:[2018-01-19 17:33:40.926046] tm3:[1969-12-31 16:00:00.000000] 
+---
+> id:[95xmJRH53QaYJ857SZalVfENaGX5696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648883] tm2:[2018-01-16 20:38:16.648883] tm3:[1969-12-31 16:00:00.000000] 
+> id:[Dkmob94XTY7qMW3vW4jSX1bwGG95696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648863] tm2:[2018-01-16 20:38:16.648863] tm3:[1969-12-31 16:00:00.000000] 
+> id:[Fgh1AleJsNqQ5TqRJHXhbmBXHVU5696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648781] tm2:[2018-01-16 20:38:16.648781] tm3:[1969-12-31 16:00:00.000000] 
+> id:[ROGLKVczQPDJ23PYTIjzFuFurqf5696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648842] tm2:[2018-01-16 20:38:16.648842] tm3:[1969-12-31 16:00:00.000000] 
+> id:[VfqPUF6Vdp8WSTmIYd6PXNLeW7N5696672063896] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-16 20:38:16.648818] tm2:[2018-01-16 20:38:16.648818] tm3:[1969-12-31 16:00:00.000000] 
+
+Failure comparing /home/andrew/t/azhang/jaguarqa/work/column_default2.out
+End of test column_default2.sh
+#################################################
+
+Test 5 column_default2.sh is done
+#################################################
+# Test 6 column_default3.sh
+#################################################
+
+
+1. Create table and load data
+============================== 
+
+Jaguar Server 2.8.4.1 140145487443712 / Client 2.8.4.1
+
+jaguar:test> jaguar:test> Table column_default3 is dropped successfully
+Done in 5 milliseconds 
+jaguar:test> jaguar:test> Done in 301 microseconds 
+jaguar:test> jaguar:test> Done in 3 milliseconds 
+jaguar:test> Done in 318 microseconds 
+jaguar:test> jaguar:test> Done in 19 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+
+Success comparing /home/andrew/t/azhang/jaguarqa/work/column_default3.out
+
+End of test column_default3.sh
+#################################################
+
+Test 6 column_default3.sh is done
+#################################################
+# Test 7 import_export_csv.sh
 #################################################
 
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstop
@@ -87,13 +326,13 @@ ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
 jaguar server is running on ssd
 jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=1  jaguar off=0
 Jaguar on hosts:  192.168.7.120
-Fri Jan 19 17:06:05 PST 2018
-
+Fri Jan 19 17:33:47 PST 2018
 There are still 1 jaguar servers running, wait ...
-Shutdown of jaguar server on current host ssd ...
-Fri Jan 19 17:06:10 PST 2018
 
+Shutdown of jaguar server on current host ssd ...
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
+Fri Jan 19 17:33:52 PST 2018
+
 jaguar server is NOT running on ssd
 jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=0  jaguar off=1
 Jaguar off hosts:  192.168.7.120
@@ -105,92 +344,105 @@ jaguar server is running on ssd
 1. Create table and load data
 ============================== 
 
-Jaguar Server 2.8.4.1 140198256023296 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140673513285376 / Client 2.8.4.1
 
 jaguar:test> jaguar:test> Table import_export is dropped successfully
 Done in 7 milliseconds 
-jaguar:test> Done in 303 microseconds 
-jaguar:test> jaguar:test> Done in 3 milliseconds 
+jaguar:test> Done in 300 microseconds 
+jaguar:test> jaguar:test> Done in 4 milliseconds 
 jaguar:test> jaguar:test> Done in 481 milliseconds 
-jaguar:test> jaguar:test> Done in 314 microseconds 
+jaguar:test> jaguar:test> Done in 304 microseconds 
 jaguar:test> 
 
-2-1. export by jagexportsql...
+2-1. export by jagexportcsv...
 
 ============================== 
 
-Fri Jan 19 17:06:35 PST 2018
+Fri Jan 19 17:34:16 PST 2018
 
-Jaguar Server 2.8.4.1 140198260225792 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140673506981632 / Client 2.8.4.1
 
-jaguar:test> spool /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql;
-Done in 27 microseconds 
-jaguar:test> select * from test.import_export timeout 1000000 exportsql;
+jaguar:test> spool /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv;
+Done in 34 microseconds 
+jaguar:test> select * from test.import_export timeout 1000000 exportcsv;
 Done in 46 milliseconds (10005 rows) 
 jaguar:test> spool off;
-Done in 282 microseconds 
+Done in 292 microseconds 
 jaguar:test> quit;
 Done
-Exported data is saved in file /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql
+Exported CSV data is saved in 
 The exported file can be imported back to database with the command:
 
-    ./jagimportsql /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql
+    ./jagimportcsv -d test -t test.import_export -f /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv
 
-Fri Jan 19 17:06:37 PST 2018
+Fri Jan 19 17:34:18 PST 2018
 Runng jagexportsql...then sleep 15 sec.
 
 2-2. Clean data...
 ============================== 
 
-Jaguar Server 2.8.4.1 140198249719552 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140673504880384 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 35 microseconds 
+jaguar:test> jaguar:test> Done in 39 microseconds 
 jaguar:test> jaguar:test> jaguar:test> Done in 6 microseconds 
 jaguar:test> 
 
 2-3. Import by jagimportsql...
 ============================== 
 
-Fri Jan 19 17:06:53 PST 2018
-/home/andrew/t/azhang/jaguarqa/work/test.import_export.sql has 1420710 bytes 
-Jaguar Server 2.8.4.1 140198232909568 / Client 2.8.4.1
+Fri Jan 19 17:34:34 PST 2018
+Jaguar Server 2.8.4.1 140673481766656 / Client 2.8.4.1
 
-Done
-Fri Jan 19 17:06:55 PST 2018
+jaguar:test> load /home/andrew/t/azhang/jaguarqa/work/test.import_export.csv into test.import_export quote terminated by '"' ;
+Done in 401 milliseconds 
+jaguar:test> quit;
+Fri Jan 19 17:34:36 PST 2018
 Running jagimportsql...sleep 30...
 
 2-4. Check Correctness...
 ============================== 
 
-Jaguar Server 2.8.4.1 140198218200832 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140673390982912 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 36 microseconds 
-jaguar:test> jaguar:test> Done in 174 microseconds 
+jaguar:test> jaguar:test> Done in 39 microseconds 
+jaguar:test> jaguar:test> Done in 155 microseconds 
 jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> Done in 21 milliseconds (1 row) 
-jaguar:test> jaguar:test> Done in 17 microseconds 
+jaguar:test> jaguar:test> Done in 14 microseconds 
 jaguar:test> ssh 192.168.7.120 grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=10005 diskarray=10005
-selectcount type=0 import_export keychecker=10005 diskarray=10005
+selectcount type=0 import_export keychecker=10008 diskarray=10005
+selectcount type=0 import_export keychecker=10008 diskarray=10005
 ================================================================
 
 
 2-5. Compare results 
-================================ 
+================================== 
 
-Success comparing /home/andrew/t/azhang/jaguarqa/work/import_export_sql.out
-Binary files /home/andrew/t/azhang/jaguarqa/work/import_export-verification_sql.out and /home/andrew/t/azhang/jaguarqa/bas/import_export-verification_sql.bas differ
+Success comparing /home/andrew/t/azhang/jaguarqa/work/import_export_csv.out
+Binary files /home/andrew/t/azhang/jaguarqa/work/import_export-verification_csv.out and /home/andrew/t/azhang/jaguarqa/bas/import_export-verification_csv.bas differ
 
-Failure comparing /home/andrew/t/azhang/jaguarqa/work/import_export-verification_sql.out
+Failure comparing /home/andrew/t/azhang/jaguarqa/work/import_export-verification_csv.out
 End of test import_export_sql.sh
 #################################################
 
-Test_2 import_export_sql.sh is done
+Test 7 import_export_csv.sh is done
 
 #################################################
 
 # Summary:
-# Total exexuted tests:
-ls /home/andrew/t/azhang/jaguarqa/work/*.log
-Total suc files:       3       3     160
-Total dif files: /home/andrew/t/azhang/jaguarqa/work/import_export-verification_sql.dif
+# Total excuted tests:
+/home/andrew/t/azhang/jaguarqa/work/column_default1.log
+/home/andrew/t/azhang/jaguarqa/work/column_default2.log
+/home/andrew/t/azhang/jaguarqa/work/column_default3.log
+/home/andrew/t/azhang/jaguarqa/work/create_db1_egift.log
+/home/andrew/t/azhang/jaguarqa/work/data_load.log
+/home/andrew/t/azhang/jaguarqa/work/import_export_csv.log
+/home/andrew/t/azhang/jaguarqa/work/jaguar_test_main.log
+Total suc files: /home/andrew/t/azhang/jaguarqa/work/column_default3.suc
+/home/andrew/t/azhang/jaguarqa/work/create_db1_egift.suc
+/home/andrew/t/azhang/jaguarqa/work/data_load1.suc
+/home/andrew/t/azhang/jaguarqa/work/data_load2.suc
+/home/andrew/t/azhang/jaguarqa/work/import_export_csv.suc
+Total dif files: /home/andrew/t/azhang/jaguarqa/work/column_default1.dif
+/home/andrew/t/azhang/jaguarqa/work/column_default2.dif
+/home/andrew/t/azhang/jaguarqa/work/import_export-verification_csv.dif
