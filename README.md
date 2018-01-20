@@ -1,6 +1,10 @@
 ## Instruction on Running automated test for jaguar database
 
+<<<<<<< HEAD
 The testing framework consists of the following components/folders:
+=======
+The jaguar testing framework consists of the following components/folders:
+>>>>>>> d0cf93118117510ad2613e91151eb30d44c03d3d
 ```
 bas: baselines files for the comparison.
 bin: utililty and customized functions.
@@ -15,7 +19,7 @@ work_version#: test result archives
 ```
 
 ##### Motivation: 
-Able to run anywhere on the one of the servers that has jaguar server installed. 
+The framework is structured to run anywhere on the one of the servers that has jaguar server installed. 
 Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
@@ -49,7 +53,7 @@ QA_HOME
 Also update the PATH accordingly. For example (on andrew@ssd): 
 ```
 export JAGUAR_HOME=/home/$LOGNAME/jaguar
-export QA_HOME=/home/andrew/t/azhang/jaguarqa`
+export QA_HOME=/home/andrew/t/azhang/jaguarqa
 export PATH=$QA_HOME/bin:$QA_HOME/sh:$JAGUAR_HOME/bin:$PATH
 ```
 
@@ -94,12 +98,14 @@ Step 2: Check result:
       2       2      57 
   
 /home/andrew/t/azhang/qa/work 
-(andrew@ssd)\>ls *.diff | wc 
-ls: cannot access *.diff: No such file or directory 
+(andrew@ssd)\>ls *.dif | wc 
+ls: cannot access *.dif: No such file or directory 
       0       0       0 
 ```
 
-If no *.diff files found, we regard the automation are successful. 
+If no *.dif files found, we regard the automation are successful. 
+
+Note: 
 
 #### 5) Tips to save work dirtories
 
@@ -143,7 +149,7 @@ Some of the the setup is duplicated, which might take some extra time to run the
  
  
 ### Note: Run testing on Windows
-#### If we install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, we should be able to run the same test on windows as well; however, we currenty encounted a permission issues!
+#### If we install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, we should be able to run the same test on windows as well; however, we might encounte a permission issues!
 
 For example, we can set a .bash_profile on the home directory for the convenience on windows:
 
@@ -198,7 +204,7 @@ which: loginj: unknown command
 ```
 
 ### In progress..
-- Clean up diff files;
+- Clean up dif files;
 - Creating more test cases;
 - Trying to fix binary diff files or find a workaround;
 - Add status at the end of test, such as: total *suc files and *diff files
