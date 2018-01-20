@@ -6,7 +6,6 @@
 #: Date: 09/19/2017
 #: Purpose:     Batch control datajaguar's regression tests.
 #: Test cases: 
-#       Use case 1: 
 #       -------------------------------------------------------------------
 #
 #: Component/Sub Comp: 
@@ -19,7 +18,7 @@
 #: SUC: 
 #: Created for: 
 #: Retired for:
-#: Test time: within 10 sec
+#: Test time: dependent on the total number of test cases
 #: History:
 
 # Note: In order to run test, we need to set the following system variables: 
@@ -64,11 +63,14 @@ do
     echo -e "#################################################\n" 2>&1 | tee -a $logf
 
     $line 2>&1 | tee -a $logf 
+    wait
+    
+    echo -e "#################################################\n" 2>&1 | tee -a $logf
+    echo "Test_$i `ls  $line` is done" 2>&1 | tee -a $logf
 
 done
 
 echo "done with test"
-
 
 echo -e "\n#################################################\n" 2>&1 | tee -a $logf
 echo "# Summary:" 2>&1 | tee -a $logf

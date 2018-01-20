@@ -1,7 +1,7 @@
 ##################################################################
 #
 # Automated regression test for jaguar database version 2.8.4.1
-# Date: Fri Jan 19 16:14:16 PST 2018
+# Date: Fri Jan 19 17:05:56 PST 2018
 #
 #################################################################
 
@@ -9,7 +9,7 @@
 # Test 1 data_load.sh
 #################################################
 
-Jaguar Server 2.8.4.1 139622124324608 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140637357725440 / Client 2.8.4.1
 
 jaguar:test> # SQL Name: data_load1.sql
 
@@ -17,64 +17,67 @@ jaguar:test> #Commented the following due to Bug034
 #dropdb jag_data_load;
 
 jaguar:test> drop table if exists data_load;
-Done in 4 milliseconds 
+Done in 2 milliseconds 
 jaguar:test> 
 jaguar:test> spool  $QA_HOME/work/data_load1.out; 
-Done in 314 microseconds 
+Done in 266 microseconds 
 jaguar:test> 
 jaguar:test> createdb jag_data_load;
 Done in 2 milliseconds 
 jaguar:test> use jag_data_load;
-Done in 1348 microseconds 
+Done in 1513 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
-Done in 4 milliseconds 
+Done in 2 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> desc data_load;  
-Done in 58 microseconds 
+Done in 70 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> load $QA_HOME/data/10kLine.txt into data_load;
-Done in 402 milliseconds 
+Done in 403 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> sleep 5;
 jaguar:jag_data_load> 
 jaguar:jag_data_load> select count(*) from  data_load;
-Done in 543 microseconds 
+Done in 464 microseconds 
 jaguar:jag_data_load> select * from data_load  where v3 = "Apple31234567890";
-Done in 31 milliseconds (1 row) 
+Done in 20 milliseconds (1 row) 
 jaguar:jag_data_load> select * from jag_data_load.data_load  where v3 = 'Apple31234567890';
-Done in 23 milliseconds (1 row) 
+Done in 21 milliseconds (1 row) 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> show create table data_load;
-Done in 106 microseconds 
+Done in 107 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> use test;
 Done in 2 milliseconds 
 jaguar:test> sleep 2;
 jaguar:test> 
 jaguar:test> spool off;
-Done in 44 microseconds 
+Done in 50 microseconds 
 jaguar:test> 
 jaguar:test> quit;
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstart
 Jaguar database server is being started on all hosts ...
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstart
 Jaguar database server is being started on all hosts ...
-Jaguar Server 2.8.4.1 139621568542464 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140637437310720 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 30 microseconds 
-jaguar:test> jaguar:test> Done in 24 milliseconds (1 row) 
+jaguar:test> jaguar:test> Done in 38 microseconds 
+jaguar:test> jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> test.data_load does not exist [300] [30]
 jaguar:test> jaguar:test> Done in 2 milliseconds 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 24 milliseconds (1 row) 
-jaguar:jag_data_load> Done in 25 milliseconds (1 row) 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 20 microseconds 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 21 milliseconds (1 row) 
+jaguar:jag_data_load> Done in 21 milliseconds (1 row) 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 22 microseconds 
 jaguar:jag_data_load> jaguar is already RUNNING on ssd
 jaguar is already RUNNING on ssd
 
 Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load1.out
 
 Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load2.out
+#################################################
+
+Test_1 data_load.sh is done
 #################################################
 # Test 2 import_export_sql.sh
 #################################################
@@ -84,11 +87,11 @@ ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
 jaguar server is running on ssd
 jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=1  jaguar off=0
 Jaguar on hosts:  192.168.7.120
-Fri Jan 19 16:14:25 PST 2018
-There are still 1 jaguar servers running, wait ...
+Fri Jan 19 17:06:05 PST 2018
 
+There are still 1 jaguar servers running, wait ...
 Shutdown of jaguar server on current host ssd ...
-Fri Jan 19 16:14:30 PST 2018
+Fri Jan 19 17:06:10 PST 2018
 
 ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
 jaguar server is NOT running on ssd
@@ -102,30 +105,30 @@ jaguar server is running on ssd
 1. Create table and load data
 ============================== 
 
-Jaguar Server 2.8.4.1 139865650497280 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140198256023296 / Client 2.8.4.1
 
 jaguar:test> jaguar:test> Table import_export is dropped successfully
-Done in 5 milliseconds 
-jaguar:test> Done in 298 microseconds 
-jaguar:test> jaguar:test> Done in 4 milliseconds 
+Done in 7 milliseconds 
+jaguar:test> Done in 303 microseconds 
+jaguar:test> jaguar:test> Done in 3 milliseconds 
 jaguar:test> jaguar:test> Done in 481 milliseconds 
-jaguar:test> jaguar:test> Done in 307 microseconds 
+jaguar:test> jaguar:test> Done in 314 microseconds 
 jaguar:test> 
 
 2-1. export by jagexportsql...
 
 ============================== 
 
-Fri Jan 19 16:14:55 PST 2018
+Fri Jan 19 17:06:35 PST 2018
 
-Jaguar Server 2.8.4.1 139865629484800 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140198260225792 / Client 2.8.4.1
 
 jaguar:test> spool /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql;
-Done in 30 microseconds 
+Done in 27 microseconds 
 jaguar:test> select * from test.import_export timeout 1000000 exportsql;
 Done in 46 milliseconds (10005 rows) 
 jaguar:test> spool off;
-Done in 284 microseconds 
+Done in 282 microseconds 
 jaguar:test> quit;
 Done
 Exported data is saved in file /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql
@@ -133,39 +136,39 @@ The exported file can be imported back to database with the command:
 
     ./jagimportsql /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql
 
-Fri Jan 19 16:14:56 PST 2018
+Fri Jan 19 17:06:37 PST 2018
 Runng jagexportsql...then sleep 15 sec.
 
 2-2. Clean data...
 ============================== 
 
-Jaguar Server 2.8.4.1 139865614776064 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140198249719552 / Client 2.8.4.1
 
-jaguar:test> jaguar:test> Done in 39 microseconds 
+jaguar:test> jaguar:test> Done in 35 microseconds 
 jaguar:test> jaguar:test> jaguar:test> Done in 6 microseconds 
 jaguar:test> 
 
 2-3. Import by jagimportsql...
 ============================== 
 
-Fri Jan 19 16:15:13 PST 2018
+Fri Jan 19 17:06:53 PST 2018
 /home/andrew/t/azhang/jaguarqa/work/test.import_export.sql has 1420710 bytes 
-Jaguar Server 2.8.4.1 139865625282304 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140198232909568 / Client 2.8.4.1
 
 Done
-Fri Jan 19 16:15:15 PST 2018
+Fri Jan 19 17:06:55 PST 2018
 Running jagimportsql...sleep 30...
 
 2-4. Check Correctness...
 ============================== 
 
-Jaguar Server 2.8.4.1 139865396057856 / Client 2.8.4.1
+Jaguar Server 2.8.4.1 140198218200832 / Client 2.8.4.1
 
 jaguar:test> jaguar:test> Done in 36 microseconds 
-jaguar:test> jaguar:test> Done in 152 microseconds 
+jaguar:test> jaguar:test> Done in 174 microseconds 
 jaguar:test> Done in 21 milliseconds (1 row) 
 jaguar:test> Done in 21 milliseconds (1 row) 
-jaguar:test> jaguar:test> Done in 14 microseconds 
+jaguar:test> jaguar:test> Done in 17 microseconds 
 jaguar:test> ssh 192.168.7.120 grep selectcount /home/andrew/jaguar/log/jaguar.log
 selectcount type=0 import_export keychecker=10005 diskarray=10005
 selectcount type=0 import_export keychecker=10005 diskarray=10005
@@ -180,6 +183,9 @@ Binary files /home/andrew/t/azhang/jaguarqa/work/import_export-verification_sql.
 
 Failure comparing /home/andrew/t/azhang/jaguarqa/work/import_export-verification_sql.out
 End of test import_export_sql.sh
+#################################################
+
+Test_2 import_export_sql.sh is done
 
 #################################################
 
