@@ -75,7 +75,7 @@ Before we start to run the automated test, please make sure all the following fo
 ```
 
 #### 4) Run the test from the $QA_HOME/sh
-We should be able run test cases from anywhere on the server where we have test cases downloaded; however, it's easier to kick out the test from:
+We should be able run test cases from anywhere on the server where we have test cases downloaded; however, it's easier to kick out the test from: jaguar_test_main.sh.
 
 ```
 $QA_HOME/sh 
@@ -120,6 +120,13 @@ drwxrwxrwx 2 andrew andrew 4096 Oct 23 14:48 work_2.7.9
 
 ```
 
+#### 6) Tips on how to analyze the test results?
+Go to the work directory. 
+ls *suc
+ls *dif
+ls *.log
+
+Note: Some dif files are expected due the change of time stamps or the uuid, we may look into the each log file to dif file is valid.
 
 #### Other Notes: 
 Each test case (automation script) is independent from each other, which means that we can run each one individually, or in the a group. ##### Some pro and con: 
@@ -130,8 +137,6 @@ We can pick any one for a particular purpose
 Some of the the setup is duplicated, which might take some extra time to run the automation. 
  
  
- 
-  
 ### Note: Run testing on Windows
 #### If we install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, we should be able to run the same test on windows as well; however, we currenty encounted a permission issues!
 
