@@ -33,58 +33,48 @@ export ADMIN_PASSWORD=jaguar
 FILE=jaguar_test_main
 logf="$QA_HOME/work/${FILE}.log"
 
-# Clean old log and work direcry::
+# Back up and Clean old log and work direcry:
 rm  $QA_HOME/work/*.*
 
 if [ -f $logf ]
     then rm $logf
 fi
 
-echo "Runing data_load.sh " 2>&1 | tee -a $logf
-echo "========================="  2>&1 | tee -a $logf
-echo "" 2>&1 | tee -a $logf
-data_load.sh  2>&1 | tee -a $logf
+if [ ! -f jaguar_test_list.txt ]
+    then
+        echo "File not existed: jaguar_test_list.txt"
+fi
 
-echo "Runing create_db1_egift.sh now "     2>&1 | tee -a $logf
-echo "=================================="  2>&1 | tee -a $logf
-create_db1_egift.sh 2>&1 | tee -a $logf
+export VER=`cat $JAGUAR_HOME/conf/version.txt`
+echo "##################################################################" 2>&1 | tee -a $logf
+echo "#" 2>&1 | tee -a $logf
+echo "# Automated regression test for jaguar database version $VER"     2>&1 | tee -a $logf
+echo "# Date: `date`" 2>&1 | tee -a $logf
+echo "#" 2>&1 | tee -a $logf
+echo -e "#################################################################\n" 2>&1 | tee -a $logf
 
+i=0
+cat jaguar_test_list.txt |
+while read line
+do
+    i=$(($i+1))
+    
+    echo "#################################################" 2>&1 | tee -a $logf
+    echo "# Test $i `ls  $line`"  2>&1 | tee -a $logf
+    echo -e "#################################################\n" 2>&1 | tee -a $logf
 
-echo ""  2>&1 | tee -a $logf
-echo "Runing import_export_csv.sh now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
+    $line 2>&1 | tee -a $logf 
 
-# import_export_csv.sh  2>&1 | tee -a $logf
+done
 
-echo ""  2>&1 | tee -a $logf
-echo "Runing import_export_sql.sh  now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
-# import_export_sql.sh 2>&1 | tee -a $logf
-
-#echo ""  2>&1 | tee -a $logf
-echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
-echo "Runing column_default1.sh  now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
-column_default1.sh 2>&1 | tee -a $logf
-
-#  time_stamp.sh  2>&1 | tee -a $logf
-
-
-echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
-echo "Runing column_default2.sh  now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
-column_default2.sh 2>&1 | tee -a $logf
+echo "done with test"
 
 
-echo -e "\nNew Feature in 2.8.2.3 " 2>&1 | tee -a $logf
-echo "Runing column_default3.sh  now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
-column_default3.sh 2>&1 | tee -a $logf
+echo -e "\n#################################################\n" 2>&1 | tee -a $logf
+echo "# Summary:" 2>&1 | tee -a $logf
+echo "# Total exexuted tests:"  2>&1 | tee -a $logf
+echo "ls $QA_HOME/work/*.log" 2>&1 | tee -a $logf
 
-
-echo -e "\nNew Feature in 2.8.3 " 2>&1 | tee -a $logf
-echo "Runing function1.sh  now " 2>&1 | tee -a $logf
-echo "============================"  2>&1 | tee -a $logf
-function1.sh 2>&1 | tee -a $logf
-
+echo -e "Total suc files: `ls $QA_HOME/work/*.suc |wc`"  2>&1 | tee -a $logf
+echo "Total dif files: `ls $QA_HOME/work/*.dif`" 2>&1 | tee -a $logf
 

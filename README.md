@@ -1,6 +1,4 @@
 ## Instruction on Running automated test for jaguar database
-### Create by Andrew Zhang, 12/4/2017 
-
 
 This framework consists of the following components/folders:
 ```
@@ -193,7 +191,3 @@ which: loginj: unknown command
 - Trying to fix binary diff files or find a workaround;
 - Add status at the end of test, such as: total *suc files and *diff files
 
-Your comments and advice are warmly welcome! 
-
-Andrew Zhang
-agz1117@hotmail.com

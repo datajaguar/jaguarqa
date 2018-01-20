@@ -1,0 +1,60 @@
+Jaguar Server 2.8.4.1 139622124324608 / Client 2.8.4.1
+
+jaguar:test> # SQL Name: data_load1.sql
+
+jaguar:test> #Commented the following due to Bug034
+#dropdb jag_data_load;
+
+jaguar:test> drop table if exists data_load;
+Done in 4 milliseconds 
+jaguar:test> 
+jaguar:test> spool  $QA_HOME/work/data_load1.out; 
+Done in 314 microseconds 
+jaguar:test> 
+jaguar:test> createdb jag_data_load;
+Done in 2 milliseconds 
+jaguar:test> use jag_data_load;
+Done in 1348 microseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
+Done in 4 milliseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> desc data_load;  
+Done in 58 microseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> load $QA_HOME/data/10kLine.txt into data_load;
+Done in 402 milliseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> sleep 5;
+jaguar:jag_data_load> 
+jaguar:jag_data_load> select count(*) from  data_load;
+Done in 543 microseconds 
+jaguar:jag_data_load> select * from data_load  where v3 = "Apple31234567890";
+Done in 31 milliseconds (1 row) 
+jaguar:jag_data_load> select * from jag_data_load.data_load  where v3 = 'Apple31234567890';
+Done in 23 milliseconds (1 row) 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> show create table data_load;
+Done in 106 microseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> use test;
+Done in 2 milliseconds 
+jaguar:test> sleep 2;
+jaguar:test> 
+jaguar:test> spool off;
+Done in 44 microseconds 
+jaguar:test> 
+jaguar:test> quit;
+Jaguar Server 2.8.4.1 139621568542464 / Client 2.8.4.1
+
+jaguar:test> jaguar:test> Done in 30 microseconds 
+jaguar:test> jaguar:test> Done in 24 milliseconds (1 row) 
+jaguar:test> test.data_load does not exist [300] [30]
+jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 24 milliseconds (1 row) 
+jaguar:jag_data_load> Done in 25 milliseconds (1 row) 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 20 microseconds 
+jaguar:jag_data_load> 
+Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load1.out
+
+Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load2.out

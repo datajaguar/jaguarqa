@@ -20,7 +20,7 @@ diff $1 $2
     else
         echo ""
         echo Failure comparing $1
-        diff $1 $2 > $QA_HOME/work/${FILE}.diff
+        diff $1 $2 > $QA_HOME/work/${FILE}.dif
     fi 
 
 
