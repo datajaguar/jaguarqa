@@ -5,3 +5,6 @@ core*
 *.suc
 *.log
 *.out
+work_*
+work_*/*.*
+
