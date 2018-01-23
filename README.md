@@ -55,7 +55,8 @@ export PATH=$QA_HOME/bin:$QA_HOME/sh:$JAGUAR_HOME/bin:$PATH
 ```
 
 ##### Tips for a successful env settings:
-Before we start to run the automated test, please make sure all the following four commands can be run and obtain a reasonable outputs as a verificaiton :
+Before we start to run the automated test, please make sure all the following four commands can be run and obtain 
+a reasonable outputs as a verificaiton :
 
 ```
 /home/andrew
@@ -76,7 +77,8 @@ Before we start to run the automated test, please make sure all the following fo
 ```
 
 #### 4) Run the test from the $QA_HOME/sh
-We should be able run test cases from anywhere on the server where we have test cases downloaded; however, it's easier to kick out the test from: jaguar_test_main.sh, such as following:
+We should be able run test cases from anywhere on the server where we have test cases downloaded; however, 
+it's easier to kick out the test from: jaguar_test_main.sh, such as following:
 
 ```
 /home/andrew/t/azhang/jaguarqa/sh
@@ -106,7 +108,8 @@ Note:
 
 #### 5) Tips to save work dirtories
 
-It's up to testers to keep the work directory. For example, we can save a work directory by attaching a version number to archiev the test results for each release:
+It's up to tester to keep the work directory. For example, we can save a work directory by attaching a version number 
+to archiev the test results for each release:
 
 ```
 /home/andrew/t/azhang/Jaguar_QA_HOME
