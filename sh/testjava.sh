@@ -1,5 +1,6 @@
 #!/bin/bash
 # Scrip Name: testjava.sh
+# Note: The unitest.sh must be run first before we run this test.
 
 . ./setpath.sh
 

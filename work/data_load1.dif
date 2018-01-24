@@ -1,0 +1,8 @@
+1c1
+< Database jag_data_load is created successfully
+---
+> Database jag_data_load exists already or create error
+3c3
+< Table data_load is created successfully
+---
+> Table data_load name was used already in current database or create error
