@@ -149,8 +149,10 @@ Some of the the setup is duplicated, which might take some extra time to run the
  
  
 ### Note: Run testing on Windows
-#### If we install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, we should be able to run the same test on windows as well; however, we might encounte a permission issues!
+#### If we install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, we should be able to run the same test on windows as well. 
 
+#### Note: If we have multiple ip address identified on the windows server (for exmaple, we might have more than one network card, or we might installed VMWare and Virtual box installed), we should set the "LISTEN_IP" in the server.conf to the same port specified the cluster.conf.
+ 
 For example, we can set a .bash_profile on the home directory for the convenience on windows:
 
 #### 1)  Set env for jaguar and QA testing
