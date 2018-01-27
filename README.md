@@ -140,7 +140,9 @@ ls *.log
 Note: Some dif files are expected due the change of time stamps or the uuid, we may look into the each log file to dif file is valid.
 
 #### Other Notes: 
-Each test case (automation script) is independent from each other, which means that we can run each one individually, or in the a group. ##### Some pro and con: 
+Each test case (automation script) is independent from each other, which means that we can run each one individually, or in the a group.
+
+##### Some pro and con: 
 ###### Pro: 
 Able to run individually and not interfere each other 
 We can pick any one for a particular purpose  
