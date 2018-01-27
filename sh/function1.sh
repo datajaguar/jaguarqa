@@ -11,8 +11,7 @@
 #: Component/Sub Comp: 
 #: Owned by: Andrew Zhang 
 #: Reviewed by:
-#: Tag: 
-#: Dependencies: QA_HOME framework and loginj 
+#: Tag: #: Dependencies: QA_HOME framework and loginj 
 #: Runnable: true
 #: Arguments: none
 #: Memory/Disk: 200MB/200MB
@@ -32,8 +31,16 @@
 export FILE=function1
 logf="$QA_HOME/work/${FILE}.log"
 
-# 
+ 
 export ADMIN_PASSWORD=jaguar
+
+if [ ! -d "$QA_HOME/work" ]; then
+	echo "No work dir"
+	mkdir $QA_HOME/work
+	echo "$QA_HOME/work was created"
+
+fi
+
 
 # Clean old log:
 if [ -f $logf ]

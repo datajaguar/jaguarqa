@@ -1,0 +1,324 @@
+##########################
+# testjava.log
+############################
+
+Check lib files... 
+-rw-r--r-- 1 Andrew Administrators   32310 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguarphp.so
+-rw-r--r-- 1 Andrew Administrators  924707 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguarpy.so
+-rw-r--r-- 1 Andrew Administrators  941551 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguarpy2.so
+-rw-r--r-- 1 Andrew Administrators  924707 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguarpy3.so
+-rw-r--r-- 1 Andrew Administrators 1552725 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguarrb.so
+-rw-r--r-- 1 Andrew Administrators 3813743 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/libJaguarClient.so
+-rw-r--r-- 1 Andrew Administrators   30059 Jan 23 14:39 /c/AGZ1/JAGUAR_HOME/jaguar/lib/libjaguargo.so
+
+Connect to jaguar at port 8888 ...
+
+Java test ...
+jar file is at: /c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguar-jdbc-2.0.jar
+
+# Command Line: javac -cp .:/c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguar-jdbc-2.0.jar example.java
+
+ Command Line: java -cp .:/c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguar-jdbc-2.0.jar example 127.0.0.1 8888
+
+# Command Line: javac -cp .:/c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguar-jdbc-2.0.jar JaguarJDBCTest.java 
+
+# Command Line: java  -cp .:/c/AGZ1/JAGUAR_HOME/jaguar/lib/jaguar-jdbc-2.0.jar JaguarJDBCTest 127.0.0.1 8888
+1,2c1,3
+< uid=00MYqUx3uqRnE6K2
+< col1=00MYqUx3uqRnE6K2
+---
+> Picked up _JAVA_OPTIONS: -Djava.net.preferIPv4Stack=true
+> uid=0h0o3ZMaG8NRh64i
+> col1=0h0o3ZMaG8NRh64i
+4c5
+< col2=newvalue
+---
+> col2=pxNCHplYlUPyC3iAjiYkfLsWRfN7jQpI
+10,12c11,13
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "00MYqUx3uqRnE6K2"
+---
+> json={
+> 	"addr" : "pxNCHplYlUPyC3iAjiYkfLsWRfN7jQpI",
+> 	"uid" : "0h0o3ZMaG8NRh64i"
+14,15c15,16
+< uid=01NHKvxjKi4UigZb
+< col1=01NHKvxjKi4UigZb
+---
+> uid=0vl1u35qIoGLpWEr
+> col1=0vl1u35qIoGLpWEr
+17c18
+< col2=newvalue
+---
+> col2=AI6HtsI9VwMTlb1lFkk9oqx6MdSb8uAG
+23,25c24,26
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "01NHKvxjKi4UigZb"
+---
+> json={
+> 	"addr" : "AI6HtsI9VwMTlb1lFkk9oqx6MdSb8uAG",
+> 	"uid" : "0vl1u35qIoGLpWEr"
+27,28c28,29
+< uid=01VpeQArnsAb1puM
+< col1=01VpeQArnsAb1puM
+---
+> uid=1mYxqgQuG4GSL0kr
+> col1=1mYxqgQuG4GSL0kr
+30c31
+< col2=newvalue
+---
+> col2=XgBaHZ8KnXptt80vuW0UbRpPT3HE315Y
+36,38c37,39
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "01VpeQArnsAb1puM"
+---
+> json={
+> 	"addr" : "XgBaHZ8KnXptt80vuW0UbRpPT3HE315Y",
+> 	"uid" : "1mYxqgQuG4GSL0kr"
+40,41c41,42
+< uid=01cJU4mhzq5jGEqI
+< col1=01cJU4mhzq5jGEqI
+---
+> uid=1tmQKv19VTD7Y8IR
+> col1=1tmQKv19VTD7Y8IR
+43c44
+< col2=newvalue
+---
+> col2=eA5ihCWsECqekrXlTh9DN8KGZnNYwtPI
+49,51c50,52
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "01cJU4mhzq5jGEqI"
+---
+> json={
+> 	"addr" : "eA5ihCWsECqekrXlTh9DN8KGZnNYwtPI",
+> 	"uid" : "1tmQKv19VTD7Y8IR"
+53,54c54,55
+< uid=01nu28vgPoNcjOSI
+< col1=01nu28vgPoNcjOSI
+---
+> uid=2CKwnjWzSNDNBfBg
+> col1=2CKwnjWzSNDNBfBg
+56c57
+< col2=newvalue
+---
+> col2=9dzwrEHxVB8RAoRBYz7mQ1VINwtoL4CS
+62,64c63,65
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "01nu28vgPoNcjOSI"
+---
+> json={
+> 	"addr" : "9dzwrEHxVB8RAoRBYz7mQ1VINwtoL4CS",
+> 	"uid" : "2CKwnjWzSNDNBfBg"
+66,67c67,68
+< uid=022cvmhTNpp04Pts
+< col1=022cvmhTNpp04Pts
+---
+> uid=2NJYHaF71IiZljb7
+> col1=2NJYHaF71IiZljb7
+69c70
+< col2=newvalue
+---
+> col2=K5EfbRlBCGIGPsFRdpNUxq1y8hwtBFyj
+75,77c76,78
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "022cvmhTNpp04Pts"
+---
+> json={
+> 	"addr" : "K5EfbRlBCGIGPsFRdpNUxq1y8hwtBFyj",
+> 	"uid" : "2NJYHaF71IiZljb7"
+79,80c80,81
+< uid=02TEwRpw2Qk5ArYz
+< col1=02TEwRpw2Qk5ArYz
+---
+> uid=2OodNRSbRQj9ns5N
+> col1=2OodNRSbRQj9ns5N
+82c83
+< col2=newvalue
+---
+> col2=lSQvACvi8M3yBkNB69OT0G4QvnZSN5D7
+88,90c89,91
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "02TEwRpw2Qk5ArYz"
+---
+> json={
+> 	"addr" : "lSQvACvi8M3yBkNB69OT0G4QvnZSN5D7",
+> 	"uid" : "2OodNRSbRQj9ns5N"
+92,93c93,94
+< uid=02UK6SFgeUoqfQ36
+< col1=02UK6SFgeUoqfQ36
+---
+> uid=2U0huWJ8y7lQzibq
+> col1=2U0huWJ8y7lQzibq
+95c96
+< col2=newvalue
+---
+> col2=xi3iqLYq9JmDb9ld3juxdcDLjYBQeKgK
+101,103c102,104
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "02UK6SFgeUoqfQ36"
+---
+> json={
+> 	"addr" : "xi3iqLYq9JmDb9ld3juxdcDLjYBQeKgK",
+> 	"uid" : "2U0huWJ8y7lQzibq"
+105,106c106,107
+< uid=02us2YtMxNWbJgCr
+< col1=02us2YtMxNWbJgCr
+---
+> uid=3QB2xnA8csZdvusv
+> col1=3QB2xnA8csZdvusv
+108c109
+< col2=newvalue
+---
+> col2=tMsI1JKjfFtLK7BLVbLsylAJMxWhZnLs
+114,116c115,117
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "02us2YtMxNWbJgCr"
+---
+> json={
+> 	"addr" : "tMsI1JKjfFtLK7BLVbLsylAJMxWhZnLs",
+> 	"uid" : "3QB2xnA8csZdvusv"
+118,119c119,120
+< uid=03KuI2UirkMSRFAm
+< col1=03KuI2UirkMSRFAm
+---
+> uid=4PioGD12mzrgmSFF
+> col1=4PioGD12mzrgmSFF
+121c122
+< col2=newvalue
+---
+> col2=yPcHDiv4h1zQKtIOiZbZAc1WJrb4jOJP
+127,129c128,130
+< json={
+< 	"addr" : "newvalue",
+< 	"uid" : "03KuI2UirkMSRFAm"
+---
+> json={
+> 	"addr" : "yPcHDiv4h1zQKtIOiZbZAc1WJrb4jOJP",
+> 	"uid" : "4PioGD12mzrgmSFF"
+
+Failure comparing /c/AGZ1/jaguarqa/work/testjava_example.out
+1c1,2
+< t.testJaguarDataSource ......................
+---
+> Picked up _JAVA_OPTIONS: -Djava.net.preferIPv4Stack=true
+> t.testJaguarDataSource ......................
+3,14c4,15
+< uid: 00MYqUx3uqRnE6K2 addr: newvalue
+< uid: 01NHKvxjKi4UigZb addr: newvalue
+< uid: 01VpeQArnsAb1puM addr: newvalue
+< uid: 01cJU4mhzq5jGEqI addr: newvalue
+< uid: 01nu28vgPoNcjOSI addr: newvalue
+< uid: 022cvmhTNpp04Pts addr: newvalue
+< uid: 02TEwRpw2Qk5ArYz addr: newvalue
+< uid: 02UK6SFgeUoqfQ36 addr: newvalue
+< uid: 02us2YtMxNWbJgCr addr: newvalue
+< uid: 03KuI2UirkMSRFAm addr: newvalue
+< insert into jbench values ( 'n11
+< line\'2', 'v11
+---
+> uid: 0h0o3ZMaG8NRh64i addr: pxNCHplYlUPyC3iAjiYkfLsWRfN7jQpI
+> uid: 0vl1u35qIoGLpWEr addr: AI6HtsI9VwMTlb1lFkk9oqx6MdSb8uAG
+> uid: 1mYxqgQuG4GSL0kr addr: XgBaHZ8KnXptt80vuW0UbRpPT3HE315Y
+> uid: 1tmQKv19VTD7Y8IR addr: eA5ihCWsECqekrXlTh9DN8KGZnNYwtPI
+> uid: 2CKwnjWzSNDNBfBg addr: 9dzwrEHxVB8RAoRBYz7mQ1VINwtoL4CS
+> uid: 2NJYHaF71IiZljb7 addr: K5EfbRlBCGIGPsFRdpNUxq1y8hwtBFyj
+> uid: 2OodNRSbRQj9ns5N addr: lSQvACvi8M3yBkNB69OT0G4QvnZSN5D7
+> uid: 2U0huWJ8y7lQzibq addr: xi3iqLYq9JmDb9ld3juxdcDLjYBQeKgK
+> uid: 3QB2xnA8csZdvusv addr: tMsI1JKjfFtLK7BLVbLsylAJMxWhZnLs
+> uid: 4PioGD12mzrgmSFF addr: yPcHDiv4h1zQKtIOiZbZAc1WJrb4jOJP
+> insert into jbench values ( 'n11
+> line\'2', 'v11
+17,30c18,34
+< 
+< 
+< t.testJaguarDataSourcePrepare ....................
+< 
+< uid: 00MYqUx3uqRnE6K2 m1: 
+< uid: 01NHKvxjKi4UigZb m1: 
+< uid: 01VpeQArnsAb1puM m1: 
+< uid: 01cJU4mhzq5jGEqI m1: 
+< uid: 01nu28vgPoNcjOSI m1: 
+< uid: 022cvmhTNpp04Pts m1: 
+< uid: 02TEwRpw2Qk5ArYz m1: 
+< uid: 02UK6SFgeUoqfQ36 m1: 
+< uid: 02us2YtMxNWbJgCr m1: 
+< uid: 03KuI2UirkMSRFAm m1: 
+---
+> uid: n11
+> line\'2 addr: v11
+> val"ue
+> 
+> 
+> t.testJaguarDataSourcePrepare ....................
+> 
+> uid: 0h0o3ZMaG8NRh64i m1: 
+> uid: 0vl1u35qIoGLpWEr m1: 
+> uid: 1mYxqgQuG4GSL0kr m1: 
+> uid: 1tmQKv19VTD7Y8IR m1: 
+> uid: 2CKwnjWzSNDNBfBg m1: 
+> uid: 2NJYHaF71IiZljb7 m1: 
+> uid: 2OodNRSbRQj9ns5N m1: 
+> uid: 2U0huWJ8y7lQzibq m1: 
+> uid: 3QB2xnA8csZdvusv m1: 
+> uid: 4PioGD12mzrgmSFF m1: 
+37,48c41,50
+< java.sql.SQLException: executeQuery failed: select * from asctable where id <=2; (test.asctable does not exist [300])
+< 	at com.jaguar.jdbc.internal.SQLExceptionMapper.get(SQLExceptionMapper.java:106)
+< 	at com.jaguar.jdbc.JaguarStatement.executeQuery(JaguarStatement.java:143)
+< 	at com.jaguar.jdbc.JaguarPreparedStatement.executeQuery(JaguarPreparedStatement.java:129)
+< 	at JaguarJDBCTest.testJaguarDataSourcePrepare(JaguarJDBCTest.java:205)
+< 	at JaguarJDBCTest.main(JaguarJDBCTest.java:37)
+< Caused by: com.jaguar.jdbc.internal.common.QueryException: executeQuery failed: select * from asctable where id <=2; (test.asctable does not exist [300])
+< 	at com.jaguar.jdbc.internal.jaguar.JaguarProtocol.executeQuery(JaguarProtocol.java:246)
+< 	at com.jaguar.jdbc.internal.jaguar.JaguarProtocol.executeQuery(JaguarProtocol.java:238)
+< 	at com.jaguar.jdbc.JaguarStatement.executeQuery(JaguarStatement.java:138)
+< 	... 3 more
+< 
+---
+> select id, count(1) as cnt, sum(phone) as sum from asctable where id<2; 
+> *************************************
+> update asctable set phone=111 where id>10;
+> id: 5 phone: 117
+> delete from asctable where id>10;
+> select * from asctable
+> id: 5 phone: 117
+> select id, phone from asctable where id < ? and ( phone > 232 or phone > ? ) and id < 100 
+> id: 5 phone: 117
+> 
+50c52
+< t.testMetaData ...................................
+---
+> t.testMetaData ...................................
+57c59
+< 
+---
+> 
+60a63
+> table: asctable cat: test type: TABLE
+64,65c67
+< table: function1 cat: test type: TABLE
+< table: function1_pow cat: test type: TABLE
+---
+> table: egift_item_test cat: test type: TABLE
+111d112
+< db: system
+112a114
+> db: casco
+114d115
+< 
+116c117,118
+< t.testDriver .........................................
+---
+> 
+> t.testDriver .........................................
+
+Failure comparing /c/AGZ1/jaguarqa/work/testjava_JaguarJDBCTest.out

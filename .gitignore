@@ -1,10 +1,6 @@
 template.sh
 core*
 .*swp
-work/*.dif
-*.suc
-*.log
-*.out
 work_*
 work_*/*.*
 *.class
