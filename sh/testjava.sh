@@ -1,6 +1,5 @@
 #!/bin/bash
 # Scrip Name: testjava.sh
-# Note: The unitest.sh must be run first before we run this test.
 
 . ./setpath.sh
 
@@ -37,14 +36,16 @@ echo -e "\n# Command Line: javac -cp .:$jar example.java"           2>&1 | tee -
 javac -cp .:$jar example.java                       2>&1 | tee -a $logf
 
 echo -e "\n Command Line: java -cp .:$jar example $SERVER $port"   2>&1 | tee -a $logf
-java -cp .:$jar example $SERVER $port > $QA_HOME/work/testjava_example.out 2>&1 | tee -a $logf
+java -Djava.library.path=$LD_LIBRARY_PATH  -cp .:$jar example $SERVER $port > $QA_HOME/work/testjava_example.out 2>&1 | tee -a $logf
 
 # Part 2: JaguarJDBCTest.java
 echo -e "\n# Command Line: javac -cp .:$jar JaguarJDBCTest.java " 2>&1 | tee -a $logf 
+
+
 javac -cp .:$jar JaguarJDBCTest.java                2>&1 | tee -a $logf
 
 echo -e "\n# Command Line: java  -cp .:$jar JaguarJDBCTest $SERVER $port" 2>&1 | tee -a $logf
-java  -cp .:$jar JaguarJDBCTest  $SERVER  $port > $QA_HOME/work/testjava_JaguarJDBCTest.out 2>&1 | tee -a $logf
+java  -Djava.library.path=$LD_LIBRARY_PATH -cp .:$jar JaguarJDBCTest  $SERVER  $port > $QA_HOME/work/testjava_JaguarJDBCTest.out 2>&1 | tee -a $logf
 
 # Compare the test result
 compare_result $QA_HOME/work/testjava_example.out $QA_HOME/bas/testjava_example.bas 2>&1 | tee -a $logf

@@ -1,7 +1,7 @@
 template.sh
 core*
 .*swp
-.dif
+work/*.dif
 *.suc
 *.log
 *.out
