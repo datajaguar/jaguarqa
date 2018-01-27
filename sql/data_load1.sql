@@ -1,7 +1,7 @@
 # SQL Name: data_load1.sql
 
 #Commented the following due to Bug034
-#dropdb jag_data_load;
+dropdb jag_data_load;
 
 drop table if exists data_load;
 
