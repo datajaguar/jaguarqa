@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script Name: 1_createtable.sh
+# Note: Cassandra using SimpleStrategy (one data center) with replication factor 3
 
 echo "drop keyspace mykeyspace ..."
 keypace="drop KEYSPACE mykeyspace;"
