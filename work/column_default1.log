@@ -1,0 +1,53 @@
+
+1. Create table and load data
+Jaguar Server 2.8.5.2 140427673913088 / Client 2.8.5.2
+
+jaguar:test> jaguar:test> Table column_default is dropped successfully
+Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 142 microseconds 
+jaguar:test> jaguar:test> Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 197 microseconds 
+jaguar:test> jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 4 microseconds 
+jaguar:test> Done in 5 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 8 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> Done in 6 microseconds 
+jaguar:test> Done in 7 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 17 milliseconds (11 rows) 
+jaguar:test> jaguar:test> Done in 14 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+17,27c17,27
+< emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[ork0d66STYkix94ZklLNlcwgdFV5696670387248] 
+< emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[QvYJuqtPfFp358WlIMTzaDuvFIB5696670387248] 
+< emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[siTO6mMPRbiEqY3t1cnmSafrkRT5696670387248] 
+< emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[NuAoXSfJWzvLqE124Z6w0gTk63y5696670387248] 
+< emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[ylnr8PZuMRHtNhZwFByIGvMau035696670387248] 
+< emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[M65iEoF4vt3XdTFHEUE9zfHfVa15696670387248] 
+< emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[5EZ7p6cHIylK3OM11FEIhymq7C55696670387248] 
+< emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[lvekBSkGhqQX6oiRq6Dr7g5OvDa5696670387248] 
+< emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[UIKZ3gdoP4Ivj6lgcHw17CCwISB5696670387248] 
+< emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[1sMkQcCOpJUgAQASnKVl4g6Pzil5696670387248] 
+< emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[wmcEgVpdWDpisr0VK4eZfVvg16T5696670387248] 
+---
+> emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[Fgh1AleJsNqQ5TqRJHXhbmBXHVU5696692057703] 
+> emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[ROGLKVczQPDJ23PYTIjzFuFurqf5696692057703] 
+> emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[Dkmob94XTY7qMW3vW4jSX1bwGG95696692057703] 
+> emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[95xmJRH53QaYJ857SZalVfENaGX5696692057703] 
+> emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[HkDOtGmOpdvvelDc2Jf9BchW5uz5696692057703] 
+> emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[TFdOkxp8Z5uNtGgWSBz3BgiKRvZ5696692057703] 
+> emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[Lyukr9xdt5CB2G4N9I35ACEDdUU5696692057703] 
+> emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[VJnUuVoNlvkyYn9ynPCaYkd1UPD5696692057703] 
+> emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[w0vqVeLOGGctZIMyE9HcxuOFs6T5696692057703] 
+> emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[VfqPUF6Vdp8WSTmIYd6PXNLeW7N5696692057703] 
+> emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[tZG6vHBTANCotizVifHOTOt4jXQ5696692057703] 
+
+Failure comparing /home/andrew/t/azhang/jaguarqa/work/column_default1.out
+End of test column_default1.sh

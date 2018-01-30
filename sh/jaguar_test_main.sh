@@ -41,6 +41,7 @@ logf="$QA_HOME/work/${FILE}.log"
 rm  $QA_HOME/work/*.*
 
 if [ -f $logf ]
+
     then rm $logf
 fi
 
@@ -78,11 +79,16 @@ done
 
 echo -e "\n\n#################################################\n" 2>&1 | tee -a $logf
 echo -e "\n# Summary:\n" 2>&1 | tee -a $logf
-echo -e "# Total excuted tests:\n"  2>&1 | tee -a $logf
-echo "`ls $QA_HOME/work/*.log`\n" 2>&1 | tee -a $logf
+echo -e "# Total excuted tests:   \n"  2>&1 | tee -a $logf
+echo -e "`ls $QA_HOME/work/*.log` \n"  2>&1 | tee -a $logf
 
-echo -e "Total suc files: `ls $QA_HOME/work/*.suc` \n"  2>&1 | tee -a $logf
-echo -e "Total dif files: `ls $QA_HOME/work/*.dif` \n" 2>&1 | tee -a $logf
+# Check suc and dif files:
+
+echo -e "Total suc files: \n "  2>&1 | tee -a $logf
+echo "`ls $QA_HOME/work/*.suc` \n"  2>&1 | tee -a $logf
+
+echo -e "Total dif files: \n" 2>&1 | tee -a $logf
+echo "`ls $QA_HOME/work/*.dif` \n" 2>&1 | tee -a $logf
 
 
 # Ending time:
@@ -94,8 +100,8 @@ let hours=deltatime/3600
 let minutes=(deltatime/60)%60
 let seconds=deltatime%60
 
-echo -e "\nTotal time in second: $deltatime"  2>&1 | tee -a $logf 
-printf "Total time in hour:min:sec: %d:%02d:%02d \n"  2>&1 | tee -a $logf
+echo -e "\nTotal testing time in second: $deltatime"  2>&1 | tee -a $logf 
+printf "Total testing time in hour:min:sec: %d:%02d:%02d \n" $hours $minutes $seconds 2>&1 | tee -a $logf
 
 
 

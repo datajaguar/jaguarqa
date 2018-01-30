@@ -1,0 +1,77 @@
+
+1. Create table and load data
+Jaguar Server 2.8.5.2 140428456105728 / Client 2.8.5.2
+
+jaguar:test> jaguar:test> jaguar:test> Table function1 is dropped successfully
+Done in 3 milliseconds 
+jaguar:test> Table function1_pow is dropped successfully
+Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 119 microseconds 
+jaguar:test> jaguar:test> Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 196 microseconds 
+jaguar:test> jaguar:test> Done in 581 milliseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 313 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 39 milliseconds (1 row) 
+jaguar:test> Done in 39 milliseconds (1 row) 
+jaguar:test> Done in 36 milliseconds (1 row) 
+jaguar:test> Done in 32 milliseconds (1 row) 
+jaguar:test> Done in 31 milliseconds (1 row) 
+jaguar:test> Done in 29 milliseconds (1 row) 
+jaguar:test> Done in 47 milliseconds (1 row) 
+jaguar:test> Done in 28 milliseconds (1 row) 
+jaguar:test> Done in 27 milliseconds (1 row) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> error: Invalid command [select upper(id_num)  from test.function1 limit r32;]. Please check its syntax. -2570 [20]
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> error: Invalid command [select substr(random1, 2, 4, 'UTF8')  from test.function1 limit 3select substring(random1, 2, 4, 'utf8')  from test.function1 limit 3;]. Please check its syntax. -2570 [20]
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 4 milliseconds 
+jaguar:test> Done in 263 microseconds 
+jaguar:test> jaguar:test> Done in 7 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 17 milliseconds (1 row) 
+jaguar:test> jaguar:test> Done in 15 milliseconds (1 row) 
+jaguar:test> Done in 15 milliseconds (1 row) 
+jaguar:test> jaguar:test> jaguar:test> Done in 38 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+23,24c23,24
+< first(random1):[89.490805] 
+< last(random1):[16.253132] 
+---
+> first(random1):[8904908050580959200.000000] 
+> last(random1):[1602531316693833500.000000] 
+28,29c28,29
+< acos(random1):[0.000000] 
+< acos(random1):[0.000000] 
+---
+> acos(random1):[-1.000000] 
+> acos(random1):[-1.000000] 
+
+Failure comparing /home/andrew/t/azhang/jaguarqa/work/function1.out
+End of test function1.sh

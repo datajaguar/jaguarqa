@@ -58,6 +58,8 @@ jaguarstart_on_all_hosts.sh
 loginj <  $QA_HOME/sql/${FILE}2.sql 2>&1 | tee -a $logf
 #wait
 
+echo -e "Result:  \n" 2>&1 | tee -a $logf
+
 export FILE=data_load1
 compare_result  $QA_HOME/work/${FILE}.out  $QA_HOME/bas/${FILE}.bas 2>&1 | tee -a $logf
 
