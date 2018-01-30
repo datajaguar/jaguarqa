@@ -24,6 +24,12 @@
 
 #: 10/23/2017 Andrew
 #  Modified on ssd
+#: History
+#: 1/29/2018, Updated for windows 
+
+#: Note: 
+#: Please be cautious when run this script: it will delete all the previouse data
+#: and logs file.
 
 # env settings
 PORT=`cat $JAGUAR_HOME/conf/server.conf |grep PORT|grep -v oport|grep -v '#'|cut -d= -f2`
@@ -39,36 +45,56 @@ if [ -f $logf ]; then
     rm $logf
 fi
 
+echo "##################################" 2>&1 | tee -a $logf
 echo "##### Jaguar Initialization  #####" 2>&1 | tee -a $logf
-echo "##############################" 2>&1 | tee -a $logf
+echo "##################################" 2>&1 | tee -a $logf
 
-echo "Part 1: jaguarstop_on_all_hosts.sh " 2>&1 | tee -a $logf
-echo "#########################################################" 2>&1 | tee -a $logf
-echo " "  >> $logf
+echo -e "\n# Part 1: Stop jaguar database " 2>&1 | tee -a $logf
+echo "##################################" 2>&1 | tee -a $logf
 
 # Shutdown servers 
-jaguarstop_on_all_hosts.sh 2>&1 | tee -a $logf
+un=`uname -o`
+if [[ "x$un" = "xMsys" ]]; then
+	exec $JAGUAR_HOME/bin/jaguarstop 	2>&1 | tee -a $logf
+elif	[[ "x$un" = "xCygwin" ]]; then 		2>&1 | tee -a $logf
+	exec $JAGUAR_HOME/bin/jaguarstop
+else 
+	exec $JAGUAR_HOME/bin/jaguarstop_on_all_hosts.sh 2>&1 | tee -a $logf
 
-wait 2>&1 | tee -a $logf
+fi
 
-jaguarstatus_on_all_hosts.sh 2>&1 | tee -a $logf
-
-wait
+wait 
 
 # clean up
-echo "Part 3: jaguarstart_on_all_hosts.sh " 2>&1 | tee -a $log 
 
-# Start:
-
-echo "Part 4: Run clean_all.sh " 2>&1 | tee -a $logf
-echo "#########################################################" 2>&1 | tee -a $logf
-echo " "  >> $logf
-
-clean_all.sh 2>&1 | tee -a $logf
+echo -e "\n# Part 2: Clean data and logs " 2>&1 | tee -a $logf
+echo "########################################" 2>&1 | tee -a $logf
 
 
-jaguarstart_on_all_hosts.sh 2>&1 | tee -a $logf
+if [[ "x$un" = "xMsys" ]]; then
+        $QA_HOME/sh/clean_all_windows.sh        2>&1 | tee -a $logf
+elif    [[ "x$un" = "xCygwin" ]]; then     2>&1 | tee -a $logf
+	$QA_HOME/sh/clean_all_windows.sh
+else
+      $QA_HOME/sh/clean_all.sh 2>&1 | tee -a $logf
+fi 
 
-wait 2>&1 | tee -a $logf
+
+# Start servers
+echo -e "\n# Part 3: Start jaguar database" 2>&1 | tee -a $logf
+echo "#######################################" 2>&1 | tee -a $logf
+
+un=`uname -o`
+if [[ "x$un" = "xMsys" ]]; then
+	exec $JAGUAR_HOME/bin/jaguarstart 	2>&1 | tee -a $logf
+elif    [[ "x$un" = "xCygwin" ]]; then
+        exec exec $JAGUAR_HOME/bin/jaguarstart	2>&1 | tee -a $logf
+else
+        exec $JAGUAR_HOME/bin/jaguarstart_on_all_hosts.sh 2>&1 | tee -a $logf
+fi
+
+	
+wait
+
 
 

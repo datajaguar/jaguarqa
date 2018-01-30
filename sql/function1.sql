@@ -4,6 +4,7 @@
 # pow caused core dump now: Bug030_20171121 
 
 drop table if exists function1;
+drop table if exists function1_pow;
 
 spool  $QA_HOME/work/function1.out; 
 
@@ -75,7 +76,6 @@ select length(random5)  from test.function1 limit 3;
 select length(ID_Num)  from test.function1 limit 3;
 
 # Test bug Bug030_20171121 (core dump when out of bound for "pow")
-drop table if exists function1_pow;
 create table function1_pow ( key: ID_Num char(32), Random1 double(30,28), Random2 double(30,28), Random3 double(30,28));
 desc function1_pow;
 

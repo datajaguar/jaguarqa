@@ -43,8 +43,8 @@ fi
 
 
 # Clean old log:
-if [ -f $logf ]
-    then mv $logf ${logf}_old
+if [ -f $logf ]; then
+    rm $logf 
 fi
 
 # 1.Create table schema

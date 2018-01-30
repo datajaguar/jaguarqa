@@ -103,7 +103,6 @@ length(random5):[9.000000]
 length(id_num):[32.000000] 
 length(id_num):[32.000000] 
 length(id_num):[32.000000] 
-Table function1_pow is dropped successfully
 Table function1_pow is created successfully
 table test.function1_pow
 (
