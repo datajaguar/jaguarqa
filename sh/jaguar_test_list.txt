@@ -1,6 +1,6 @@
 data_load.sh
 create_db1_egift.sh
-function1.sql
+function1.sh
 column_default1.sh
 column_default2.sh
 column_default3.sh

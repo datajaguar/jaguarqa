@@ -27,6 +27,11 @@
 # 3. ADMIN_PASSWORD 
 # 
 
+# Starting time
+t1=`date +%s`
+echo -e "\n==> Starting time is t1: $t1, `date` \n"
+
+
 export ADMIN_PASSWORD=jaguar
 
 FILE=jaguar_test_main
@@ -72,9 +77,25 @@ do
 done
 
 echo -e "\n\n#################################################\n" 2>&1 | tee -a $logf
-echo "# Summary:" 2>&1 | tee -a $logf
-echo "# Total excuted tests:"  2>&1 | tee -a $logf
-echo "`ls $QA_HOME/work/*.log`" 2>&1 | tee -a $logf
+echo -e "\n# Summary:\n" 2>&1 | tee -a $logf
+echo -e "# Total excuted tests:\n"  2>&1 | tee -a $logf
+echo "`ls $QA_HOME/work/*.log`\n" 2>&1 | tee -a $logf
 
-echo -e "Total suc files: `ls $QA_HOME/work/*.suc`"  2>&1 | tee -a $logf
-echo "Total dif files: `ls $QA_HOME/work/*.dif`" 2>&1 | tee -a $logf
+echo -e "Total suc files: `ls $QA_HOME/work/*.suc` \n"  2>&1 | tee -a $logf
+echo -e "Total dif files: `ls $QA_HOME/work/*.dif` \n" 2>&1 | tee -a $logf
+
+
+# Ending time:
+t2=`date +%s`
+echo -e "\n\n ===> Ending time is t2: $t2, `date`"
+
+let deltatime=t2-t1
+let hours=deltatime/3600
+let minutes=(deltatime/60)%60
+let seconds=deltatime%60
+
+echo -e "\nTotal time in second: $deltatime"  2>&1 | tee -a $logf 
+printf "Total time in hour:min:sec: %d:%02d:%02d \n"  2>&1 | tee -a $logf
+
+
+
