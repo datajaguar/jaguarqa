@@ -1,0 +1,41 @@
+Table create_table_bank is created successfully
+table test.create_table_bank
+(
+  key:
+    id uuid,
+  value:
+    age int,
+    job char(50),
+    marital char(10),
+    education char(50),
+    default_1 char(3),
+    balance int,
+    housing char(10),
+    loan char(10),
+    contact char(10),
+    day int,
+    month char(10),
+    duration int,
+    campaign int,
+    pdays int,
+    previous int,
+    poutcome char(10),
+    y char(10),
+    spare_ char(87)
+);
+
+test.create_table_bank contains 45211 rows
+test.create_table_bank contains 90422 rows
+test.create_table_bank contains 135633 rows
+age:[18] value:[36.000000] 
+age:[19] value:[105.000000] 
+age:[20] value:[150.000000] 
+age:[21] value:[237.000000] 
+age:[22] value:[387.000000] 
+age:[23] value:[606.000000] 
+age:[24] value:[906.000000] 
+age:[25] value:[1581.000000] 
+age:[26] value:[2415.000000] 
+age:[27] value:[2727.000000] 
+age:[28] value:[3114.000000] 
+age:[29] value:[3555.000000] 
