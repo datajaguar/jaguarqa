@@ -1,6 +1,11 @@
 # create a table to laod car plate with some random data:
+# Script Name: car_plate.sql
 
-table test.function1
+drop table if exists test.carPlate;
+
+spool  $QA_HOME/work/carPlate.out;
+
+create table test.carPlate
 (
       key:
         id_num char(32),
@@ -12,4 +17,17 @@ table test.function1
         value:
         spare_ char(57)
 );
+desc test.carPlate;
+
+load  $QA_HOME/data/carPlate.txt into test.carPlate;
+
+sleep 4;
+
+select count(*) from test.carPlate;
+
+spool off;
+
+quit;
+
+
 

@@ -1,0 +1,17 @@
+Database jag_delete_data is created successfully
+Database is changed successfully
+Table delete_data is created successfully
+table jag_delete_data.delete_data
+(
+  key:
+    uid char(32),
+  value:
+    v1 char(16),
+    v2 char(16),
+    v3 char(16),
+    spare_ char(24)
+);
+
+uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
+jag_delete_data.delete_data contains 10004 rows
+jag_delete_data.delete_data contains 10004 rows
