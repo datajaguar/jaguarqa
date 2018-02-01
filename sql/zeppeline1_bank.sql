@@ -1,9 +1,9 @@
 
-drop table if exists create_table_bank;
+drop table if exists zeppeline1_bank;
 
-spool create_table_bank.out;
+spool zeppeline1_bank.out;
 
-create table create_table_bank
+create table zeppeline1_bank 
 (
     key:
         id uuid,
@@ -27,21 +27,21 @@ create table create_table_bank
         y varchar (10) 
 );
 
-desc create_table_bank;
+desc zeppeline1_bank;
 
-load /home/andrew/bank-full.csv into create_table_bank;
+load /home/andrew/bank-full.csv into zeppeline1_bank;
 sleep 2;
-select count(*) from create_table_bank;
+select count(*) from zeppeline1_bank;
 
-load /home/andrew/bank-full.csv into create_table_bank;
+load /home/andrew/bank-full.csv into zeppeline1_bank;
 sleep 2;
-select count(*) from create_table_bank;
+select count(*) from zeppeline1_bank;
 
-load /home/andrew/bank-full.csv into create_table_bank;
+load /home/andrew/bank-full.csv into zeppeline1_bank;
 sleep 2;
-select count(*) from create_table_bank;
+select count(*) from zeppeline1_bank;
 
-select age, count(1) value from create_table_bank where age<30 group by age order by age;
+select age, count(1) value from zeppeline1_bank where age<30 group by age order by age;
 
 spool off;
 
