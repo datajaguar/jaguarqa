@@ -1,42 +1,7 @@
 
 1. Create table and load data
-Jaguar Server 2.8.5.2 140427663406848 / Client 2.8.5.2
+Jaguar Server 2.8.5.2 140556510406400 / Client 2.8.5.2
 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Table column_default2 is dropped successfully
-Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 126 microseconds 
-jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 210 microseconds 
-jaguar:test> jaguar:test> Done in 8 microseconds 
-jaguar:test> Done in 4 microseconds 
-jaguar:test> Done in 4 microseconds 
-jaguar:test> Done in 4 microseconds 
-jaguar:test> Done in 4 microseconds 
-jaguar:test> jaguar:test> Done in 4 microseconds 
-jaguar:test> Done in 4 microseconds 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 200 microseconds 
-jaguar:test> Done in 16 milliseconds (7 rows) 
-jaguar:test> jaguar:test> Done in 14 microseconds 
-jaguar:test> 
-2. Check Correctness...
-============================== 
-
-18,19c18
-< id:[0uWTtYaoXCev7NwTC6rEO5MNrpi5696675487253] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023190] tm2:[2018-01-29 20:40:53.023190] tm3:[1969-12-31 16:00:00.000000] 
-< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023311] tm2:[2018-01-29 20:40:53.023311] tm3:[1969-12-31 16:00:00.000000] 
----
-> id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.501124] tm2:[2018-01-29 17:52:16.501124] tm3:[1969-12-31 16:00:00.000000] 
-21,24c20,24
-< id:[ATM2ls0s4TBU9hnkVqPRm4zVka15696675487253] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023289] tm2:[2018-01-29 20:40:53.023289] tm3:[1969-12-31 16:00:00.000000] 
-< id:[WX4epxFV0zlkUKND3QzQ0g81zxu5696675487253] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023248] tm2:[2018-01-29 20:40:53.023248] tm3:[1969-12-31 16:00:00.000000] 
-< id:[sIY9ETbQiGvbE3wYXfKziA68zmh5696675487253] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023269] tm2:[2018-01-29 20:40:53.023269] tm3:[1969-12-31 16:00:00.000000] 
-< id:[uvrwtUsmnpvJk5VNaJi3josVbwH5696675487253] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 20:40:53.023225] tm2:[2018-01-29 20:40:53.023225] tm3:[1969-12-31 16:00:00.000000] 
----
-> id:[BsQwY6YHkidcDjoYAPNXRPmcarc5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.500122] tm2:[2018-01-29 17:52:16.500122] tm3:[1969-12-31 16:00:00.000000] 
-> id:[FRaqbC8wSA1XvpFVjCRGryWtIIZ5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.498223] tm2:[2018-01-29 17:52:16.498223] tm3:[1969-12-31 16:00:00.000000] 
-> id:[R4ZDgC81TbdkSmLAztxc1o8yfog5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.501124] tm2:[2018-01-29 17:52:16.501124] tm3:[1969-12-31 16:00:00.000000] 
-> id:[S2TRqf69aZbLAX3cf3ednHM3SOl5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.499121] tm2:[2018-01-29 17:52:16.499121] tm3:[1969-12-31 16:00:00.000000] 
-> id:[bpH71yEXUIEAOeIiGXix4A2DreB5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.500122] tm2:[2018-01-29 17:52:16.500122] tm3:[1969-12-31 16:00:00.000000] 
-
-Failure comparing /home/andrew/t/azhang/jaguarqa/work/column_default2.out
-End of test column_default2.sh
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 5 milliseconds 
+jaguar:test> jaguar:test> Done in 597 microseconds 
+jaguar:test> jaguar:test> 

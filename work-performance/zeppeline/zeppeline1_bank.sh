@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#: Script Name: zeppeline1_bank.sh  
+#: Script Name: zeppeline1_bank.sh 
 #: Authors: Andrew Zhang
 #: Reviewers:
 #: Date: 1/30/2018
@@ -24,7 +24,7 @@
 
 # Note: currently this is a bug
 # Run this test in command line:
-# nohup zeppeline1_bank.sh > zeppeline1_bank.sh.out &
+# nohup zeppeline1_bank.sh  > zeppeline1_bank.sh.out & 
 
 
 # Need two system environments:
@@ -44,10 +44,9 @@ if [ -f $logf ]
     then rm $logf
 fi
 
-# 1) Create table:
+# 1) Create table with load 30,000,000 rows:
 
 loginj < $QA_HOME/sql/zeppeline1_bank_createTable.sql 2>&1 | tee -a $logf
-
 
 t1=`date +%s`
 echo -e "\n==> Starting time is t1: $t1, `date` \n"
@@ -61,7 +60,10 @@ num=2200
 for i in $(seq "$num")
 do
     echo "Load data for the number: ${i}th time" 2>&1 | tee -a $logf
+    sleep 1
     loginj < $QA_HOME/sql/zeppeline1_bank_loadData.sql 
+    echo "Done once"
+    sleep 1
 done
 
 wait

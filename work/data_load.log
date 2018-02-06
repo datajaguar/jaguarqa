@@ -1,64 +1,64 @@
-Jaguar Server 2.8.5.2 140428506535680 / Client 2.8.5.2
+Jaguar Server 2.8.5.2 140554008286976 / Client 2.8.5.2
 
 jaguar:test> # SQL Name: data_load1.sql
 
 jaguar:test> #Commented the following due to Bug034
 dropdb jag_data_load;
 Database jag_data_load is dropped successfully
-Done in 4 milliseconds 
+Done in 215 milliseconds 
 jaguar:test> 
 jaguar:test> drop table if exists data_load;
-Done in 2 milliseconds 
+Done in 6 milliseconds 
 jaguar:test> 
 jaguar:test> spool  $QA_HOME/work/data_load1.out; 
-Done in 40 microseconds 
+Done in 589 microseconds 
 jaguar:test> 
 jaguar:test> createdb jag_data_load;
-Done in 1401 microseconds 
+Done in 5 milliseconds 
 jaguar:test> use jag_data_load;
-Done in 2 milliseconds 
+Done in 5 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
-Done in 2 milliseconds 
+Done in 77 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> desc data_load;  
-Done in 202 microseconds 
+Done in 895 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> load $QA_HOME/data/10kLine.txt into data_load;
-Done in 475 milliseconds 
+Done in 1724 milliseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> sleep 5;
 jaguar:jag_data_load> 
 jaguar:jag_data_load> select count(*) from  data_load;
-Done in 349 microseconds 
+Done in 10 milliseconds 
 jaguar:jag_data_load> select * from data_load  where v3 = "Apple31234567890";
-Done in 22 milliseconds (1 row) 
+Done in 95 milliseconds (1 row) 
 jaguar:jag_data_load> select * from jag_data_load.data_load  where v3 = 'Apple31234567890';
-Done in 22 milliseconds (1 row) 
+Done in 94 milliseconds (1 row) 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> show create table data_load;
-Done in 93 microseconds 
+Done in 200 microseconds 
 jaguar:jag_data_load> 
 jaguar:jag_data_load> use test;
-Done in 1494 microseconds 
+Done in 6 milliseconds 
 jaguar:test> sleep 2;
 jaguar:test> 
 jaguar:test> spool off;
-Done in 43 microseconds 
+Done in 93 microseconds 
 jaguar:test> 
 jaguar:test> quit;
-Jaguar Server 2.8.5.2 140428472915712 / Client 2.8.5.2
+Jaguar Server 2.8.5.2 140559024903936 / Client 2.8.5.2
 
-jaguar:test> jaguar:test> Done in 34 microseconds 
-jaguar:test> jaguar:test> Done in 22 milliseconds (1 row) 
+jaguar:test> jaguar:test> Done in 85 microseconds 
+jaguar:test> jaguar:test> Done in 99 milliseconds (1 row) 
 jaguar:test> test.data_load does not exist [300] [30]
-jaguar:test> jaguar:test> Done in 2 milliseconds 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 22 milliseconds (1 row) 
-jaguar:jag_data_load> Done in 23 milliseconds (1 row) 
-jaguar:jag_data_load> jaguar:jag_data_load> Done in 19 microseconds 
+jaguar:test> jaguar:test> Done in 5 milliseconds 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 97 milliseconds (1 row) 
+jaguar:jag_data_load> Done in 98 milliseconds (1 row) 
+jaguar:jag_data_load> jaguar:jag_data_load> Done in 86 microseconds 
 jaguar:jag_data_load> Result:  
 
 
-Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load1.out
+Success comparing /home/andrew/jaguarqa/work/data_load1.out
 
-Success comparing /home/andrew/t/azhang/jaguarqa/work/data_load2.out
+Success comparing /home/andrew/jaguarqa/work/data_load2.out

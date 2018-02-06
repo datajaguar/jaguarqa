@@ -1,0 +1,26 @@
+Table zeppeline1_bank is created successfully
+table test.zeppeline1_bank
+(
+  key:
+    id uuid,
+  value:
+    age int,
+    job char(50),
+    marital char(10),
+    education char(50),
+    default_1 char(3),
+    balance int,
+    housing char(10),
+    loan char(10),
+    contact char(10),
+    day int,
+    month char(10),
+    duration int,
+    campaign int,
+    pdays int,
+    previous int,
+    poutcome char(10),
+    y char(10),
+    spare_ char(87)
+);
+

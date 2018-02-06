@@ -1,0 +1,8 @@
+
+1. Create table and load data
+Jaguar Server 2.8.5.2 140559138141952 / Client 2.8.5.2
+
+jaguar:test> jaguar:test> Table column_default is dropped successfully
+Done in 132 milliseconds 
+jaguar:test> jaguar:test> Done in 594 microseconds 
+jaguar:test> jaguar:test> 

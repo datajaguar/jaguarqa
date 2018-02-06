@@ -1,0 +1,40 @@
+Jaguar Server 2.8.5.2 140469682026240 / Client 2.8.5.2
+
+jaguar:test> jaguar:test> Table zeppeline1_bank_2 is dropped successfully
+Done in 488 milliseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 10 milliseconds 
+jaguar:test> jaguar:test> Done in 96 milliseconds 
+jaguar:test> jaguar:test> Done in 819 microseconds 
+jaguar:test> jaguar:test> Done in 348 microseconds 
+jaguar:test> 
+==> Starting time is t1: 1517871083, Mon Feb  5 14:51:23 PST 2018 
+
+Load data for the number: 1th time
+Jaguar Server 2.8.5.2 140468918679296 / Client 2.8.5.2
+
+jaguar:test> jaguar:test> uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+uuid?
+Done in 7605 milliseconds 
+jaguar:test> jaguar:test> 
+
+ ===> Ending time is t2: 1517876796, Mon Feb  5 16:26:36 PST 2018
+
+Total time in second: 5713
+Total time in hour:min:sec: 1:35:13 
