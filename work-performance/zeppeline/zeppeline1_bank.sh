@@ -4,11 +4,9 @@
 #: Authors: Andrew Zhang
 #: Reviewers:
 #: Date: 1/30/2018
-#: Purpose:     Prepare for testing datavisualization in zeppeline.
-#: Test cases:
-#       Use case 1:
+#: Purpose:     Prepare for testing data visualization in zeppeline.
+#:              Create table load back data close to 30,000,000 row.
 #       -------------------------------------------------------------------
-#
 #: Component/Sub Comp:
 #: Owned by: Andrew Zhang
 #: Reviewed by:
