@@ -1,3 +1,7 @@
+# JaguarDB Test Automation 
+
+This automation framework will enable automated testing for regression, new feature testing and performance testing, etc for Jaguar database.
+
 ## Instruction on Running automated test for jaguar database
 
 The jaguar testing framework consists of the following components/folders:
