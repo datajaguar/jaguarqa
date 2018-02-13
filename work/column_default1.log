@@ -1,59 +1,41 @@
 
 1. Create table and load data
-Jaguar Server 2.8.5.2 140557196023552 / Client 2.8.5.2
+Jaguar Server 2.8.6 / Client 2.8.6
 
-jaguar:test> jaguar:test> Done in 4 milliseconds 
-jaguar:test> jaguar:test> Done in 525 microseconds 
-jaguar:test> jaguar:test> Done in 4 milliseconds 
-jaguar:test> jaguar:test> Done in 269 microseconds 
-jaguar:test> jaguar:test> Done in 20 microseconds 
-jaguar:test> Done in 12 microseconds 
-jaguar:test> Done in 12 microseconds 
-jaguar:test> Done in 11 microseconds 
-jaguar:test> Done in 11 microseconds 
-jaguar:test> Done in 12 microseconds 
-jaguar:test> Done in 12 microseconds 
-jaguar:test> Done in 11 microseconds 
+jaguar:test> jaguar:test> Done in 43 milliseconds 
+jaguar:test> jaguar:test> Done in 171 microseconds 
+jaguar:test> jaguar:test> Done in 24 milliseconds 
+jaguar:test> jaguar:test> Done in 533 microseconds 
+jaguar:test> jaguar:test> Done in 145 microseconds 
 jaguar:test> Done in 13 microseconds 
-jaguar:test> Done in 7 microseconds 
-jaguar:test> Done in 6 microseconds 
-jaguar:test> jaguar:test> Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('101','Jason','Zhang','94588','20','M','','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('1011','Mike','','94588','40','m1','0','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('102','Andrew','Zhang','94588','','','1','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('103','Sherry','','94588','','F','2','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('104','Jerry','','94588','23','h','A','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('105','Kevein','','94588','','','a','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('106','Kevein','','94588','','','B','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('107','Kevein','','94588','','','b','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('108','Kevein','','94588','','','7','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('109','Kevein','','94588','','','8','');] [test.column_default does not exist [300]]
-Query error[200]: [insert into test.column_default (emp_id,first_name,last_name,zip_code,age,sex,category,uuid) values ('1012','Vinod','','94588','40','zz','10','');] [test.column_default does not exist [300]]
-jaguar:test> jaguar:test> test.column_default does not exist [300] [30]
-jaguar:test> jaguar:test> Done in 344 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 12 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 12 microseconds 
+jaguar:test> Done in 13 microseconds 
+jaguar:test> Done in 11 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 22 milliseconds (11 rows) 
+jaguar:test> jaguar:test> Done in 31 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 
 
-1,2c1,27
-< Table column_default name was used already in current database or create error
-< column_default does not exist
+17,27c17,27
+< emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[uN6GWMBATckouUzu7PDlSyukWWD3453218778065] 
+< emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[kqRBUEGABs99klrGNldgs2TLSpf3453218778065] 
+< emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[cl9NDzFfthV1QlaXDuohfJut9vm3453218778065] 
+< emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[TnJ8y5glIPYVhgOg4ap2LRq148v3453218778065] 
+< emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[Y2ZtAcqrlK3ACI3N3lXiRjmDMzM3453218778065] 
+< emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[euK5sM2UnfkMy4P6Gv9rwsnNhG93453218778065] 
+< emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[Pp0YhrFW4OiKrrtXTpM9RGcrbI63453218778065] 
+< emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[rG8pIQIJF5aZOMYrvhPZ6ZWYwNc3453218778065] 
+< emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[yfYS8kCfSFvbliahxo5MsdbsX0T3453218778065] 
+< emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[UqGEFboID9JxuWPguT3AxyHZ27k3453218778065] 
+< emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[bIXD7BMwjAd0fgae2Vauosjnwgj3453218778065] 
 ---
-> Table column_default is created successfully
-> table test.column_default
-> (
->   key:
->     emp_id int,
->   value:
->     first_name char(10),
->     last_name char(10),
->     zip_code char(5),
->     age int DEFAULT '9',
->     sex char(2) DEFAULT 'M',
->     category bit DEFAULT b'1',
->     uuid uuid,
->     spare_ char(27)
-> );
-> 
 > emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[Fgh1AleJsNqQ5TqRJHXhbmBXHVU5696692057703] 
 > emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[ROGLKVczQPDJ23PYTIjzFuFurqf5696692057703] 
 > emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[Dkmob94XTY7qMW3vW4jSX1bwGG95696692057703] 

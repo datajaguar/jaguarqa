@@ -58,6 +58,5 @@ table starbucks.egift_item
     spare_ char(1141)
 );
 
-Table egift_item is dropped successfully
 Database is changed successfully
 Database starbucks is dropped successfully

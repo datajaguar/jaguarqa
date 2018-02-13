@@ -1,0 +1,12 @@
+
+
+name := "TestJDBC Project"
+version := "1.0"
+scalaVersion := "2.10.4"
+
+resolvers += Classpaths.typesafeResolver
+
+libraryDependencies += "org.apache.spark" %% "spark-core" % "1.4.1"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.4.1"
+
+#addSbtPlugin("com.jaguar.jdbc" % "jaguar-jdbc" % "2.0")

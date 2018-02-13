@@ -16,6 +16,7 @@ for hostname in $(cat $hs); do
     ssh $hostname "/bin/rm -rf $JAGUAR_HOME/log/delta"
     ssh $hostname "/bin/rm -rf $JAGUAR_HOME/log/cmd"
     ssh $hostname "/bin/rm -rf $JAGUAR_HOME/log/core*"
+    ssh $hostname "/bin/rm -rf $JAGUAR_HOME/log/jaguar.*"
     ssh $hostname "ls -l $JAGUAR_HOME/log"
 done
 

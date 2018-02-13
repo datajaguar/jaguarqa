@@ -1,7 +1,17 @@
 
 1. Create table and load data
-Jaguar Server 2.8.5.2 140555690440448 / Client 2.8.5.2
+Jaguar Server 2.8.6 / Client 2.8.6
 
-jaguar:test> jaguar:test> Done in 43 milliseconds 
-jaguar:test> jaguar:test> Done in 527 microseconds 
-jaguar:test> jaguar:test> 
+jaguar:test> jaguar:test> Done in 44 milliseconds 
+jaguar:test> jaguar:test> Done in 240 microseconds 
+jaguar:test> jaguar:test> Done in 26 milliseconds 
+jaguar:test> Done in 561 microseconds 
+jaguar:test> jaguar:test> Done in 225 microseconds 
+jaguar:test> 
+2. Check Correctness...
+============================== 
+
+
+Success comparing /home/andrew/jaguarqa/work/column_default3.out
+
+End of test column_default3.sh

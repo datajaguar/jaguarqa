@@ -1,0 +1,9 @@
+#
+# Command Line: loginj < script.sql
+#
+# ~/jaguar/bin/jag -u admin -p jaguar -h :1117 -d test $@
+
+PORT=`grep PORT $JAGUAR_HOME/conf/server.conf |grep -v '#' | awk -F= '{print $2}'`
+HOST=localhost
+
+$JAGUAR_HOME/bin/jag -u admin -p jaguar -h $HOST:$PORT -x yes $@

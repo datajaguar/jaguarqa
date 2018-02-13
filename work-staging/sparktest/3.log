@@ -1,0 +1,142 @@
+Fri Feb  9 10:48:05 PST 2018
+18/02/09 10:48:06 INFO spark.SparkContext: Running Spark version 1.6.0
+18/02/09 10:48:07 INFO spark.SecurityManager: Changing view acls to: andrew
+18/02/09 10:48:07 INFO spark.SecurityManager: Changing modify acls to: andrew
+18/02/09 10:48:07 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(andrew); users with modify permissions: Set(andrew)
+18/02/09 10:48:07 INFO util.Utils: Successfully started service 'sparkDriver' on port 41509.
+18/02/09 10:48:08 INFO slf4j.Slf4jLogger: Slf4jLogger started
+18/02/09 10:48:08 INFO Remoting: Starting remoting
+18/02/09 10:48:08 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.7.151:53481]
+18/02/09 10:48:08 INFO Remoting: Remoting now listens on addresses: [akka.tcp://sparkDriverActorSystem@192.168.7.151:53481]
+18/02/09 10:48:08 INFO util.Utils: Successfully started service 'sparkDriverActorSystem' on port 53481.
+18/02/09 10:48:08 INFO spark.SparkEnv: Registering MapOutputTracker
+18/02/09 10:48:08 INFO spark.SparkEnv: Registering BlockManagerMaster
+18/02/09 10:48:08 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-088f47c9-aba8-43b2-a79e-f0c51e5c0d41
+18/02/09 10:48:08 INFO storage.MemoryStore: MemoryStore started with capacity 530.0 MB
+18/02/09 10:48:08 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+18/02/09 10:48:08 WARN util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+18/02/09 10:48:08 INFO util.Utils: Successfully started service 'SparkUI' on port 4041.
+18/02/09 10:48:08 INFO ui.SparkUI: Started SparkUI at http://192.168.7.151:4041
+18/02/09 10:48:08 INFO spark.SparkContext: Added JAR file:/home/andrew/jaguar/lib/jaguar-jdbc-2.0.jar at spark://192.168.7.151:41509/jars/jaguar-jdbc-2.0.jar with timestamp 1518202088630
+18/02/09 10:48:08 INFO spark.SparkContext: Added JAR file:/home/andrew/sparktest/target/scala-2.10/testscalajdbc_2.10-1.0.jar at spark://192.168.7.151:41509/jars/testscalajdbc_2.10-1.0.jar with timestamp 1518202088630
+18/02/09 10:48:08 INFO executor.Executor: Starting executor ID driver on host localhost
+18/02/09 10:48:08 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51948.
+18/02/09 10:48:08 INFO netty.NettyBlockTransferService: Server created on 51948
+18/02/09 10:48:08 INFO storage.BlockManager: external shuffle service port = 7337
+18/02/09 10:48:08 INFO storage.BlockManagerMaster: Trying to register BlockManager
+18/02/09 10:48:08 INFO storage.BlockManagerMasterEndpoint: Registering block manager localhost:51948 with 530.0 MB RAM, BlockManagerId(driver, localhost, 51948)
+18/02/09 10:48:08 INFO storage.BlockManagerMaster: Registered BlockManager
+18/02/09 10:48:09 ERROR spark.SparkContext: Error initializing SparkContext.
+java.net.ConnectException: Call From dell3/192.168.7.151 to dell2:8020 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:791)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:731)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1408)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:230)
+	at com.sun.proxy.$Proxy12.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:762)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:256)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:104)
+	at com.sun.proxy.$Proxy13.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:2121)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:1215)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:1211)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1211)
+	at org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:100)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:561)
+	at TestScalaJDBC$.sparkInsert(TestScalaJDBC.scala:356)
+	at TestScalaJDBC$.main(TestScalaJDBC.scala:51)
+	at TestScalaJDBC.main(TestScalaJDBC.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:731)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:530)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:494)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:614)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:713)
+	at org.apache.hadoop.ipc.Client$Connection.access$2900(Client.java:375)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1524)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1447)
+	... 30 more
+18/02/09 10:48:09 INFO ui.SparkUI: Stopped Spark web UI at http://192.168.7.151:4041
+18/02/09 10:48:09 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/02/09 10:48:09 INFO storage.MemoryStore: MemoryStore cleared
+18/02/09 10:48:09 INFO storage.BlockManager: BlockManager stopped
+18/02/09 10:48:09 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+18/02/09 10:48:09 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/02/09 10:48:09 INFO spark.SparkContext: Successfully stopped SparkContext
+Exception in thread "main" java.net.ConnectException: Call From dell3/192.168.7.151 to dell2:8020 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:791)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:731)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1408)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:230)
+	at com.sun.proxy.$Proxy12.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:762)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:256)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:104)
+	at com.sun.proxy.$Proxy13.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:2121)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:1215)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:1211)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1211)
+	at org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:100)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:561)
+	at TestScalaJDBC$.sparkInsert(TestScalaJDBC.scala:356)
+	at TestScalaJDBC$.main(TestScalaJDBC.scala:51)
+	at TestScalaJDBC.main(TestScalaJDBC.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:731)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:530)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:494)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:614)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:713)
+	at org.apache.hadoop.ipc.Client$Connection.access$2900(Client.java:375)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1524)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1447)
+	... 30 more
+18/02/09 10:48:09 INFO remote.RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+18/02/09 10:48:09 INFO util.ShutdownHookManager: Shutdown hook called
+18/02/09 10:48:09 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-b88adeb8-fe6f-47ba-8abe-f7a9b771bcb2
+18/02/09 10:48:09 INFO remote.RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+Fri Feb  9 10:48:10 PST 2018
+Total 1518202085 --- 1518202090  5 seconds

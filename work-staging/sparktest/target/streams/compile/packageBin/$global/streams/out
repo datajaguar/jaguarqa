@@ -1,0 +1,17 @@
+[0m[[0minfo[0m] [0mPackaging /home/kwan/sparktest/target/scala-2.10/testscalajdbc_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$$anonfun$sparkfunc2$2.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$2.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$$anonfun$sparkfunc2$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$1.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$$anonfun$insert_raw_cache$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$insert_raw_cache$1.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$$anonfun$randomStringFromCharList$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$randomStringFromCharList$1.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC$$anonfun$sparkfunc2$3.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$3.class[0m
+[0m[[0mdebug[0m] [0m	TestScalaJDBC.class[0m
+[0m[[0mdebug[0m] [0m	  /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

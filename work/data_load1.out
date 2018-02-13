@@ -1,7 +1,7 @@
-Database jag_data_load is created successfully
-Database is changed successfully
+Database jag_data_load exists already or create error
+Database is NOT changed
 Table data_load is created successfully
-table jag_data_load.data_load
+table test.data_load
 (
   key:
     uid char(32),
@@ -12,10 +12,9 @@ table jag_data_load.data_load
     spare_ char(24)
 );
 
-jag_data_load.data_load contains 10005 rows
+test.data_load contains 10005 rows
 uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
-uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
-create table jag_data_load.data_load
+create table test.data_load
 (
   key:
     uid char(32),

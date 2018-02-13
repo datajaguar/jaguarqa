@@ -1,0 +1,345 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /home/kwan/sparktest/target/scala-2.10/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.4
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+7 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$insert_raw_cache$1.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$randomStringFromCharList$1.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$1.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$2.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$3.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$.class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC.class
+binary dependencies:
+8 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/org.apache.spark/spark-catalyst_2.10/jars/spark-catalyst_2.10-1.4.1.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.4.1.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/org.apache.spark/spark-sql_2.10/jars/spark-sql_2.10-1.4.1.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /home/kwan/sparktest/lib/jaguar-jdbc-2.0.jar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+7 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$$anonfun$insert_raw_cache$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$$anonfun$randomStringFromCharList$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$$anonfun$sparkfunc2$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$$anonfun$sparkfunc2$2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC$$anonfun$sparkfunc2$3
+used names:
+234 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> !=
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> $
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> &&
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> *
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> +
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ++
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ->
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> /
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> <
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> <=
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> <init>
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ===
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> >
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> >=
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> AnyRef
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Array
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Char
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Class
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ClassTag
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Codec
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Configuration
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Connection
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Date
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> DriverManager
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> FileSystem
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> IndexedSeq
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Int
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> JaguarDataSource
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Level
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Logger
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Map
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> OFF
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Ordering
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Path
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Predef
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Random
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ResultSet
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> SQLContext
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Seq
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> SimpleDateFormat
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Source
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> SparkConf
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> SparkContext
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> String
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> StringBuilder
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> StringContext
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> System
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> TestScalaJDBC
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Throwable
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> URI
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> Unit
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> _pt
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> _pt2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> _ptlen
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> _rand
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> and
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> any2ArrowAssoc
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> apache
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> append
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> apply
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> args
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> arr
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> asc
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> augmentString
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> avg
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> builder
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> c
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> cache
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> canBuildFrom
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> card_cover
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> card_id
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> charWrapper
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> chars
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> close
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> coalesce
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> code_check_no
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> code_no
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> collect
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> collection
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> com
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> commit
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> conf
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> conn
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> count
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> createStatement
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> currentTimeMillis
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> delete
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> desc
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> describe
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> df
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> distinct
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> dropDuplicates
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> except
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> executeUpdate
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> fallbackSystemCodec
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> filter
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> flog_time
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> forName
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> foreach
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> format
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> formatLog
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> fpath
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> freqItems
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> fromFile
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> fs
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> get
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getConnection
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getDate
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getDay
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getHours
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getLines
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getLogger
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getMinutes
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getMonth
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getTime
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> getYear
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> groupBy
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> hadoop
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> hadoopConf
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> hdfs
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> i
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> immutable
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> implicits
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> insertIntoJDBC
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> intWrapper
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> internal
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> intersect
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> io
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> ip
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> iprod
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> jaguar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> java
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> jdbc
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> join
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> k12
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> lang
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> len
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> length
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> limit
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> line
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> load
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log4j
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_10
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_30
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_5
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_d
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_h
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_m
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_ms
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_q
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_w
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_y
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> log_time_ymd
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> makeInsert
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> map
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> materializeClassTag
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> math
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> msg
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> net
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> newBuilder
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> nextDouble
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> nextInt
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> nextPrintableChar
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> options
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> orderBy
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> org
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> output
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> package
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> parse
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> people
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> people2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> persist
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> port
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> price
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> printSchema
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> println
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> prod_id
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> prod_name
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> prod_no
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> prod_type
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> q
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> qual$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> qual$2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> randomAlphaNumericString
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> randomNum
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> randomString
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> randomStringFromCharList
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> rdd
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> read
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> refArrayOps
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> registerTempTable
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> row
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sample
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> saveAsTextFile
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sb
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sc
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> scala
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> select
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> setAppName
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> setLevel
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> show
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sk1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sk2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sort
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> spark
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sparkConf
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sparkInsert
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> split
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sql
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> sqlContext
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> st2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> stat
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> status
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> text
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> to
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> toInt
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> toJSON
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> toString
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> types
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> unionAll
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> update
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> url
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> util
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> uuid
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> where
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> while$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> while$2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> while$3
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> x$1
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> x$2
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> x$3
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> x$4
+product stamps:
+7 items
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$insert_raw_cache$1.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$randomStringFromCharList$1.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$1.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$2.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$$anonfun$sparkfunc2$3.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC$.class -> lastModified(1489005479000)
+/home/kwan/sparktest/target/scala-2.10/classes/TestScalaJDBC.class -> lastModified(1489005479000)
+source stamps:
+1 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> hash(1ee73ceb823f730e69fe247c1ac6e2deda13c2fb)
+binary stamps:
+8 items
+/home/kwan/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar -> lastModified(1338025419000)
+/home/kwan/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> lastModified(1381127427000)
+/home/kwan/.ivy2/cache/org.apache.spark/spark-catalyst_2.10/jars/spark-catalyst_2.10-1.4.1.jar -> lastModified(1436942059000)
+/home/kwan/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.4.1.jar -> lastModified(1436942079000)
+/home/kwan/.ivy2/cache/org.apache.spark/spark-sql_2.10/jars/spark-sql_2.10-1.4.1.jar -> lastModified(1436942057000)
+/home/kwan/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar -> lastModified(1395179160000)
+/home/kwan/sparktest/lib/jaguar-jdbc-2.0.jar -> lastModified(1485836510000)
+/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/rt.jar -> lastModified(1360280999000)
+class names:
+8 items
+/home/kwan/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar -> org.apache.log4j.Category
+/home/kwan/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> org.apache.hadoop.fs.FileSystem
+/home/kwan/.ivy2/cache/org.apache.spark/spark-catalyst_2.10/jars/spark-catalyst_2.10-1.4.1.jar -> org.apache.spark.sql.Row
+/home/kwan/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.4.1.jar -> org.apache.spark.SparkContext
+/home/kwan/.ivy2/cache/org.apache.spark/spark-sql_2.10/jars/spark-sql_2.10-1.4.1.jar -> org.apache.spark.sql.DataFrameReader
+/home/kwan/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar -> scala.Boolean
+/home/kwan/sparktest/lib/jaguar-jdbc-2.0.jar -> com.jaguar.jdbc.JaguarDataSource
+/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+1 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAJ/3GoAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAInNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cHMHqQd0AAZub3RpZnlzcQB+AAx11/7YdAAKbWFrZUluc2VydHNxAH4ADLA+att0ABBpbnNlcnRfcmF3X2NhY2hlc3EAfgAMKCasC3QABHdhaXRzcQB+AAy+ODNRdAANJGFzSW5zdGFuY2VPZnNxAH4ADFwuB8V0AARfcHQyc3EAfgAMu0Enw3QABmVxdWFsc3NxAH4ADBQIC1J0AAxhc0luc3RhbmNlT2ZzcQB+AAx1wR/BdAAFX3JhbmRzcQB+AAydhJSXdAAMc3luY2hyb25pemVkc3EAfgAM6PaPMnQADHJhbmRvbVN0cmluZ3NxAH4ADLpvd650AA0kaXNJbnN0YW5jZU9mc3EAfgAMklH+OnQAA19wdHNxAH4ADFi64Pp0AAlzcGFya2Z1bmNzcQB+AAxI6YDWdAAEbWFpbnNxAH4ADF6cX0F0AAtzcGFya0luc2VydHNxAH4ADFP0QtN0AAlub3RpZnlBbGxzcQB+AAxGp7i4dAAMaXNJbnN0YW5jZU9mc3EAfgAMWEgkuHQABl9wdGxlbnNxAH4ADBU5hT90AAI9PXNxAH4ADG3Gja10AAVjbG9uZXNxAH4ADOzL+IF0ABhyYW5kb21TdHJpbmdGcm9tQ2hhckxpc3RzcQB+AAzAgrRKdAAPbWFrZUluc2VydFNob3J0c3EAfgAMTrAHt3QACHRvU3RyaW5nc3EAfgAMQcat2nQAAiE9c3EAfgAMWAng4nQAGHJhbmRvbUFscGhhTnVtZXJpY1N0cmluZ3NxAH4ADCnsC4l0AAhnZXRDbGFzc3NxAH4ADM1moKN0AApzcGFya2Z1bmMyc3EAfgAM4/HLRnQADVRlc3RTY2FsYUpEQkNzcQB+AAwzcJMudAACbmVzcQB+AAzDjpJkdAACZXFzcQB+AAyTT8mldAACIyNzcQB+AAyGTxxBdAAIZmluYWxpemVzcQB+AAyFYPCjdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBbeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAcQB+AEd1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJpY3QkMQAAAAAAAAAAAgABTAAHdmFsdWUkMXEAfgBzeHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgByAHBzcQB+AHdzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AW0wACWluaGVyaXRlZHEAfgBbTAAHcGFyZW50c3EAfgBbeHEAfgB7c3EAfgByAHBzcQB+AHd1cQB+AFYAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AFxxAH4AZXVxAH4AZgAAAABzcQB+AGgAcQB+ACt1cQB+AGoAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AenQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AHpzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AJh1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgCFeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBtdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgCMWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgB6c3EAfgCLdAAFQXJyYXlxAH4AkXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgCLdAAGU3RyaW5nc3EAfgCPc3EAfgCSdXEAfgCVAAAAA3NxAH4Al3QABGphdmFzcQB+AJd0AARsYW5ncQB+AJxzcQB+AHIAcHNxAH4Ad3VxAH4AVgAAAABzcQB+AHIAcHNxAH4Ad3VxAH4AsAAAAAJzcQB+AIt0AAZPYmplY3RxAH4AtHNxAH4Ai3QAA0FueXEAfgCRdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAABzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVqvpF5QdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQALi9ob21lL2t3YW4vc3Bhcmt0ZXN0L3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABQe5zzrgj9zDmn+JHwaxuLe2hPC+w==
+external apis:
+0 items
+source infos:
+1 items
+/home/kwan/sparktest/src/main/scala/TestScalaJDBC.scala -> 
+AAAAAAAAAAcAAAEAAACZADAJCXBlb3BsZS5pbnNlcnRJbnRvSkRCQyh1cmwsICJpbnQxMGtfMiIsIHRydWUgKTsBAAARIwEAAAAJAQAJCQkgICAgICAgAQA3L2hvbWUva3dhbi9zcGFya3Rlc3Qvc3JjL21haW4vc2NhbGEvVGVzdFNjYWxhSkRCQy5zY2FsYQEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEASG1ldGhvZCBpbnNlcnRJbnRvSkRCQyBpbiBjbGFzcyBEYXRhRnJhbWUgaXMgZGVwcmVjYXRlZDogVXNlIHdyaXRlLmpkYmMoKQEAAAEAAAGPADgJCXZhbCBsb2dfdGltZV95ID0gZmxvZ190aW1lLnBhcnNlKCBsb2dfdGltZSApLmdldFllYXIoKQEAAC6hAQAAAC8BAC8JCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEBADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAFttZXRob2QgZ2V0WWVhciBpbiBjbGFzcyBEYXRlIGlzIGRlcHJlY2F0ZWQ6IHNlZSBjb3JyZXNwb25kaW5nIEphdmFkb2MgZm9yIG1vcmUgaW5mb3JtYXRpb24uAQAAAQAAAZAAOQkJdmFsIGxvZ190aW1lX20gPSBmbG9nX3RpbWUucGFyc2UoIGxvZ190aW1lICkuZ2V0TW9udGgoKQEAAC7aAQAAAC8BAC8JCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEBADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAFxtZXRob2QgZ2V0TW9udGggaW4gY2xhc3MgRGF0ZSBpcyBkZXByZWNhdGVkOiBzZWUgY29ycmVzcG9uZGluZyBKYXZhZG9jIGZvciBtb3JlIGluZm9ybWF0aW9uLgEAAAEAAAGRADgJCXZhbCBsb2dfdGltZV9kID0gZmxvZ190aW1lLnBhcnNlKCBsb2dfdGltZSApLmdldERhdGUoKQEAAC8UAQAAAC8BAC8JCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEBADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAFttZXRob2QgZ2V0RGF0ZSBpbiBjbGFzcyBEYXRlIGlzIGRlcHJlY2F0ZWQ6IHNlZSBjb3JyZXNwb25kaW5nIEphdmFkb2MgZm9yIG1vcmUgaW5mb3JtYXRpb24uAQAAAQAAAZoANwkJdmFsIGxvZ190aW1lX3cgPSBmbG9nX3RpbWUucGFyc2UoIGxvZ190aW1lICkuZ2V0RGF5KCkBAAAwMgEAAAAvAQAvCQkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICABADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAQA3L2hvbWUva3dhbi9zcGFya3Rlc3Qvc3JjL21haW4vc2NhbGEvVGVzdFNjYWxhSkRCQy5zY2FsYQBabWV0aG9kIGdldERheSBpbiBjbGFzcyBEYXRlIGlzIGRlcHJlY2F0ZWQ6IHNlZSBjb3JyZXNwb25kaW5nIEphdmFkb2MgZm9yIG1vcmUgaW5mb3JtYXRpb24uAQAAAQAAAZsAOQkJdmFsIGxvZ190aW1lX2ggPSBmbG9nX3RpbWUucGFyc2UoIGxvZ190aW1lICkuZ2V0SG91cnMoKQEAADBqAQAAAC8BAC8JCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEBADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAFxtZXRob2QgZ2V0SG91cnMgaW4gY2xhc3MgRGF0ZSBpcyBkZXByZWNhdGVkOiBzZWUgY29ycmVzcG9uZGluZyBKYXZhZG9jIGZvciBtb3JlIGluZm9ybWF0aW9uLgEAAAEAAAGcADsJCXZhbCBsb2dfdGltZV8xID0gZmxvZ190aW1lLnBhcnNlKCBsb2dfdGltZSApLmdldE1pbnV0ZXMoKQEAADCkAQAAAC8BAC8JCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEANy9ob21lL2t3YW4vc3Bhcmt0ZXN0L3NyYy9tYWluL3NjYWxhL1Rlc3RTY2FsYUpEQkMuc2NhbGEBADcvaG9tZS9rd2FuL3NwYXJrdGVzdC9zcmMvbWFpbi9zY2FsYS9UZXN0U2NhbGFKREJDLnNjYWxhAF5tZXRob2QgZ2V0TWludXRlcyBpbiBjbGFzcyBEYXRlIGlzIGRlcHJlY2F0ZWQ6IHNlZSBjb3JyZXNwb25kaW5nIEphdmFkb2MgZm9yIG1vcmUgaW5mb3JtYXRpb24uAQ==
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWq+kXlB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQALi9ob21lL2t3YW4vc3Bhcmt0ZXN0L3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv

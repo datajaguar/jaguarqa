@@ -1,0 +1,7 @@
+1,2c1,3
+< test.data_load contains 10005 rows
+< Database is NOT changed
+---
+> uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
+> Database is changed successfully
+> uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 

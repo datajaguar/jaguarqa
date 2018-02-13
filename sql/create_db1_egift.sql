@@ -60,7 +60,7 @@ create table starbucks.egift_item
 );
 
 desc starbucks.egift_item;
-drop table  starbucks.egift_item;
+#drop table  starbucks.egift_item;
 
 use test;
 
