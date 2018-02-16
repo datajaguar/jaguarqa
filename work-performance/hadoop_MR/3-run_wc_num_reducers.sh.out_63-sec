@@ -1,0 +1,179 @@
+ 
+----- Delete the target hdfs dir -----
+> hdfs dfs -rm -R /data/wordcount/output
+18/02/15 14:48:32 INFO fs.TrashPolicyDefault: Moved: 'hdfs://quickstart.cloudera:8020/data/wordcount/output' to trash at: hdfs://quickstart.cloudera:8020/user/cloudera/.Trash/Current/data/wordcount/output1518734912327
+ 
+----- Launching Hadoop Job ---- 
+ 
+  - Ignore the warning: 'WARN hdfs.DFSClient: Caught exception'
+    Its a Hadoop bug described at: https://issues.apache.org/jira/browse/HDFS-10429
+  
+> hadoop jar ./target/grid.mr-1.0.0-fat.jar edu.ucsc.grid.mr.DriverNumReducers  /data/wordcount/input  /data/wordcount/output
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Hadoop job Wordcount Job with # reducers
+18/02/15 14:48:34 INFO mr.DriverNumReducers:  Jar file       : [/home/cloudera/workspace/grid-mr/./target/grid.mr-1.0.0-fat.jar]
+18/02/15 14:48:34 INFO mr.DriverNumReducers:  Job parameters : [/data/wordcount/input, /data/wordcount/output]
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Mapper
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - mapper class : class edu.ucsc.grid.mr.WordcountMapper
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - output key class   : class org.apache.hadoop.io.Text
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - output value class : class org.apache.hadoop.io.IntWritable
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Reducer
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - reducer class : class edu.ucsc.grid.mr.WordcountReducer
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - # of reducers : 5
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Combiner
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - combiner class : class edu.ucsc.grid.mr.WordcountReducer
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Input format class  : class org.apache.hadoop.mapreduce.lib.input.TextInputFormat
+18/02/15 14:48:34 INFO mr.DriverNumReducers: Output
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - format class : class org.apache.hadoop.mapreduce.lib.output.TextOutputFormat
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - key class    : class org.apache.hadoop.io.Text
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - value class  : class org.apache.hadoop.io.IntWritable
+18/02/15 14:48:34 INFO mr.DriverNumReducers: HDFS locations
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - Input  : /data/wordcount/input
+18/02/15 14:48:34 INFO mr.DriverNumReducers:   - Output : /data/wordcount/output
+18/02/15 14:48:34 INFO client.RMProxy: Connecting to ResourceManager at quickstart.cloudera/127.0.0.1:8032
+18/02/15 14:48:35 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+18/02/15 14:48:35 INFO input.FileInputFormat: Total input paths to process : 3
+18/02/15 14:48:35 INFO mapreduce.JobSubmitter: number of splits:3
+18/02/15 14:48:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1518722462579_0025
+18/02/15 14:48:36 INFO impl.YarnClientImpl: Submitted application application_1518722462579_0025
+18/02/15 14:48:36 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1518722462579_0025/
+18/02/15 14:48:36 INFO mapreduce.Job: Running job: job_1518722462579_0025
+18/02/15 14:48:43 INFO mapreduce.Job: Job job_1518722462579_0025 running in uber mode : false
+18/02/15 14:48:43 INFO mapreduce.Job:  map 0% reduce 0%
+18/02/15 14:48:50 INFO mapreduce.Job:  map 33% reduce 0%
+18/02/15 14:48:55 INFO mapreduce.Job:  map 67% reduce 0%
+18/02/15 14:49:00 INFO mapreduce.Job:  map 100% reduce 0%
+18/02/15 14:49:06 INFO mapreduce.Job:  map 100% reduce 20%
+18/02/15 14:49:11 INFO mapreduce.Job:  map 100% reduce 40%
+18/02/15 14:49:15 INFO mapreduce.Job:  map 100% reduce 60%
+18/02/15 14:49:18 INFO mapreduce.Job:  map 100% reduce 80%
+18/02/15 14:49:23 INFO mapreduce.Job:  map 100% reduce 100%
+18/02/15 14:49:23 INFO mapreduce.Job: Job job_1518722462579_0025 completed successfully
+18/02/15 14:49:23 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=629
+		FILE: Number of bytes written=1032090
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=775
+		HDFS: Number of bytes written=388
+		HDFS: Number of read operations=24
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=10
+	Job Counters 
+		Launched map tasks=3
+		Launched reduce tasks=5
+		Data-local map tasks=3
+		Total time spent by all maps in occupied slots (ms)=6056960
+		Total time spent by all reduces in occupied slots (ms)=8350720
+		Total time spent by all map tasks (ms)=11830
+		Total time spent by all reduce tasks (ms)=16310
+		Total vcore-milliseconds taken by all map tasks=11830
+		Total vcore-milliseconds taken by all reduce tasks=16310
+		Total megabyte-milliseconds taken by all map tasks=6056960
+		Total megabyte-milliseconds taken by all reduce tasks=8350720
+	Map-Reduce Framework
+		Map input records=15
+		Map output records=69
+		Map output bytes=647
+		Map output materialized bytes=936
+		Input split bytes=399
+		Combine input records=69
+		Combine output records=68
+		Reduce input groups=52
+		Reduce shuffle bytes=936
+		Reduce input records=68
+		Reduce output records=52
+		Spilled Records=136
+		Shuffled Maps =15
+		Failed Shuffles=0
+		Merged Map outputs=15
+		GC time elapsed (ms)=363
+		CPU time spent (ms)=5880
+		Physical memory (bytes) snapshot=1137774592
+		Virtual memory (bytes) snapshot=5990330368
+		Total committed heap usage (bytes)=389545984
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=376
+	File Output Format Counters 
+		Bytes Written=388
+ 
+----- List output in HDFS ----
+ 
+> hdfs dfs -ls /data/wordcount/output/
+Found 6 items
+-rw-r--r--   1 cloudera supergroup          0 2018-02-15 14:49 /data/wordcount/output/_SUCCESS
+-rw-r--r--   1 cloudera supergroup         37 2018-02-15 14:49 /data/wordcount/output/part-r-00000
+-rw-r--r--   1 cloudera supergroup        128 2018-02-15 14:49 /data/wordcount/output/part-r-00001
+-rw-r--r--   1 cloudera supergroup         63 2018-02-15 14:49 /data/wordcount/output/part-r-00002
+-rw-r--r--   1 cloudera supergroup         62 2018-02-15 14:49 /data/wordcount/output/part-r-00003
+-rw-r--r--   1 cloudera supergroup         98 2018-02-15 14:49 /data/wordcount/output/part-r-00004
+ 
+----- Pull the results out cluster ----
+ 
+> hdfs dfs -getmerge /data/wordcount/output /tmp/job_results.txt
+ 
+----- List the local file ----
+ 
+> cat /tmp/job_results.txt
+But	1
+The	1
+forgets	1
+never	2
+with	1
+A	2
+An	2
+And	1
+Are	1
+Hadoop	3
+Sqoop	1
+Useful	1
+anything	1
+bad	1
+cling	1
+data	1
+gets	1
+he	1
+helps	1
+in	1
+is	4
+king	2
+lets	1
+or	1
+Hive	1
+fellow	1
+gentle	1
+mad	1
+the	2
+well	1
+what	1
+wonderful	1
+an	1
+and	3
+does	1
+extraneous	1
+group	1
+thrive	1
+to	1
+yellow	2
+Because	1
+HDFS	1
+He	2
+Impala	1
+Or	1
+elegant	2
+element	1
+elephant	3
+him	1
+mellow	1
+plays	1
+thing	1
+ 
+---- x x x ----

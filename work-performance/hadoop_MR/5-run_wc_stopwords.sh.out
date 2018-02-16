@@ -1,0 +1,64 @@
+ 
+----- Delete the target hdfs dir -----
+> hdfs dfs -rm -R /data/wordcount/output
+18/02/15 16:59:16 INFO fs.TrashPolicyDefault: Moved: 'hdfs://quickstart.cloudera:8020/data/wordcount/output' to trash at: hdfs://quickstart.cloudera:8020/user/cloudera/.Trash/Current/data/wordcount/output1518742756445
+ 
+----- Launching Hadoop Job ---- 
+ 
+  - Ignore the warning: 'WARN hdfs.DFSClient: Caught exception'
+    Its a Hadoop bug described at: https://issues.apache.org/jira/browse/HDFS-10429
+  
+> hadoop jar ./target/grid.mr-1.0.0-fat.jar edu.ucsc.grid.mr.DriverStopWords  /data/wordcount/input  /data/wordcount/output
+18/02/15 16:59:18 INFO mr.DriverStopWords: Added file to the distributed cache: /data/wordcount/other_data/stop_words.txt
+18/02/15 16:59:18 INFO mr.DriverStopWords: Hadoop job Partitioned Wordcount Job.
+18/02/15 16:59:18 INFO mr.DriverStopWords:  Jar file       : [/home/cloudera/workspace/grid-mr/./target/grid.mr-1.0.0-fat.jar]
+18/02/15 16:59:18 INFO mr.DriverStopWords:  Job parameters : [/data/wordcount/input, /data/wordcount/output]
+18/02/15 16:59:18 INFO mr.DriverStopWords: Mapper
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - mapper class : class edu.ucsc.grid.mr.WordCountStopWMapper
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - output key class   : class org.apache.hadoop.io.Text
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - output value class : class org.apache.hadoop.io.IntWritable
+18/02/15 16:59:18 INFO mr.DriverStopWords: Reducer
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - reducer class  : class edu.ucsc.grid.mr.WordcountReducer
+18/02/15 16:59:18 INFO mr.DriverStopWords: Partition
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - partitioner class  : class org.apache.hadoop.mapreduce.lib.partition.HashPartitioner
+18/02/15 16:59:18 INFO mr.DriverStopWords: Input format class  : class org.apache.hadoop.mapreduce.lib.input.TextInputFormat
+18/02/15 16:59:18 INFO mr.DriverStopWords: Output
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - format class : class org.apache.hadoop.mapreduce.lib.output.TextOutputFormat
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - key class    : class org.apache.hadoop.io.Text
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - value class  : class org.apache.hadoop.io.IntWritable
+18/02/15 16:59:18 INFO mr.DriverStopWords: HDFS locations
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - Input  : /data/wordcount/input
+18/02/15 16:59:18 INFO mr.DriverStopWords:   - Output : /data/wordcount/output
+18/02/15 16:59:18 INFO client.RMProxy: Connecting to ResourceManager at quickstart.cloudera/127.0.0.1:8032
+18/02/15 16:59:18 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+18/02/15 16:59:18 INFO mapreduce.JobSubmitter: Cleaning up the staging area /user/cloudera/.staging/job_1518740291133_0004
+18/02/15 16:59:18 WARN security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:java.io.FileNotFoundException: File does not exist: /data/wordcount/other_data/stop_words.txt
+Exception in thread "main" java.io.FileNotFoundException: File does not exist: /data/wordcount/other_data/stop_words.txt
+	at org.apache.hadoop.hdfs.DistributedFileSystem$20.doCall(DistributedFileSystem.java:1266)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$20.doCall(DistributedFileSystem.java:1258)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1258)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.getFileStatus(ClientDistributedCacheManager.java:300)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.getFileStatus(ClientDistributedCacheManager.java:224)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.determineTimestamps(ClientDistributedCacheManager.java:93)
+	at org.apache.hadoop.mapreduce.filecache.ClientDistributedCacheManager.determineTimestampsAndCacheVisibilities(ClientDistributedCacheManager.java:57)
+	at org.apache.hadoop.mapreduce.JobResourceUploader.uploadFiles(JobResourceUploader.java:179)
+	at org.apache.hadoop.mapreduce.JobSubmitter.copyAndConfigureFiles(JobSubmitter.java:99)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:194)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1307)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1304)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1917)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1304)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1325)
+	at edu.ucsc.grid.mr.DriverStopWords.run(DriverStopWords.java:96)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:84)
+	at edu.ucsc.grid.mr.DriverStopWords.main(DriverStopWords.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)

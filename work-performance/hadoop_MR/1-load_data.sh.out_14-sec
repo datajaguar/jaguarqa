@@ -1,0 +1,21 @@
+ 
+----- Delete the input hdfs dir -----
+> hdfs dfs -rm -R /data/wordcount/input
+rm: `/data/wordcount/input': No such file or directory
+ 
+----- Re-create the input hdfs dir -----
+> hdfs dfs -mkdir -p /data/wordcount/input
+ 
+----- Generating the data  -----
+----- Loading in HDFS  ---- 
+ 
+ 
+----- List the local file ----
+ 
+> hdfs dfs -ls /data/wordcount/input
+Found 3 items
+-rw-r--r--   1 cloudera supergroup        122 2018-02-15 15:03 /data/wordcount/input/HadoopPoem0.txt
+-rw-r--r--   1 cloudera supergroup        136 2018-02-15 15:03 /data/wordcount/input/HadoopPoem1.txt
+-rw-r--r--   1 cloudera supergroup        118 2018-02-15 15:03 /data/wordcount/input/HadoopPoem2.txt
+ 
+---- x x x ----
