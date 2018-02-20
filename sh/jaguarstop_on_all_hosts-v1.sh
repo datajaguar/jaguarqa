@@ -15,7 +15,7 @@ fi
 
 JAGUAR_HOME=`cat $HOME/.jaguarhome`
 hostfile="$JAGUAR_HOME/conf/cluster.conf"
-allhosts=`cat $hostfile|grep -v '#'`
+allhosts=`cat $hostfile`
 
 if [[ -f "$hostfile" ]]; then
     ## echo "OK, $hostfile is found"

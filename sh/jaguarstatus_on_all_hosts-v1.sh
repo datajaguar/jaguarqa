@@ -18,7 +18,7 @@ fi
 
 JAGUAR_HOME=`cat $HOME/.jaguarhome`
 hostfile="$JAGUAR_HOME/conf/cluster.conf"
-allhosts=`cat $hostfile|grep -v '#'`
+allhosts=`cat $hostfile`
 
 if [[ -f "$hostfile" ]]; then
     ## echo "OK, $hostfile is found"
@@ -33,7 +33,6 @@ fi
 ((good=0))
 ((bad=0))
 badhosts=""
-goodhosts=""
 for h in $allhosts
 do
 	((hnum=hnum+1))
@@ -44,7 +43,6 @@ do
 	((rc=rc+ecode))
 	if ((ecode==0)); then
 		((good=good+1))
-		goodhosts="$goodhosts $h"
 	else
 		((bad=bad+1))
 		badhosts="$badhosts $h"
@@ -54,9 +52,6 @@ done
 echo "jaguarstatus_on_all_hosts.sh  total hosts=$hnum  jaguar on=$good  jaguar off=$bad"
 if ((bad>0)); then
 	echo "Jaguar off hosts: $badhosts"
-fi
-if ((good>0)); then
-	echo "Jaguar on hosts: $goodhosts"
 fi
 exit $rc
 

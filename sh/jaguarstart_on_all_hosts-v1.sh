@@ -15,7 +15,7 @@ fi
 
 JAGUAR_HOME=`cat $HOME/.jaguarhome`
 hostfile="$JAGUAR_HOME/conf/cluster.conf"
-allhosts=`cat $hostfile|grep -v '#'`
+allhosts=`cat $hostfile`
 
 if [[ -f "$hostfile" ]]; then
     ## echo "OK, $hostfile is found"
@@ -25,11 +25,11 @@ else
     exit 1
 fi
 
-for h in $allhosts; do
+for h in $allhosts
+do
     echo "ssh $h $JAGUAR_HOME/bin/jaguarstart"
     ssh $h "$JAGUAR_HOME/bin/jaguarstart" &
 done
 
 echo "Jaguar database server is being started on all hosts ..."
-echo  " "
 
