@@ -1,6 +1,6 @@
 # JaguarDB Test Automation Framework
 
-This automation framework will enable automated testing for regression, new feature testing and performance testing, etc for Jaguar database.
+This automation framework enables automated testing for regression, new feature testing and performance testing, etc for Jaguar database. More technical info regarding to jaguar database, please refer to: http://datajaguar.com/doc/JaguarUserManual.pdf
 
 ## Instruction on Running automated test for jaguar database
 
