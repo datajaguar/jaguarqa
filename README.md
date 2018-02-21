@@ -2,7 +2,13 @@
 
 This automation framework enables automated testing for regression, new feature testing and performance testing, etc for Jaguar database. More technical info regarding to jaguar database, please refer to: http://datajaguar.com/doc/JaguarUserManual.pdf
 
-## Instruction on Running automated test for jaguar database
+## Instruction on running the automated testing for jaguar database
+
+#### Motivation: 
+The framework is structured to run anywhere on the one of the servers that has jaguar server installed. 
+Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
+
+Jaguar database automation enables automated test cases with minimum manual operation. 
 
 The jaguar testing framework consists of the following components/folders:
 
@@ -18,13 +24,6 @@ work-staging: the testing scripts currently still under development.
 work_version#: test result archives
 
 ```
-
-##### Motivation: 
-The framework is structured to run anywhere on the one of the servers that has jaguar server installed. 
-Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
-
-Jaguar database automation enables automated test cases with minimum manual operation. 
-
 Here are a few requirement and dependencies:
 #### 1) Succesful Installation
 Make sure to have a successful installation either on a single server or cluster, and all server started/stopped without errors 
