@@ -1,11 +1,11 @@
-# JaguarDB Test Automation Framework
+# JaguarDB Test Automation Framework (for both Linux and Windows)
 
 This automation framework enables automated testing for regression, new feature testing and performance testing, etc for Jaguar database. More technical info regarding to jaguar database, please refer to: http://datajaguar.com/doc/JaguarUserManual.pdf
 
 ## Instruction on running the automated testing for jaguar database
 
 #### Motivation: 
-The framework is structured to run anywhere on the one of the servers that has jaguar server installed. 
+The framework is structured to run anywhere on any of the servers that has jaguar server installed. 
 Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
@@ -43,7 +43,7 @@ $QA_HOME/work: the work directory; all the test results are here (we can rename 
 $QA_HOME/work_import_export_sql_v2.8.1.1_10_17 
 ```
 
-#### 3) Set Two System Variables 
+#### 3) System envrionment variables setup 
 System environment settings requires: 
 ```
 JAGUAR_HOME 
@@ -57,7 +57,7 @@ export QA_HOME=/home/andrew/t/azhang/jaguarqa
 export PATH=$QA_HOME/bin:$QA_HOME/sh:$JAGUAR_HOME/bin:$PATH
 ```
 
-##### Tips for a successful env settings:
+#### Tips for a successful env settings:
 Before we start to run the automated test, please make sure all the following four commands can be run and obtain 
 a reasonable outputs as a verificaiton :
 
@@ -147,17 +147,18 @@ Each test case (automation script) is independent from each other, which means t
 
 ##### Some pro and con: 
 ###### Pro: 
-Able to run individually and not interfere each other 
-We can pick any one for a particular purpose  
+Able to run individually and not interfere each other. 
+We can pick any test for a particular feature.  
 ###### Con: 
 Some of the the setup is duplicated, which might take some extra time to run the automation. 
  
  
 ### Note: Run testing on Windows
+This framework has been tested for working on the Windows as well, please pay following attention:
 
 #### If we have multiple ip address identified on the windows server (for exmaple, we might have more than one network card, or we might installed VMWare and Virtual box installed), we should set the "LISTEN_IP" in the server.conf to the same port specified the cluster.conf
 
-#### We should install MSYS-1.0.11.exe on windows and set system enviroment variable correctly, then we will be able to run the same test on windows as well. 
+#### We should install MSYS-1.0.11.exe on windows and set system enviroment variable correctly.
  
 For example, we can set a .bash_profile on the home directory for the convenience on windows:
 
@@ -197,23 +198,8 @@ alias jaguar='cd $JAGUAR_HOME'
 (Andrew@AZHANG1)\>
 ```
 
-#### Note: Currently, we ran into a permission issue on windows:
-```
- /c/AGZ1/jaguar_QA_HOME/bin
-(Andrew@AZHANG1)\>ls -l
-total 87
--rwxr-xr-x 1 Andrew Administrators   575 Nov 10 20:23 compare_result.sh
--rw-r--r-- 1 Andrew Administrators 86368 Nov 10 20:23 diff
--rw-r--r-- 1 Andrew Administrators   273 Nov 10 20:23 loginj
-
-/c/AGZ1/jaguar_QA_HOME/bin
-(Andrew@AZHANG1)\>which loginj
-which: loginj: unknown command
-```
-
 ### In progress..
 - Clean up dif files;
 - Creating more test cases;
-- Trying to fix binary diff files or find a workaround;
-- Add status at the end of test, such as: total *suc files and *diff files
+- Add status at the end of test, such as: total *suc files and *dif files
 
