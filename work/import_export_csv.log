@@ -1,69 +1,47 @@
-ssh 192.168.7.151 /home/andrew/jaguar/bin/jaguarstop
-ssh 192.168.7.136 /home/andrew/jaguar/bin/jaguarstop
-ssh 192.168.7.141 /home/andrew/jaguar/bin/jaguarstop
-ssh 192.168.7.151 /home/andrew/jaguar/bin/jaguarstatus
+ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstop
+ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
+jaguar server is running on ssd
 
-Shutdown of jaguar server on current host dell3 ...
-
-Shutdown of jaguar server on current host dell1 ...
-jaguar server is running on dell3
-ssh 192.168.7.136 /home/andrew/jaguar/bin/jaguarstatus
-
-Shutdown of jaguar server on current host dell2 ...
-jaguar server is NOT running on dell1
-ssh 192.168.7.141 /home/andrew/jaguar/bin/jaguarstatus
-jaguar server is NOT running on dell2
-jaguarstatus_on_all_hosts.sh  total hosts=3  jaguar on=1  jaguar off=2
-Jaguar off hosts:  192.168.7.136 192.168.7.141
-Jaguar on hosts:  192.168.7.151
-Mon Feb 12 15:27:56 PST 2018
+Shutdown of jaguar server on current host ssd ...
+jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=1  jaguar off=0
+Jaguar on hosts:  192.168.7.120
+Tue Feb 20 18:08:06 PST 2018
 There are still 1 jaguar servers running, wait ...
-Mon Feb 12 15:28:00 PST 2018
+Tue Feb 20 18:08:11 PST 2018
 
-Mon Feb 12 15:26:30 PST 2018
-
-Mon Feb 12 15:38:05 PST 2018
-
-ssh 192.168.7.151 /home/andrew/jaguar/bin/jaguarstatus
-jaguar server is NOT running on dell3
-ssh 192.168.7.136 /home/andrew/jaguar/bin/jaguarstatus
-jaguar server is NOT running on dell1
-ssh 192.168.7.141 /home/andrew/jaguar/bin/jaguarstatus
-jaguar server is NOT running on dell2
-jaguarstatus_on_all_hosts.sh  total hosts=3  jaguar on=0  jaguar off=3
-Jaguar off hosts:  192.168.7.151 192.168.7.136 192.168.7.141
-Jaguar database has been stopped on all 3 hosts
-ssh 192.168.7.151 /home/andrew/jaguar/bin/jaguarstart
-ssh 192.168.7.136 /home/andrew/jaguar/bin/jaguarstart
-ssh 192.168.7.141 /home/andrew/jaguar/bin/jaguarstart
+ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstatus
+jaguar server is NOT running on ssd
+jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=0  jaguar off=1
+Jaguar off hosts:  192.168.7.120
+Jaguar database has been stopped on all 1 hosts
+ssh 192.168.7.120 /home/andrew/jaguar/bin/jaguarstart
 Jaguar database server is being started on all hosts ...
-jaguar server is running on dell1
-jaguar server is running on dell3
-jaguar server is running on dell2
+ 
+jaguar server is running on ssd
 
 1. Create table and load data
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
-jaguar:test> jaguar:test> Table import_export does not exist or is dropped/truncated by another client or drop error
-Done in 43 milliseconds 
-jaguar:test> Done in 267 microseconds 
-jaguar:test> jaguar:test> Done in 41 milliseconds 
-jaguar:test> jaguar:test> Done in 1065 milliseconds 
-jaguar:test> jaguar:test> Done in 275 microseconds 
+jaguar:test> jaguar:test> Table import_export is dropped successfully
+Done in 5 milliseconds 
+jaguar:test> Done in 188 microseconds 
+jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:test> jaguar:test> Done in 486 milliseconds 
+jaguar:test> jaguar:test> Done in 201 microseconds 
 jaguar:test> 
 
 2-1. export by jagexportcsv...
 
-Mon Feb 12 15:28:26 PST 2018
+Tue Feb 20 18:08:36 PST 2018
 
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
 jaguar:test> spool /home/andrew/jaguarqa/work/test.import_export.csv;
-Done in 58 microseconds 
+Done in 44 microseconds 
 jaguar:test> select * from test.import_export timeout 1000000 exportcsv;
-Done in 77 milliseconds (10005 rows) 
+Done in 46 milliseconds (10005 rows) 
 jaguar:test> spool off;
-Done in 262 microseconds 
+Done in 161 microseconds 
 jaguar:test> quit;
 Done
 Exported CSV data is saved in 
@@ -71,39 +49,39 @@ The exported file can be imported back to database with the command:
 
     ./jagimportcsv -d test -t test.import_export -f /home/andrew/jaguarqa/work/test.import_export.csv
 
-Mon Feb 12 15:28:27 PST 2018
+Tue Feb 20 18:08:37 PST 2018
 
 2-2. Clean data...
 ============================== 
 
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
-jaguar:test> jaguar:test> Done in 73 microseconds 
-jaguar:test> Done in 82 milliseconds 
-jaguar:test> jaguar:test> Done in 261 microseconds 
+jaguar:test> jaguar:test> Done in 59 microseconds 
+jaguar:test> Done in 8 milliseconds 
+jaguar:test> jaguar:test> Done in 172 microseconds 
 jaguar:test> 
 
 2-3. Import by jagimportsql...
 ============================== 
 
-Mon Feb 12 15:28:44 PST 2018
-Jaguar Server 2.8.6 / Client 2.8.6
+Tue Feb 20 18:08:54 PST 2018
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
 jaguar:test> load /home/andrew/jaguarqa/work/test.import_export.csv into test.import_export quote terminated by '"' ;
-Done in 1003 milliseconds 
+Done in 483 milliseconds 
 jaguar:test> quit;
-Mon Feb 12 15:28:46 PST 2018
+Tue Feb 20 18:08:55 PST 2018
 
 2-4. Check Correctness...
 ============================== 
 
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
 jaguar:test> jaguar:test> Done in 62 microseconds 
-jaguar:test> jaguar:test> Done in 11 milliseconds 
-jaguar:test> Done in 31 milliseconds (1 row) 
-jaguar:test> Done in 29 milliseconds (1 row) 
-jaguar:test> jaguar:test> Done in 22 microseconds 
+jaguar:test> jaguar:test> Done in 162 microseconds 
+jaguar:test> Done in 21 milliseconds (1 row) 
+jaguar:test> Done in 22 milliseconds (1 row) 
+jaguar:test> jaguar:test> Done in 13 microseconds 
 jaguar:test> 
 
 2-5. Compare results 

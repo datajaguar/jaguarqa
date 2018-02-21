@@ -1,18 +1,4 @@
-ssh 192.168.7.151 grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=3309 diskarray=3309
-selectcount type=0 import_export keychecker=3309 diskarray=3309
-selectcount type=1 import_export keychecker=3320 diskarray=3320
-selectcount type=2 import_export keychecker=3376 diskarray=3376
-================================================================
-ssh 192.168.7.136 grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=3376 diskarray=3376
-selectcount type=0 import_export keychecker=3376 diskarray=3376
-selectcount type=1 import_export keychecker=3309 diskarray=3309
-selectcount type=2 import_export keychecker=3320 diskarray=3320
-================================================================
-ssh 192.168.7.141 grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=3320 diskarray=3320
-selectcount type=0 import_export keychecker=3320 diskarray=3320
-selectcount type=1 import_export keychecker=3376 diskarray=3376
-selectcount type=2 import_export keychecker=3309 diskarray=3309
+ssh 192.168.7.120 grep selectcount /home/andrew/jaguar/log/jaguar.log
+selectcount type=0 import_export keychecker=10005 diskarray=10005
+selectcount type=0 import_export keychecker=10005 diskarray=10005
 ================================================================

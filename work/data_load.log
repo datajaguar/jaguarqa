@@ -1,93 +1,31 @@
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
 jaguar:test> # SQL Name: data_load1.sql
 
 jaguar:test> #Commented the following due to Bug034
 dropdb jag_data_load;
-Database jag_data_load does not exist or drop error
-Done in 144 milliseconds 
+Database jag_data_load is dropped successfully
+Done in 6 milliseconds 
 jaguar:test> 
 jaguar:test> drop table if exists data_load;
-Done in 130 milliseconds 
+Table data_load is dropped successfully
+Done in 2 milliseconds 
 jaguar:test> 
 jaguar:test> spool  $QA_HOME/work/data_load1.out; 
-Done in 84 microseconds 
+Done in 166 microseconds 
 jaguar:test> 
 jaguar:test> createdb jag_data_load;
-Done in 134 milliseconds 
+Done in 2 milliseconds 
 jaguar:test> use jag_data_load;
-Done in 152 milliseconds 
-jaguar:test> 
-jaguar:test> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
-Done in 166 milliseconds 
-jaguar:test> 
-jaguar:test> desc data_load;  
-Done in 292 microseconds 
-jaguar:test> 
-jaguar:test> load $QA_HOME/data/10kLine.txt into data_load;
-Done in 1419 milliseconds 
-jaguar:test> 
-jaguar:test> sleep 5;
-jaguar:test> 
-jaguar:test> select count(*) from  data_load;
-Done in 15 milliseconds 
-jaguar:test> select * from data_load  where v3 = "Apple31234567890";
-Done in 41 milliseconds (1 row) 
-jaguar:test> select * from jag_data_load.data_load  where v3 = 'Apple31234567890';
-Invalid command of WHERE part [777]
-Error query, please try again
-jaguar:test> 
-jaguar:test> show create table data_load;
-Done in 187 microseconds 
-jaguar:test> 
-jaguar:test> use test;
-Done in 153 milliseconds 
-jaguar:test> sleep 2;
-jaguar:test> 
-jaguar:test> spool off;
-Done in 91 microseconds 
-jaguar:test> 
-jaguar:test> quit;
-Jaguar Server 2.8.6 / Client 2.8.6
-
-jaguar:test> jaguar:test> Done in 87 microseconds 
-jaguar:test> jaguar:test> Invalid command of WHERE part [20]
-Error query, please try again
-jaguar:test> Done in 12 milliseconds 
-jaguar:test> jaguar:test> Done in 169 milliseconds 
-jaguar:test> jaguar:test> Done in 31 milliseconds (1 row) 
-jaguar:test> Invalid command of WHERE part [777]
-Error query, please try again
-jaguar:test> jaguar:test> Done in 84 microseconds 
-jaguar:test> Result:  
-
-1,2c1,2
-< Database jag_data_load exists already or create error
-< Database is NOT changed
----
-> Database jag_data_load is created successfully
-> Database is changed successfully
-4c4
-< table test.data_load
----
-> table jag_data_load.data_load
-15c15,16
-< test.data_load contains 10005 rows
----
-> jag_data_load.data_load contains 10005 rows
-> uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
-17c18
-< create table test.data_load
----
-> create table jag_data_load.data_load
-
-Failure comparing /home/andrew/jaguarqa/work/data_load1.out
-1,2c1,3
-< test.data_load contains 10005 rows
-< Database is NOT changed
----
-> uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
-> Database is changed successfully
-> uid:[Dpple01234567890] v1:[green31234567890] v2:[sweetsweet312345] v3:[Apple31234567890] 
-
-Failure comparing /home/andrew/jaguarqa/work/data_load2.out
+Done in 1481 microseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> create table data_load  ( key: uid char(32), value: v1 char(16), v2 char(16), v3 char(16) );
+Done in 3 milliseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> desc data_load;  
+Done in 289 microseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> load $QA_HOME/data/10kLine.txt into data_load;
+Done in 484 milliseconds 
+jaguar:jag_data_load> 
+jaguar:jag_data_load> 

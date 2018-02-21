@@ -4,5 +4,6 @@ function1.sh
 column_default1.sh
 column_default2.sh
 column_default3.sh
+image.sh
 import_export_csv.sh
 import_export_sql.sh

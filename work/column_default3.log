@@ -1,12 +1,13 @@
 
 1. Create table and load data
-Jaguar Server 2.8.6 / Client 2.8.6
+Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
-jaguar:test> jaguar:test> Done in 44 milliseconds 
-jaguar:test> jaguar:test> Done in 240 microseconds 
-jaguar:test> jaguar:test> Done in 26 milliseconds 
-jaguar:test> Done in 561 microseconds 
-jaguar:test> jaguar:test> Done in 225 microseconds 
+jaguar:test> jaguar:test> Table column_default3 is dropped successfully
+Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 175 microseconds 
+jaguar:test> jaguar:test> Done in 3 milliseconds 
+jaguar:test> Done in 197 microseconds 
+jaguar:test> jaguar:test> Done in 13 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 

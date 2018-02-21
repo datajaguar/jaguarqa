@@ -27,10 +27,6 @@
 # 3. ADMIN_PASSWORD 
 # 
 
-# Starting time
-t1=`date +%s`
-echo -e "\n==> Starting time is t1: $t1, `date` \n"
-
 
 export ADMIN_PASSWORD=jaguar
 
@@ -38,7 +34,7 @@ FILE=jaguar_test_main
 logf="$QA_HOME/work/${FILE}.log"
 
 # Back up and Clean old log and work direcry:
-rm  $QA_HOME/work/*.*
+rm  $QA_HOME/work/*.* > /dev/null 2>&1 
 
 if [ -f $logf ]
 
@@ -47,8 +43,16 @@ fi
 
 if [ ! -f jaguar_test_list.txt ]
     then
-        echo "File not existed: jaguar_test_list.txt"
+        echo "We need jaguar_test_list.txt as an input file names; please make sure the file in the current folder!"
+        exit 1
 fi
+
+
+# Starting time
+t1=`date +%s`
+echo -e "\n==> Starting time is t1: $t1, `date` \n"
+
+
 
 export VER=`cat $JAGUAR_HOME/conf/version.txt`
 echo "##################################################################" 2>&1 | tee -a $logf

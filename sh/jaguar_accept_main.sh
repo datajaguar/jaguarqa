@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Note: This test is not currently updated!
+
 # Main test to control the batch sql
 # Script Name: jaguarMainFunc.sh
 # Created by: Andrew Zhang
