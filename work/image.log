@@ -3,20 +3,20 @@
 Jaguar Server 2.8.7.2 / Client 2.8.7.2
 
 jaguar:test> jaguar:test> jaguar:test> jaguar:test> Table image is dropped successfully
-Done in 4 milliseconds 
-jaguar:test> jaguar:test> Done in 180 microseconds 
+Done in 3 milliseconds 
+jaguar:test> jaguar:test> Done in 166 microseconds 
+jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:test> jaguar:test> Done in 203 microseconds 
 jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 195 microseconds 
-jaguar:test> jaguar:test> Done in 4 milliseconds 
-jaguar:test> Done in 3 milliseconds 
+jaguar:test> Done in 4 milliseconds 
 jaguar:test> Done in 17 milliseconds 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 17 milliseconds (3 rows) 
-jaguar:test> Done in 159 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 16 milliseconds (3 rows) 
+jaguar:test> Done in 123 microseconds 
 jaguar:test> Done in 15 milliseconds (3 rows) 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> Done in 2 milliseconds 
-jaguar:test> Done in 15 milliseconds 
-jaguar:test> jaguar:test> Done in 15 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:test> Done in 3 milliseconds 
+jaguar:test> Done in 16 milliseconds 
+jaguar:test> jaguar:test> Done in 55 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 

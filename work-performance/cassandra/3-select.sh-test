@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This is a test for creating a 10 line select.txt:
+# Command Line: ./3-select.sh-test 10 
+
+n=$1
+
+if [[ "x$n" = "x" ]]; then
+	n=500000
+fi
+
+echo "Select $n records ..."
+# ./jcallinfo -o yes -z 0 -n $n -r S -o yes > select.txt
+
+./jcallinfo -o yes -k 1 -z 0 -n $n -r S -o yes > select.txt
+
+exit
+
+date
+$HOME/software/cassandra/bin/cqlsh -k mykeyspace -f select.txt > select.out
+echo "Select $n records done"
+date

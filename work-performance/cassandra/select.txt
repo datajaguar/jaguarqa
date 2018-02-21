@@ -1,0 +1,10 @@
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=4928361235859;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=831770984468;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=2896843582739;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=5221765681709;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=2568648378987;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=5610737909352;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=3634399299219;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=4014940858286;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=1033951882712;
+select lNumberKey, tApplyTime, content from callinfo where lNumberKey=304948521712;

@@ -1,0 +1,111 @@
+Here a few test scripts for the performance test for cassandra:
+
+start_all_cassandra_concurrent.sh:  Start casssandra concurrently
+
+1-createtable.sh    Create keyspace(db) and table for Cassandra
+2_insert.sh         Insert data into Cassandra   
+3-select.sh         Select
+4-update.sh         Update
+5-delete.sh         Delete
+
+cassandra.sql       A simple script for ad hoc test
+jcallinfo           A utilty to created customzed data written in c++
+
+select_count_forever_cassandra_callinfo.sh      A script to check the data
+select_count_forever_jaguar_callinfo_jbench.sh  A script to check the data
+select_count_once_timer.sh
+
+test_cassandra_acpt.sh
+test_kill_mixdel2_start_3.sh                    Another utility 
+
+
+
+########################################
+# A few utilities Cassandra utilities:
+########################################
+
+1) nodetool status
+
+watch -n 2 nodetool status
+
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address        Load       Tokens       Owns    Host ID                               Rack
+UN  192.168.7.136  21.48 MiB  256          ?       018ddb0b-37a9-4efd-97d8-ebda9d6dc624  rack1
+UN  192.168.7.141  21.55 MiB  256          ?       685d255d-79fd-444d-8c94-be3e7cb439e8  rack1
+UN  192.168.7.116  21.51 MiB  256          ?       2c7f150c-6ad4-4afa-b8d3-58abaccf7549  rack1
+UN  192.168.7.117  20.1 MiB   256          ?       ed287b70-05fa-4ab5-b5ed-8f7a15ad8a79  rack1
+UN  192.168.7.151  21.48 MiB  256          ?       a9b6d912-03f0-47e2-bc66-2080e4b59d82  rack1
+
+Note: Non-system keyspaces don't have the same replication settings, effective ownership information is meaningless
+
+2) nodetool info
+
+ID                     : a9b6d912-03f0-47e2-bc66-2080e4b59d82
+Gossip active          : true
+Thrift active          : false
+Native Transport active: true
+Load                   : 21.48 MiB
+Generation No          : 1519183524
+Uptime (seconds)       : 1917
+Heap Memory (MB)       : 1180.79 / 8032.00
+Off Heap Memory (MB)   : 0.49
+Data Center            : datacenter1
+Rack                   : rack1
+Exceptions             : 0
+Key Cache              : entries 220169, size 15.12 MiB, capacity 100 MiB, 98 hits, 122 requests, 0.803 recent hit rate, 14400 save period in seconds
+Row Cache              : entries 0, size 0 bytes, capacity 0 bytes, 0 hits, 0 requests, NaN recent hit rate, 0 save period in seconds
+Counter Cache          : entries 0, size 0 bytes, capacity 50 MiB, 0 hits, 0 requests, NaN recent hit rate, 7200 save period in seconds
+Chunk Cache            : entries 441, size 27.56 MiB, capacity 480 MiB, 456 misses, 3628 requests, 0.874 recent hit rate, NaN microseconds miss latency
+Percent Repaired       : 0.0%
+Token                  : (invoke with -T/--tokens to see all 256 tokens)
+
+
+3) nodetool ring |more
+
+Datacenter: datacenter1
+==========
+Address        Rack        Status State   Load            Owns                Token
+                                                                              9211574478307566002
+192.168.7.117  rack1       Up     Normal  20.1 MiB        ?                   -9185341068201919176
+192.168.7.116  rack1       Up     Normal  21.51 MiB       ?                   -9169573109356670900
+192.168.7.117  rack1       Up     Normal  20.1 MiB        ?                   -9158496460784609502
+192.168.7.141  rack1       Up     Normal  21.54 MiB       ?                   -9143269192197951048
+192.168.7.117  rack1       Up     Normal  20.1 MiB        ?                   -9133484063331926422
+192.168.7.141  rack1       Up     Normal  21.54 MiB       ?                   -9118253623444109353
+192.168.7.141  rack1       Up     Normal  21.54 MiB       ?                   -9117457860570381614
+192.168.7.116  rack1       Up     Normal  21.51 MiB       ?                   -9047957014772792942
+192.168.7.151  rack1       Up     Normal  21.48 MiB       ?                   -9045819453112145957
+192.168.7.151  rack1       Up     Normal  21.48 MiB       ?                   -9037607386872327908
+192.168.7.141  rack1       Up     Normal  21.54 MiB       ?                   -9025882900034848215
+192.168.7.116  rack1       Up     Normal  21.51 MiB       ?                   -9005775045236434348
+192.168.7.151  rack1       Up     Normal  21.48 MiB       ?                   -8994580888426282396
+192.168.7.116  rack1       Up     Normal  21.51 MiB       ?                   -8993210516880014628
+192.168.7.136  rack1       Up     Normal  21.48 MiB       ?                   -8979416386138928365
+
+4) nodetool cfstats
+
+/home/dev2/t/jaguarqa/work-performance/cassandra
+(dev2@dell3)\>nodetool cfstats |more
+Keyspace : mykeyspace2
+        Read Count: 0
+        Read Latency: NaN ms.
+        Write Count: 0
+        Write Latency: NaN ms.
+        Pending Flushes: 0
+                Table: users
+                SSTable count: 0
+                Space used (live): 0
+                Space used (total): 0
+                Space used by snapshots (total): 0
+                Off heap memory used (total): 0
+                SSTable Compression Ratio: 0.0
+                Number of keys (estimate): 0
+                Memtable cell count: 0
+                Memtable data size: 0
+                Memtable off heap memory used: 0
+                Memtable switch count: 0
+                Local read count: 0
+
