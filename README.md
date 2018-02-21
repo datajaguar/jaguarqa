@@ -1,4 +1,4 @@
-# JaguarDB Test Automation 
+# JaguarDB Test Automation Framework
 
 This automation framework will enable automated testing for regression, new feature testing and performance testing, etc for Jaguar database.
 
