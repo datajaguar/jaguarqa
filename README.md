@@ -10,44 +10,36 @@ Automated test cases will check the results (successful or failure) at the end o
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
 
-#### The jaguar testing framework consists of the following components/folders:
+#### Structure and Descriptions
+The JaguarDB Test Automation Framework is consit of the following components/folders:
 
 ```
 bas: baselines files for the comparison.
-bin: utililties and customized functions, for examples, loginj, compare_result, and some tools for manapulating the config files for the database. 
-data folder: data files for testing.
-sh folder: shell scripts for running the test.
+bin: utililties and customized functions, and some tools for manapulating the config files for the database. 
+data: data files for testing.
+sh: shell scripts for running the test.
 sql: sql scripts
-work: test result files and logs.
-work-performance: performance related scripts and data (we compare with other databases, such as mongoDb and Cassandra, etc)
-work-staging: the testing scripts currently still under development.
-work_version#: test result archives
+work: testing result files and logs.
+work-performance: performance related scripts and data for benchmarking test (HBase, mongoDb and Cassandra, etc)
+work-staging: the testing scripts currently are still under development.
+work_version#: test result archives at your chioce
 
 ```
-Here are a few requirement and dependencies:
+## Test Setup:
 #### 1) Succesful Installation
-Make sure to have a successful installation either on a single server or cluster, and all server started/stopped without errors 
+Make sure to have a successful installation either on a single server or clusters, and all server started/stopped without errors 
 #### 2) Download the test framework
 We can download the test anywhere on the server, for example:
 
 ```
-/home/andrew/t/azhang
-(andrew@ssd)\>git clone https://github.com/datajaguar/jaguarqa.git
-```
-Structure and Descriptions: 
-```
-$QA_HOME/sh: where automation scripts are located. 
-$QA_HOME/bin: some predefined executable tests, such as "loginj". 
-$QA_HOME/bas: baseline for the comparison. 
-$QA_HOME/work: the work directory; all the test results are here (we can rename and archive the result into such as: 
-$QA_HOME/work_import_export_sql_v2.8.1.1_10_17 
+git clone https://github.com/datajaguar/jaguarqa.git
 ```
 
 #### 3) System envrionment variables setup 
 System environment settings requires: 
 ```
-JAGUAR_HOME 
-QA_HOME 
+JAGUAR_HOME: the home directory of the jaguar databases is installed.
+QA_HOME: the location where the jaguarqa is located.
 ```
 
 Also update the PATH accordingly. For example (on andrew@ssd): 
@@ -77,6 +69,12 @@ a reasonable outputs as a verificaiton :
 /home/andrew/t/azhang/jaguarqa
 (andrew@ssd)\>which loginj
 ~/t/azhang/jaguarqa/bin/loginj
+```
+
+Note: We can run any of ad hoc test by script by, for example:
+```
+loginj < data_load1.sql
+(The result will be archieved into the directory of $QA_HOME/work)
 ```
 
 #### 4) Run the test from the $QA_HOME/sh
@@ -121,8 +119,6 @@ total 48
 drwxrwxrwx 2 andrew andrew 4096 Nov 10 20:08 bas
 drwxrwxrwx 2 andrew andrew   54 Nov 10 20:19 bin
 drwxrwxrwx 2 andrew andrew   58 Nov 10 19:25 data
-drwxrwxrwx 2 andrew andrew 4096 Oct 23 14:48 jaguarMainFunc_log
-drwxrwxrwx 2 andrew andrew   24 Oct 23 14:48 jaguarTestData
 drwxrwxrwx 2 andrew andrew    6 Oct 23 14:48 log
 -rwxrwxr-x 1 andrew andrew 4189 Nov 10 21:36 README.md
 drwxrwxrwx 2 andrew andrew 4096 Nov 10 21:31 sh
@@ -142,11 +138,11 @@ ls *.log
 
 Note: Some dif files are expected due the change of time stamps or the uuid, we may look into the each log file to dif file is valid.
 
-#### Other Notes: 
+### Other Notes: 
 Each test case (automation script) is independent from each other, which means that we can run each one individually, or in the a group.
 
-##### Some pro and con: 
-###### Pro: 
+#### Some pro and con: 
+##### Pro: 
 Able to run individually and not interfere each other. 
 We can pick any test for a particular feature.  
 ###### Con: 
