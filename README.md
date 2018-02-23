@@ -5,12 +5,12 @@ This automation framework enables automated testing for regression, new feature 
 ## Instruction on running the automated testing for jaguar database
 
 #### Motivation: 
-The framework is structured to run anywhere on any of the servers that has jaguar server installed. 
+The framework is structured to run anywhere on any of the server that has jaguar database is installed and a few system variables are proerly set. 
 Automated test cases will check the results (successful or failure) at the end of the test under the work directory.
 
 Jaguar database automation enables automated test cases with minimum manual operation. 
 
-The jaguar testing framework consists of the following components/folders:
+#### The jaguar testing framework consists of the following components/folders:
 
 ```
 bas: baselines files for the comparison.
