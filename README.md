@@ -14,9 +14,9 @@ Jaguar database automation enables automated test cases with minimum manual oper
 
 ```
 bas: baselines files for the comparison.
-bin: utililty and customized functions.
-data: data files for testing.
-sh: shell scripts for running the test.
+bin: utililties and customized functions, for examples, loginj, compare_result, and some tools for manapulating the config files for the database. 
+data folder: data files for testing.
+sh folder: shell scripts for running the test.
 sql: sql scripts
 work: test result files and logs.
 work-performance: performance related scripts and data (we compare with other databases, such as mongoDb and Cassandra, etc)
@@ -66,7 +66,7 @@ a reasonable outputs as a verificaiton :
 (andrew@ssd)\>echo $JAGUAR_HOME
 /home/andrew/jaguar
 
-/home/andrew
+/home/andrew 
 (andrew@ssd)\>echo $QA_HOME
 /home/andrew/t/azhang/jaguarqa
 
