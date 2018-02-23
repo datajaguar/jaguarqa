@@ -1,0 +1,49 @@
+#!/bin/bash
+
+##############################################################################################################
+##
+##  Copy a file to all hosts in jaguar cluster
+##
+##  ./scpall SOURCE_FILE   DEST_PATH
+##
+##
+##############################################################################################################
+
+if [[ ! -f "$HOME/.jaguarhome" ]]; then
+	echo "Jaguar has not been installed, quit"
+	exit 1
+fi
+
+if (( $# < 1 )); then
+	echo "Usage:  $0  SOURCE_FILE  DEST_PATH"
+	exit 1
+fi
+
+JAGUAR_HOME=`cat $HOME/.jaguarhome`
+hostfile="$JAGUAR_HOME/conf/cluster.conf"
+allhosts=`cat $hostfile`
+
+if [[ -f "$hostfile" ]]; then
+    ## echo "OK, $hostfile is found"
+	/bin/true
+else
+    echo "$hostfile is not found, exit"
+    exit 1
+fi
+
+srcfile=$1
+destpath=$2
+
+if [[ "x$destpath" = "x" ]]; then
+	echo "Usage:  $0  SOURCE_FILE  DEST_PATH ..."
+	exit 1
+fi
+
+((rc=0))
+for h in $allhosts
+do
+    echo "scp $srcfile $h:$destpath"
+    scp $srcfile $h:$destpath
+	echo "================================================================"
+done
+

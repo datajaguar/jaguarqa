@@ -1,4 +1,4 @@
-# A utility to sample 10000 randomly from the text file
+# A utility to sample 10000 randomly from 700,000,000 rows 
 
 import random
 

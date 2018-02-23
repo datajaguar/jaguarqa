@@ -8,6 +8,6 @@ cat scilab_processID  |
     do
         set $line
         echo $2
-                                                      #   sleep 1
+        #   sleep 1
         kill -9 $2
    done

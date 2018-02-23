@@ -1,0 +1,44 @@
+#!/bin/bash
+
+##############################################################################################################
+##
+##  Execute a command on all jaguar hosts
+##
+##  ./sshall "command"
+##
+##
+##############################################################################################################
+
+if [[ ! -f "$HOME/.jaguarhome" ]]; then
+	echo "Jaguar has not been installed, quit"
+	exit 1
+fi
+
+if (( $# < 1 )); then
+	echo "Usage:  $0 command arg1 arg2 ..."
+	exit 1
+fi
+
+JAGUAR_HOME=`cat $HOME/.jaguarhome`
+hostfile="$JAGUAR_HOME/conf/cluster.conf"
+allhosts=`cat $hostfile`
+
+if [[ -f "$hostfile" ]]; then
+    ## echo "OK, $hostfile is found"
+	/bin/true
+else
+    echo "$hostfile is not found, exit"
+    exit 1
+fi
+
+((rc=0))
+for h in $allhosts
+do
+	if echo $h grep -iv '#' >/dev/null
+	then
+    	echo "ssh $h $@"
+    	ssh $h $@
+		echo "================================================================"
+	fi
+done
+
