@@ -149,12 +149,12 @@ We can pick any test for a particular feature.
 Some of the the setup is duplicated, which might take some extra time to run the automation. 
  
  
-### Note: Run testing on Windows
-This framework has been tested for working on the Windows as well, please pay following attention:
+### Note: Running tests on Windows
+This framework has been tested for working on the Windows as well; however, please note:
 
-#### If we have multiple ip address identified on the windows server (for exmaple, we might have more than one network card, or we might installed VMWare and Virtual box installed), we should set the "LISTEN_IP" in the server.conf to the same port specified the cluster.conf
+If we have multiple ip address identified on the windows server (for exmaple, we might have more than one network card, or we might installed VMWare and Virtual box installed), we should set the "LISTEN_IP" in the server.conf to the same port specified the cluster.conf
 
-#### We should install MSYS-1.0.11.exe on windows and set system enviroment variable correctly.
+#### We should install MSYS-1.0.11.exe or cygwin and set system enviroment variable correctly.
  
 For example, we can set a .bash_profile on the home directory for the convenience on windows:
 
