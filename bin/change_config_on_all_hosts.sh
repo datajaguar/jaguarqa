@@ -5,6 +5,8 @@
 ##  Change Jaguar Server Any Config Paramter On All Hosts
 ##
 ##  ./change_config_on_all_hosts.sh   KEY  VALUE
+##  For example: ./change_config_on_all_hosts.sh PORT 1117 
+##  (Change the default port from 8888 into 1117)
 ##
 #####################################################################################
 

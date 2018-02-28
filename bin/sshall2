@@ -1,0 +1,22 @@
+#!/bin/bash
+
+##############################################################################################################
+##
+##  Execute a command on all jaguar hosts (A simplified versioni for ad hod test)
+##
+##  ./sshall "command"
+##
+##
+##############################################################################################################
+
+allhost=`cat temp_hosts.txt`
+for h in $allhost 
+do
+	if echo $h grep -iv '#' >/dev/null
+	then
+    	echo "ssh $h $@"
+    	ssh $h $@
+		echo "================================================================"
+	fi
+done
+

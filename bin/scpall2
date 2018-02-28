@@ -1,0 +1,28 @@
+#!/bin/bash
+
+##############################################################################################################
+##
+##  Copy a file to all hosts in jaguar cluster (A simplified version)
+##
+##  ./scpall SOURCE_FILE   DEST_PATH
+##
+##
+##############################################################################################################
+
+srcfile=$1
+destpath=$2
+
+if [[ "x$destpath" = "x" ]]; then
+	echo "Usage:  $0  SOURCE_FILE  DEST_PATH ..."
+	exit 1
+fi
+
+((rc=0))
+hostname=`cat temp_hosts.txt`
+for h in  $hostname
+do
+    echo "scp $srcfile $h:$destpath"
+    scp $srcfile $h:$destpath
+	echo "================================================================"
+done
+
