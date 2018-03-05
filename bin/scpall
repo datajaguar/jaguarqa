@@ -21,10 +21,9 @@ fi
 
 JAGUAR_HOME=`cat $HOME/.jaguarhome`
 hostfile="$JAGUAR_HOME/conf/cluster.conf"
-allhosts=`cat $hostfile`
+allhosts=`grep -iv '#' $hostfile`
 
 if [[ -f "$hostfile" ]]; then
-    ## echo "OK, $hostfile is found"
 	/bin/true
 else
     echo "$hostfile is not found, exit"
@@ -40,8 +39,7 @@ if [[ "x$destpath" = "x" ]]; then
 fi
 
 ((rc=0))
-for h in $allhosts
-do
+for h in $allhosts; do
     echo "scp $srcfile $h:$destpath"
     scp $srcfile $h:$destpath
 	echo "================================================================"

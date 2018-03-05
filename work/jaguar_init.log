@@ -1,0 +1,31 @@
+##################################
+##### Jaguar Initialization  #####
+##################################
+
+# Part 1: Stop jaguar database 
+##################################
+ssh ssd /home/andrew/jaguar/bin/jaguarstop
+ssh ssd /home/andrew/jaguar/bin/jaguarstatus
+
+Jaguar server is already shut down on current host ssd
+jaguar server is NOT running on ssd
+Sun Mar  4 11:08:13 PST 2018
+
+jaguarstatus_on_all_hosts.sh  total hosts=1  jaguar on=0  jaguar off=1
+Jaguar off hosts:  ssd
+Jaguar database server has been stopped on all 1 hosts
+
+# Part 2: Clean data and logs 
+########################################
+cleaning  now...
+total 12
+-rw-r--r-- 1 andrew andrew 5059 Mar  4 10:57 perflog.txt
+-rw-r--r-- 1 andrew andrew    4 Mar  4 11:07 shutdown.cmd
+donw with cleaning
+
+# Part 3: Start jaguar database
+#######################################
+ssh ssd /home/andrew/jaguar/bin/jaguarstart
+Jaguar database server is being started on all hosts ...
+ 
+jaguar server is running on ssd

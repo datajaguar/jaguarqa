@@ -21,10 +21,9 @@ fi
 
 JAGUAR_HOME=`cat $HOME/.jaguarhome`
 hostfile="$JAGUAR_HOME/conf/cluster.conf"
-allhosts=`cat $hostfile`
+allhosts=`grep -iv '#' $hostfile`
 
 if [[ -f "$hostfile" ]]; then
-    ## echo "OK, $hostfile is found"
 	/bin/true
 else
     echo "$hostfile is not found, exit"
@@ -32,13 +31,9 @@ else
 fi
 
 ((rc=0))
-for h in $allhosts
-do
-	if echo $h grep -iv '#' >/dev/null
-	then
-    	echo "ssh $h $@"
-    	ssh $h $@
-		echo "================================================================"
-	fi
+for h in $allhosts; do
+   	echo "ssh [$h] $@"
+   	ssh $h $@
+	echo "================================================================"
 done
 

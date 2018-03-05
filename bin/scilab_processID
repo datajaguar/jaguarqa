@@ -1,0 +1,6 @@
+andrew    60585  60582  0 15:33 pts/13   00:00:00 /home/andrew/jaguar/bin/rlwrap /home/andrew/jaguar/bin/jql.bin -u admin -p jaguar -h :8888
+andrew    60586  60585  0 15:33 pts/14   00:00:00 /home/andrew/jaguar/bin/jql.bin -u admin -p jaguar -h :8888
+andrew    60594  60591  0 15:33 pts/13   00:00:00 /home/andrew/jaguar/bin/rlwrap /home/andrew/jaguar/bin/jql.bin -u admin -p jaguar -h :9999
+andrew    60595  60594  0 15:33 pts/15   00:00:00 /home/andrew/jaguar/bin/jql.bin -u admin -p jaguar -h :9999
+andrew    63718      1  0 16:06 ?        00:00:00 /home/andrew/jaguar/bin/jaguar.bin
+andrew    64458  64456  0 17:07 pts/12   00:00:00 grep jaguar.bin

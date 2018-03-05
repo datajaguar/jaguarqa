@@ -1,36 +1,35 @@
 
 1. Create table and load data
-Jaguar Server 2.8.7.2 / Client 2.8.7.2
+Jaguar Server 2.8.8 / Client 2.8.8
 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Table column_default2 is dropped successfully
-Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 170 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 1656 microseconds 
+jaguar:test> jaguar:test> Done in 126 microseconds 
 jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 284 microseconds 
-jaguar:test> jaguar:test> Done in 25 microseconds 
+jaguar:test> jaguar:test> Done in 193 microseconds 
+jaguar:test> jaguar:test> Done in 115 microseconds 
+jaguar:test> Done in 18 microseconds 
+jaguar:test> Done in 16 microseconds 
 jaguar:test> Done in 17 microseconds 
-jaguar:test> Done in 16 microseconds 
-jaguar:test> Done in 14 microseconds 
-jaguar:test> Done in 14 microseconds 
-jaguar:test> jaguar:test> Done in 15 microseconds 
-jaguar:test> Done in 16 microseconds 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 209 microseconds 
+jaguar:test> Done in 22 microseconds 
+jaguar:test> jaguar:test> Done in 16 microseconds 
+jaguar:test> Done in 15 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 201 microseconds 
 jaguar:test> Done in 16 milliseconds (7 rows) 
-jaguar:test> jaguar:test> Done in 14 microseconds 
+jaguar:test> jaguar:test> Done in 15 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 
 
 18c18
-< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928889] tm2:[2018-02-20 18:07:55.928889] tm3:[1969-12-31 16:00:00.000000] 
+< id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059238] tm2:[2018-02-26 17:43:36.059238] tm3:[1969-12-31 16:00:00.000000] 
 ---
 > id:[1] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.501124] tm2:[2018-01-29 17:52:16.501124] tm3:[1969-12-31 16:00:00.000000] 
 20,24c20,24
-< id:[OsXvowr52F0JGIa7meosz5NgrvB5696689878875] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928847] tm2:[2018-02-20 18:07:55.928847] tm3:[1969-12-31 16:00:00.000000] 
-< id:[YzYJyeVJ3KqrE4j8nJnHmIm7Vzr5696689878875] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928824] tm2:[2018-02-20 18:07:55.928824] tm3:[1969-12-31 16:00:00.000000] 
-< id:[ZiecPPJqWDRujqhmFmFLfdmVUvG5696689878875] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928800] tm2:[2018-02-20 18:07:55.928800] tm3:[1969-12-31 16:00:00.000000] 
-< id:[xp8YdATIWn91oM15sHfy1rUtY0f5696689878875] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928867] tm2:[2018-02-20 18:07:55.928867] tm3:[1969-12-31 16:00:00.000000] 
-< id:[zDzB7WtAFAN3f5k6VACFH9N55hL5696689878875] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-20 18:07:55.928762] tm2:[2018-02-20 18:07:55.928762] tm3:[1969-12-31 16:00:00.000000] 
+< id:[CLjyX035GpPMvVk45NPUncPLwQl5696664095816] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059115] tm2:[2018-02-26 17:43:36.059115] tm3:[1969-12-31 16:00:00.000000] 
+< id:[H8aTITceQcgUQDJC8EXcHIZA3bp5696664095816] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059152] tm2:[2018-02-26 17:43:36.059152] tm3:[1969-12-31 16:00:00.000000] 
+< id:[OIf9nlig49tg0DwSuaB4ifZvUHu5696664095816] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059175] tm2:[2018-02-26 17:43:36.059175] tm3:[1969-12-31 16:00:00.000000] 
+< id:[bCbF7WjYtD57kw4g08CJcCZ64oB5696664095816] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059217] tm2:[2018-02-26 17:43:36.059217] tm3:[1969-12-31 16:00:00.000000] 
+< id:[uKGTzm7GHsWXu6oL40hWspvwIIw5696664095816] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-02-26 17:43:36.059197] tm2:[2018-02-26 17:43:36.059197] tm3:[1969-12-31 16:00:00.000000] 
 ---
 > id:[BsQwY6YHkidcDjoYAPNXRPmcarc5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.500122] tm2:[2018-01-29 17:52:16.500122] tm3:[1969-12-31 16:00:00.000000] 
 > id:[FRaqbC8wSA1XvpFVjCRGryWtIIZ5087110877136] a:[0] b:[b] bitv:[1] bitm:[0] tm1:[2018-01-29 17:52:16.498223] tm2:[2018-01-29 17:52:16.498223] tm3:[1969-12-31 16:00:00.000000] 

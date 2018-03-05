@@ -1,16 +1,15 @@
-Jaguar Server 2.8.7.2 / Client 2.8.7.2
+Jaguar Server 2.8.8 / Client 2.8.8
 
 jaguar:test> drop table if exist starbucks.egift_item;
-Table egift_item is dropped successfully
-Done in 2 milliseconds 
+Done in 1490 microseconds 
 jaguar:test> 
 jaguar:test> spool  $QA_HOME/work/create_db1_egift.out;
-Done in 203 microseconds 
+Done in 48 microseconds 
 jaguar:test> createdb starbucks;
-Done in 1571 microseconds 
+Done in 2 milliseconds 
 jaguar:test> use starbucks;
-Done in 1341 microseconds 
-jaguar:starbucks> create table starbucks.egift_item
+Done in 1391 microseconds 
+jaguar:test> create table starbucks.egift_item
 (
   key:
     prod_id integer,
@@ -65,20 +64,20 @@ jaguar:starbucks> create table starbucks.egift_item
     ext_time1 datetime,
     ext_time2 datetime
 );
-Done in 4 milliseconds 
-jaguar:starbucks> 
-jaguar:starbucks> desc starbucks.egift_item;
-Done in 360 microseconds 
-jaguar:starbucks> #drop table  starbucks.egift_item;
+Done in 3 milliseconds 
+jaguar:test> 
+jaguar:test> desc starbucks.egift_item;
+Done in 245 microseconds 
+jaguar:test> #drop table  starbucks.egift_item;
 
-jaguar:starbucks> use test;
+jaguar:test> use test;
 Done in 2 milliseconds 
 jaguar:test> 
 jaguar:test> dropdb starbucks;
-Done in 3 milliseconds 
+Done in 2 milliseconds 
 jaguar:test> 
 jaguar:test> spool off;
-Done in 176 microseconds 
+Done in 66 microseconds 
 jaguar:test> quit;
 60a61
 > Table egift_item is dropped successfully

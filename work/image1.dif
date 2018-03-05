@@ -1,0 +1,4 @@
+8c8
+<     spare_ char(25)
+---
+>     spare_ char(44)

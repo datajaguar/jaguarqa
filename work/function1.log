@@ -1,63 +1,59 @@
 
 1. Create table and load data
-Jaguar Server 2.8.7.2 / Client 2.8.7.2
+Jaguar Server 2.8.8 / Client 2.8.8
 
-jaguar:test> jaguar:test> jaguar:test> Table function1 is dropped successfully
-Done in 6 milliseconds 
-jaguar:test> Table function1_pow is dropped successfully
-Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 138 microseconds 
-jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> jaguar:test> Done in 223 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:test> Done in 1290 microseconds 
+jaguar:test> jaguar:test> Done in 36 microseconds 
+jaguar:test> jaguar:test> Done in 2 milliseconds 
+jaguar:test> jaguar:test> Done in 140 microseconds 
 jaguar:test> jaguar:test> Done in 586 milliseconds 
-jaguar:test> jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 342 microseconds 
+jaguar:test> jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 225 microseconds 
 jaguar:test> jaguar:test> jaguar:test> Done in 38 milliseconds (1 row) 
 jaguar:test> Done in 38 milliseconds (1 row) 
-jaguar:test> Done in 37 milliseconds (1 row) 
+jaguar:test> Done in 36 milliseconds (1 row) 
 jaguar:test> Done in 31 milliseconds (1 row) 
 jaguar:test> Done in 31 milliseconds (1 row) 
 jaguar:test> Done in 29 milliseconds (1 row) 
-jaguar:test> Done in 46 milliseconds (1 row) 
+jaguar:test> Done in 45 milliseconds (1 row) 
 jaguar:test> Done in 28 milliseconds (1 row) 
 jaguar:test> Done in 27 milliseconds (1 row) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
 jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> error: Invalid command [select upper(id_num)  from test.function1 limit r32;]. Please check its syntax. -2570 [777]
-Error query, please try again
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> error: Invalid command [select upper(id_num)  from test.function1 limit r32;]. Please check its syntax. -2570 [30]
 jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
 jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> Done in 20 milliseconds (3 rows) 
 jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> error: Invalid command [select substr(random1, 2, 4, 'UTF8')  from test.function1 limit 3select substring(random1, 2, 4, 'utf8')  from test.function1 limit 3;]. Please check its syntax. -2570 [777]
-Error query, please try again
-jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
 jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> error: Invalid command [select substr(random1, 2, 4, 'UTF8')  from test.function1 limit 3select substring(random1, 2, 4, 'utf8')  from test.function1 limit 3;]. Please check its syntax. -2570 [30]
+jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
+jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
+jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> jaguar:test> Done in 19 milliseconds (3 rows) 
 jaguar:test> Done in 19 milliseconds (3 rows) 
-jaguar:test> jaguar:test> Done in 20 milliseconds (3 rows) 
-jaguar:test> Done in 20 milliseconds (3 rows) 
 jaguar:test> jaguar:test> Done in 3 milliseconds 
-jaguar:test> Done in 275 microseconds 
-jaguar:test> jaguar:test> Done in 22 microseconds 
-jaguar:test> jaguar:test> jaguar:test> Done in 16 milliseconds (1 row) 
+jaguar:test> Done in 149 microseconds 
+jaguar:test> jaguar:test> Done in 64 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 15 milliseconds (1 row) 
 jaguar:test> jaguar:test> Done in 16 milliseconds (1 row) 
 jaguar:test> Done in 15 milliseconds (1 row) 
-jaguar:test> jaguar:test> jaguar:test> Done in 36 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 40 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 
