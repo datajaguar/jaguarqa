@@ -1,40 +1,40 @@
 
 1. Create table and load data
-Jaguar Server 2.8.8 / Client 2.8.8
+Jaguar Server 2.8.9 / Client 2.8.9
 
-jaguar:test> jaguar:test> Done in 1504 microseconds 
-jaguar:test> jaguar:test> Done in 123 microseconds 
-jaguar:test> jaguar:test> Done in 2 milliseconds 
-jaguar:test> jaguar:test> Done in 194 microseconds 
-jaguar:test> jaguar:test> Done in 125 microseconds 
-jaguar:test> Done in 28 microseconds 
-jaguar:test> Done in 20 microseconds 
-jaguar:test> Done in 22 microseconds 
-jaguar:test> Done in 17 microseconds 
-jaguar:test> Done in 24 microseconds 
-jaguar:test> Done in 22 microseconds 
-jaguar:test> Done in 21 microseconds 
-jaguar:test> Done in 22 microseconds 
-jaguar:test> Done in 21 microseconds 
-jaguar:test> Done in 20 microseconds 
+jaguar:test> jaguar:test> Done in 48 milliseconds 
+jaguar:test> jaguar:test> Done in 114 microseconds 
+jaguar:test> jaguar:test> Done in 58 seconds 
+jaguar:test> jaguar:test> Done in 190 microseconds 
+jaguar:test> jaguar:test> Done in 25 microseconds 
+jaguar:test> Done in 19 microseconds 
+jaguar:test> Done in 15 microseconds 
+jaguar:test> Done in 14 microseconds 
+jaguar:test> Done in 14 microseconds 
+jaguar:test> Done in 15 microseconds 
+jaguar:test> Done in 14 microseconds 
+jaguar:test> Done in 14 microseconds 
+jaguar:test> Done in 15 microseconds 
+jaguar:test> Done in 14 microseconds 
+jaguar:test> Done in 15 microseconds 
 jaguar:test> jaguar:test> jaguar:test> jaguar:test> Done in 16 milliseconds (11 rows) 
-jaguar:test> jaguar:test> Done in 15 microseconds 
+jaguar:test> jaguar:test> Done in 14 microseconds 
 jaguar:test> 
 2. Check Correctness...
 ============================== 
 
 17,27c17,27
-< emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[B7V1yQwOk0vb4oaXuHuRous6MhW5696659195811] 
-< emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[jDRfRKMDcpmDAUAzJw1IvTUocIM5696659195811] 
-< emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[jXDVegKs6ueHEB4hbWRKDlLmRDg5696659195811] 
-< emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[dNWZ6UDZ6RJyVbLDPmH6yBWgeh05696659195811] 
-< emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[A6DOjoLhuDUsJJbiFn1ianXfVw95696659195811] 
-< emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[cKoajvN5M9Q3BrV3bFdrkysAINx5696659195811] 
-< emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[VJ34TLt32WO8GVYKwqDAzgLYyjo5696659195811] 
-< emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[81bDVSEZLosMqmyy3tvL0VoysFj5696659195811] 
-< emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[odCMkBXXwOAwzYWkohSVkkq5kjt5696659195811] 
-< emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[eTzOuEJtdxXZRXu1ZSbUkQo9fTB5696659195811] 
-< emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[QL697iJTCiOxPC5ja3duquklMEL5696659195811] 
+< emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[sYoLH56TRBxNmTNGewh17ib8CrI5696600875090] 
+< emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[01eIfbdIDFxPNs6OdXkK8I3ZkQ55696600875090] 
+< emp_id:[103] first_name:[Sherry] last_name:[] zip_code:[94588] age:[9] sex:[F] category:[1] uuid:[VKuGKuSqJ3DpFhWu4pASCvakBSn5696600875090] 
+< emp_id:[104] first_name:[Jerry] last_name:[] zip_code:[94588] age:[23] sex:[h] category:[0] uuid:[yadE6X8KFAC5jFHGkYDO20nSCQ05696600875090] 
+< emp_id:[105] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[WsTi03vE7rLR6ltaD7RhpPUcPUz5696600875090] 
+< emp_id:[106] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[FunFpPyFOAaqFz9vEtWO43Flrsg5696600875090] 
+< emp_id:[107] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[0] uuid:[Df8aUBxzYl6D7ENxjlHOZaJLeKo5696600875090] 
+< emp_id:[108] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[zbQNO3UYXvuwtNC6UeRrya8k7g15696600875090] 
+< emp_id:[109] first_name:[Kevein] last_name:[] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[SsMg2X4NM7HI2cczDX9HRoxjUHp5696600875090] 
+< emp_id:[1011] first_name:[Mike] last_name:[] zip_code:[94588] age:[40] sex:[m1] category:[0] uuid:[fZxvsuRd9Vh1MQwxdpiRCP8BUpM5696600875090] 
+< emp_id:[1012] first_name:[Vinod] last_name:[] zip_code:[94588] age:[40] sex:[zz] category:[1] uuid:[cPEeH60W8XYWH4Bq6OADpyN7n9E5696600875090] 
 ---
 > emp_id:[101] first_name:[Jason] last_name:[Zhang] zip_code:[94588] age:[20] sex:[M] category:[1] uuid:[Fgh1AleJsNqQ5TqRJHXhbmBXHVU5696692057703] 
 > emp_id:[102] first_name:[Andrew] last_name:[Zhang] zip_code:[94588] age:[9] sex:[M] category:[1] uuid:[ROGLKVczQPDJ23PYTIjzFuFurqf5696692057703] 
