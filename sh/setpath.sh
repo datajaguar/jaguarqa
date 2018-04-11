@@ -8,17 +8,10 @@ fi
 export PORT=`grep PORT $JAGUAR_HOME/conf/server.conf |grep -v '#' | awk -F= '{print $2}'`
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAGUAR_HOME/lib
 
-if [[ -e "$HOME/raydb.git" ]]; then
-    export PATH=$PATH:$HOME/commit:$HOME/commit/qa:$JAGUAR_HOME/bin:.
-    export isdev=1
+export PATH=$PATH:$JAGUAR_HOME/bin:.
+export isdev=0
+export SERVER=`hostname -I|cut -d' ' -f1`
+un=`uname -o`
+if [[ "x$un" = "xMsys" ]]; then
 	export SERVER=127.0.0.1
-else
-    export PATH=$PATH:$JAGUAR_HOME/bin:.
-    export isdev=0
-	export SERVER=`hostname -I|cut -d' ' -f1`
-	un=`uname -o`
-	if [[ "x$un" = "xMsys" ]]; then
-		export SERVER=127.0.0.1
-	fi
 fi
-
