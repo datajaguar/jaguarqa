@@ -36,10 +36,12 @@ logf="$QA_HOME/work/${FILE}.log"
 # Back up and Clean old log and work direcry:
 rm  $QA_HOME/work/*.* > /dev/null 2>&1 
 
-if [ -f $logf ]
-
-    then rm $logf
+if [[ ! -e $QA_HOME/work ]]; then
+    mkdir $QA_HOME/work
 fi
+
+# Clean up the old log files in the work direcry:
+rm  $QA_HOME/work/*.* > /dev/null 2>&1
 
 if [ ! -f jaguar_test_list.txt ]
     then

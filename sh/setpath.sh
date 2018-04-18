@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Updated: 4/17/2018
+
 export JAGUAR_HOME=$HOME
 if [[ -f $HOME/.jaguarhome ]]; then
 	export JAGUAR_HOME=`cat $HOME/.jaguarhome`
