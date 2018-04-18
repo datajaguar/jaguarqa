@@ -1,8 +1,0 @@
-ssh [ssd] grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=10005 diskarray=10005
-selectcount type=0 import_export keychecker=10005 diskarray=10005
-================================================================
-ssh [ssd] grep selectcount /home/andrew/jaguar/log/jaguar.log
-selectcount type=0 import_export keychecker=10005 diskarray=10005
-selectcount type=0 import_export keychecker=10005 diskarray=10005
-================================================================
