@@ -4,3 +4,4 @@ core*
 work_*
 work_*/*.*
 *.class
+work/*.*
