@@ -26,9 +26,9 @@ select * from image;
 sleep 1;
 
 #getfile img into '$QA_HOME/work/reg-out.jpg' from image where uid=1001;
-getfile img into '/home/andrew/jaguarqa/work/req.jpg' from image where uid=1001;
-getfile img into '/home/andrew/jaguarqa/work/shanghai1.jpg' from image where uid=1002;
-getfile img into '/home/andrew/jaguarqa/work/IMG_4M.jpg' from image where uid=1003;
+getfile img into '$QA_HOME/work/req.jpg' from image where uid=1001;
+getfile img into '$QA_HOME/work/shanghai1.jpg' from image where uid=1002;
+getfile img into '$QA_HOME/IMG_4M.jpg' from image where uid=1003;
 
 spool off;
 quit;

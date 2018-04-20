@@ -5,7 +5,7 @@ table test.image
     uid bigint,
   value:
     img file,
-    spare_ char(44)
+    spare_ char(25)
 );
 
 uid:[1001] substr(img, 1, 100):[req.jpg] 
