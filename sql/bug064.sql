@@ -3,7 +3,7 @@
 
 drop table if exists bug064;
 
-spool bug064.out; 
+spool $QA_HOME/work/bug064.out; 
 
 
 create table bug064 ( key: uid int, value: addr1_int int, addr2_f float, addr3_d double );

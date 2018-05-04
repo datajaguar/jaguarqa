@@ -80,6 +80,12 @@ create table function1_pow ( key: ID_Num char(32), Random1 double(30,28), Random
 desc function1_pow;
 
 Insert into test.function1_pow (id_num, random1, random2, random3) values (ID67, 2.0, 4, 16);
+Insert into test.function1_pow (id_num, random1, random2, random3) values (ID67, 2.0, 4.12345, 5.123456778);
+Insert into test.function1_pow (id_num, random1, random2, random3) values (ID67, 2.0, 4.88888888888888888888888, 16.9999999999999999999999999999);
+
+
+
+
 sleep 3;
 
 select * from test.function1_pow;

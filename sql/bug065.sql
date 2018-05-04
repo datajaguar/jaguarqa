@@ -3,7 +3,7 @@
 
 drop table if exists bug065;
 
-spool bug065.out; 
+spool $QA_HOME/work/bug065.out; 
 
 create table bug065 ( key: a float(26,3), value: b float(26,3), c float(26,3), d float(26,3) );
 desc bug065;
