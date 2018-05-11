@@ -48,7 +48,7 @@ loginj < $QA_HOME/sql/${FILE}.sql 2>&1 | tee -a $logf
 wait
 
 # 2. Check Correctness 
-echo -e "\n2. Check Correctness..."  2>&1 | tee -a $logf
+echo -e "\n\n2. Check Correctness..."  2>&1 | tee -a $logf
 echo -e "============================== \n"  2>&1 | tee -a $logf 
 
 cd $QA_HOME/work

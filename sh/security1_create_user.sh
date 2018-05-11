@@ -47,7 +47,6 @@ loginj < $QA_HOME/sql/${FILE}.sql 2>&1 | tee -a $logf
 
 wait
 
-exit
 
 # 2. Check Correctness 
 echo -e "\n2. Check Correctness..."  2>&1 | tee -a $logf
