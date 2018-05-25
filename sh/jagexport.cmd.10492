@@ -1,4 +1,0 @@
-spool /c/AGZ1/jaguarqa/work/test.import_export.sql;
-select * from test.import_export timeout 1000000 exportsql;
-spool off;
-quit;

@@ -1,0 +1,16 @@
+#
+# Command Line: loginj < script.sql
+#
+# ~/jaguar/bin/jag -u admin -p jaguar -h :1117 -d test $@
+# 
+# Login after password is changed.
+#
+PORT=`grep PORT $JAGUAR_HOME/conf/server.conf |grep -v '#' | awk -F= '{print $2}'`
+HOST=localhost
+NAME=UID1
+PASSWORD=Pawd567890_&#
+# $JAGUAR_HOME/bin/jag -u UID1 -p PASSWORD -h $HOST:$PORT -d test $@
+# $JAGUAR_HOME/bin/jag -u $NAME -p $PASSWORD -h $HOST:$PORT -d test
+
+$JAGUAR_HOME/bin/jag -u UID1 -p 'Pawd567890_&#' -h $HOST:$PORT -d test $@
+

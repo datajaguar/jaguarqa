@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 
 #: Script Name: image.sh
 #: Authors: Andrew Zhang
@@ -33,7 +33,7 @@ export FILE=image
 logf="$QA_HOME/work/${FILE}.log"
 
 # 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 # Clean old log:
 if [ -f $logf ]

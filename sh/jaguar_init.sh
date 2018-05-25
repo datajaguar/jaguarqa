@@ -35,7 +35,7 @@
 PORT=`cat $JAGUAR_HOME/conf/server.conf |grep PORT|grep -v oport|grep -v '#'|cut -d= -f2`
 HOST=127.0.0.1
 USER=admin
-PASSWORD=jaguar
+PASSWORD=jaguarjaguarjaguar
 
 
 FILE=jaguar_init
@@ -89,7 +89,7 @@ if [[ "x$un" = "xMsys" ]]; then
 	exec $JAGUAR_HOME/bin/jaguarstart 	2>&1 | tee -a $logf
 elif    [[ "x$un" = "xCygwin" ]]; then
         exec exec $JAGUAR_HOME/bin/jaguarstart	2>&1 | tee -a $logf
-else
+ elseSS
         exec $JAGUAR_HOME/bin/jaguarstart_on_all_hosts.sh 2>&1 | tee -a $logf
 fi
 

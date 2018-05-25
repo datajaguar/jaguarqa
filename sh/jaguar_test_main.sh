@@ -28,7 +28,7 @@
 # 
 
 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 FILE=jaguar_test_main
 logf="$QA_HOME/work/${FILE}.log"

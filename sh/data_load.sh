@@ -39,7 +39,7 @@ FILE2=data_load2
 PORT=`cat $HOME/jaguar/conf/server.conf |grep PORT|grep -v oport|grep -v '#'|cut -d= -f2`
 HOST=127.0.0.1
 USER=admin
-PASSWORD=jaguar
+PASSWORD=jaguarjaguarjaguar
 
 logf="$QA_HOME/work/${FILE}.log"
 

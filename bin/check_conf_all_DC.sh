@@ -1,20 +1,21 @@
 #!/bin/bash
 
-###########################################################################
+###################################################################################
 ##
-##  Check the two config files from all the servers on all DC(s):
-##  cluster.conf and datacenter.conf
+##  Check the three main config files from all the servers across the data centers:
+##  cluster.conf, datacenter.conf, and server.conf
 ##
-##  ./sshall "command"
+##  ./check_conf_all_DC.sh 
 ##
 ##
-############################################################################
+###################################################################################
 
 echo -e "\nCurrent Data Center Configurations:"
 echo -e "==================================="
 echo -e "DC1: ssd(GATE) hp1 hp2
        \nDC2: dell1(GATE) dell1 dell2
        \nDC3: hd7(GATE) hd7 hd8 \n"
+echo -e "===================================\n"
 
 for h in ssd hp1 hp2 dell1 dell2 dell3 hd6 hd7 hd8; do
     echo "ssh [$h] "

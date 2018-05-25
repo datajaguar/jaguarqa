@@ -32,7 +32,7 @@ export FILE=function1
 logf="$QA_HOME/work/${FILE}.log"
 
  
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 if [ ! -d "$QA_HOME/work" ]; then
 	echo "No work dir"

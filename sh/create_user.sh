@@ -13,7 +13,7 @@ FILE=create_user
 PORT=`cat $HOME/jaguar/conf/server.conf |grep PORT|grep -v oport|grep -v '#'|cut -d= -f2`
 HOST=127.0.0.1
 USER=admin
-PASSWORD=jaguar
+PASSWORD=jaguarjaguarjaguar
 
 # $JAGUAR_TEST_HOME/sh/select1.sh
 

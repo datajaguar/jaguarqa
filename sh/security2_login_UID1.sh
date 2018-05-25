@@ -33,7 +33,7 @@ export FILE=security2_login_UID1
 logf="$QA_HOME/work/${FILE}.log"
 
 # 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 # Clean old log:
 if [ -f $logf ]

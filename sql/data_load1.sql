@@ -3,8 +3,6 @@
 #Commented the following due to Bug034
 dropdb jag_data_load;
 
-drop table if exists data_load;
-
 spool  $QA_HOME/work/data_load1.out; 
 
 createdb jag_data_load;

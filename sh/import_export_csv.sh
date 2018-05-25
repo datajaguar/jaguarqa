@@ -30,7 +30,7 @@ FILE=import_export_csv
 logf="$QA_HOME/work/${FILE}.log"
 
 # 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 # Clean old log:
 if [ -f $logf ]

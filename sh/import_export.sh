@@ -35,7 +35,7 @@ sshall rm -rf  $JAGUAR_HOME/export/*  2>&1 | tee -a $logf
 sshall ls -l $JAGUAR_HOME/export/*    2>&1 | tee -a $logf
 
 # 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 # Clean old log:
 if [ -f $logf ]

@@ -17,7 +17,7 @@ FILE=jaguar_accept_main
 PORT=`cat $JAGUAR_HOME/conf/server.conf |grep PORT|grep -v oport|grep -v '#'|cut -d= -f2`
 HOST=127.0.0.1
 USER=admin
-PASSWORD=jaguar
+PASSWORD=jaguarjaguarjaguar
 
 
 # Test 1:

@@ -33,7 +33,7 @@ export FILE=column_default3
 logf="$QA_HOME/work/${FILE}.log"
 
 # 
-export ADMIN_PASSWORD=jaguar
+export ADMIN_PASSWORD=jaguarjaguarjaguar
 
 # Clean old log:
 if [ -f $logf ]
