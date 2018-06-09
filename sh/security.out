@@ -1,0 +1,18 @@
+Jaguar Server 2.9.2.1 / Client 2.9.2.1
+
+jaguar:test> system
+test
+jag_data_load
+country_name
+db_城市名
+db_城市名_とうきょ
+星巴克
+国家名
+
+Done in 120 microseconds 
+jaguar:test> jaguar:test> jaguar:test> Done in 908 microseconds (0 rows) 
+jaguar:test> :[city2-1] :[city_とうきょ] 
+Done in 747 microseconds (1 row) 
+jaguar:test> :[city2_1] :[city_大阪] 
+Done in 844 microseconds (1 row) 
+jaguar:test> jaguar:test> jaguar:test> 

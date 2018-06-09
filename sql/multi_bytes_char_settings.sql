@@ -68,6 +68,10 @@ update 城市2 set 名='城市2-1', 地点='とうきょ', where 名='ddd的基�
 update 城市2 set 名='城市2_2', 地点='大阪', where 名='阿飞花费';
 update 城市2 set 名='城市2c', 地点='ナゴヤドーム', where 名='比你高';
 insert into 城市2 values ( '城市2d', '重庆');
+
+insert into 城市2 values ( 'city2-1', 'city_とうきょ');
+insert into 城市2 values ( 'city2_1', 'city_大阪');
+
 select * from 城市2;
 
 select 城市.名, 城市.地点 from 城市 where 地点 = '天津';
@@ -82,6 +86,10 @@ select 城市.名, 城市.地点 from 国家名.城市2 where 名 = '城市2c';
 
 # This one failed:
 select 城市.名, 城市.地点 from 国家名.城市2 where 名 = '城市2_1';
+
+# How about this:
+select 城市.名, 城市.地点 from 国家名.城市2 where 名 = 'city2-1';
+select 城市.名, 城市.地点 from 国家名.城市2 where 名 = 'city2_1';
 
 spool off;
 

@@ -25,13 +25,13 @@ createuser UID2:Pawd56789012 34;
 createuser UID2:Pawd567890_&#>/^$?; 
 
 createuser UID_g1:Pawd5678901234; 
-# Test for grant all on all to user.
+grant all on all to UID_g1;
 
 createuser UID_g2:Pawd5678901234; 
-# grant PERM on DB.TAB.COL to user.
+grant all on jag_data_load.data_load to UID_g2:
 
 createuser UID_g4:Pawd5678901234; 
-# grant PERM on DB.TAB  to user; 
+grant select on jag_data_load.data_load to UID_g3; 
 
 createuser UID_g5:Pawd5678901234; 
 # Test for grant all on all to user.
