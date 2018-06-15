@@ -15,7 +15,7 @@ dropuser UID_g8;
 dropuser UID_g9;
 dropuser UID_g10;
 
-spool  $QA_HOME/work/isecurity1_create_grant.out;
+spool  $QA_HOME/work/security1_create_grant.out;
 
 showusers;
 #createuser UID1:password;

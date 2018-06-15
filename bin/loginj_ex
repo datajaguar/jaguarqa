@@ -6,7 +6,5 @@
 PORT=`grep PORT $JAGUAR_HOME/conf/server.conf |grep -v '#' | awk -F= '{print $2}'`
 HOST=localhost
 
-$JAGUAR_HOME/bin/jag -u admin -p jaguarjaguarjaguar -h $HOST:$PORT -x yes $@
-
-#export QA_HOME=/home/andrew/jaguarqa
-#export PATH=$QA_HOME/bin:$QA_HOME/sh:$PATH
+# $JAGUAR_HOME/bin/jag -u admin -p jaguar -h $HOST:$PORT -d test $@
+$JAGUAR_HOME/bin/jag -u admin -p jaguarjaguarjaguar -h $HOST:$PORT -x -d test $@
