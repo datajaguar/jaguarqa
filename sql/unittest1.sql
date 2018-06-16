@@ -17,7 +17,6 @@ insert into unittest1  values ( 'kkk5', somev, vkkv6v, vbvnv8vv );
 
 sleep 3;
 
-# Why this select does not show correct result?
 select count(*) from unittest1;
 
 sleep 3;
@@ -70,8 +69,6 @@ select * from unittest1 where uid='Cpple01234567890Apple01234567890';
 spool off;
 
 quit;
-
-
 
 
 desc unittest_old_2;
