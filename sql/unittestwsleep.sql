@@ -41,6 +41,7 @@ create index mem1_idx1 on mem1 ( v1 );
 create table if not exists unittest1 ( key: uid char(32), value: v1 char(16), v2 char(16)), v3 char(16) );
 create table if not exists unittest_old ( key: uid char(32), value: v1 char(16), v2 char(16)), v3 char(16) );
 create table if not exists unittest_old_2 ( key: uid char(32), ssn char(16), value: v1 char(16), v2 char(16)), v3 char(16) );
+
 insert into unittest1 ( uid, v1, v2, v3 ) values ( 'kkk1', vvvv1, vvvvvv2, vvvvv3 );
 insert into unittest1 ( uid, v1, v2, v3 ) values ( 'kkk2', vvbvv1, vkkvvvvv2, vbvnvvvv3 );
 insert into unittest1 ( uid, v1, v2, v3 ) values ( 'kkk3', some, vkkvvvvv2, vbvnvvvv3 );
