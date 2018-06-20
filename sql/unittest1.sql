@@ -1,9 +1,9 @@
 # Script Name: unittest1.sql   
+# Feature test: table, index, select, delete, update, etc.
 
 drop table if exists unittest1;
 
 spool  $QA_HOME/work/unittest1.out;
-
 
 create table if not exists unittest1 ( key: uid char(32), value: v1 char(16), v2 char(16)), v3 char(16) );
 create table if not exists unittest_old ( key: uid char(32), value: v1 char(16), v2 char(16)), v3 char(16) );
@@ -33,26 +33,23 @@ load $QA_HOME/data/100H.txt into unittest1 ;
 sleep 3;
 
 select count(*) from unittest1;
-sleep 2;
+sleep 4;
+
 
 create index unittest1_idx1 on unittest1( v2 );
 create index unittest1_idx2 on unittest1( v3 );
-select * from unittest1 where v2='vkkvvvvv2';
+create index unittest1_idx3 on unittest1( uid );
+
+desc unittest1_idx1;
+desc unittest1_idx2;
+desc unittest1_idx3;
+
 select * from unittest1_idx1 limit 10;
 select * from unittest1_idx1 limit 10,3;
+select * from unittest1 where v2='vkkvvvvv2';
 select * from unittest1_idx1 where v2='vkkvvvvv2';
-select * from unittest1 use index( unittest1_idx1 ) where unittest1.v2='vkkvvvvv2';
 
-select * from unittest1_idx1 limit 5;
-
-desc unittest1;
-desc unittest1_idx1;
 show indexes from unittest1;
-
-spool off;
-
-quit;
-
 
 select uid, v3 from unittest1 where uid='ddd' and v2='fdfdfdf';
 select uid, v3 from unittest1 where uid='kkk2' and v2='vkkvvvvv2';
@@ -65,10 +62,6 @@ select * from unittest1 where uid='Cpple01234567890Apple01234567890';
 #delete from unittest1 where uid='kkk3';
 #delete from unittest1 where v1='some';
 #rename table unittest_old to unittest_new;
-
-spool off;
-
-quit;
 
 
 desc unittest_old_2;
@@ -83,12 +76,13 @@ truncate table unittest_old_2;
 delete from unittest_old_2;
 select * from unittest_old_2 limit 3;
 
+drop table if exists unittest_old;
 drop table if exists unittest_old_2;
 drop table if exists unittest_new;
 
-#spool off;
+spool off;
 
-#quit;
+quit;
 
 
 
