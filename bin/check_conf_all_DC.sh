@@ -8,6 +8,16 @@
 ##  ./check_conf_all_DC.sh 
 ##
 ##
+## A sample output looks like the following:
+##
+## Current Data Center Configurations: 
+## =================================== 
+## DC1: ssd(GATE) hp1 hp2 
+
+## DC2: dell1(GATE) dell1 dell2 
+
+## DC3: hd7(GATE) hd7 hd8 
+
 ###################################################################################
 
 echo -e "\nCurrent Data Center Configurations:"
