@@ -33,19 +33,19 @@
 ## IS_GATE=yes
 ## REPLICATION=2
 ## SERVER_TOKEN=lNIhMFGpzqbjkMQIFnN1HXmn0vTJJdK9
-=============================================
+## =============================================
 
-ssh [hp1]
------------
-1-cluster.conf:
-hp1
-hp2
-2-datacenter.conf:
-ssd:1117:GATE
-3-server.conf:
-REPLICATION=2
-SERVER_TOKEN=lNIhMFGpzqbjkMQIFnN1HXmn0vTJJdK9
-=============================================
+## ssh [hp1]
+## -----------
+## 1-cluster.conf:
+## hp1
+## hp2
+## 2-datacenter.conf:
+## ssd:1117:GATE
+## 3-server.conf:
+## REPLICATION=2
+## SERVER_TOKEN=lNIhMFGpzqbjkMQIFnN1HXmn0vTJJdK9
+## =============================================
 
 ###################################################################################
 
