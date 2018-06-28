@@ -150,6 +150,9 @@ select k1, sum(k2)  from int10k_2 group by k1 limit 4;
 select k1, sum(k2)  from int10k_2 group by k1;
 select k1, sum(k2), count(1)  from int10k_2 group by k1 limit 2,2;
 
+# unittest3.sql
+################
+
 create table if not exists sales ( key: uid int, daytime datetime, value: amt float(3.1), unit float(3.1), utype char(1) );
 load $HOME/jaguardb_qatest/sales.txt into sales ;
 insert into sales values (10, '2014-04-23 08:59:52.000000', 0.1, 0.1, 'C' );

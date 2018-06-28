@@ -15,13 +15,17 @@ create table time_stamp
 
 # desc time_stamp ;
 
-insert into time_stamp (column_name) values ("demo");
-
+insert into time_stamp (column_name) values ("demo1");
+insert into time_stamp (column_name) values ("demo2");
+insert into time_stamp (column_name) values ("demo3");
+insert into time_stamp (column_name) values ("demo4");
+insert into time_stamp (column_name) values ("demo5");
 sleep 3;
 
-select column_name as name, time_column as ts from  test.time_stamp;
-
-select * from test.time_stamp;
+select column_name as name, time_column as ts from  test.time_stamp order by ts;
+sleep 3;
+select * from test.time_stamp order by time_column;
+sleep 3;
 
 spool off;
 quit;

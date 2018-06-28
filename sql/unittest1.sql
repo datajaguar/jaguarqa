@@ -1,5 +1,7 @@
 # Script Name: unittest1.sql   
-# Feature test: table, index, select, delete, update, etc.
+# Features: 
+# 1. create index and query from index; 
+# 2. select, delete, update, etc.
 
 drop table if exists unittest1;
 
@@ -84,5 +86,4 @@ spool off;
 
 quit;
 
-
-
+ 
