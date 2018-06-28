@@ -8,7 +8,8 @@
 ##  ./check_conf_all_DC.sh 
 ##
 ##
-## A sample output looks like the following:
+## A sample output looks like the following 
+## (and with information for one data center with one GATE and one server)
 ##
 ## Current Data Center Configurations: 
 ## =================================== 
@@ -17,6 +18,34 @@
 ## DC2: dell1(GATE) dell1 dell2 
 
 ## DC3: hd7(GATE) hd7 hd8 
+## ===================================
+
+## ssh [ssd]
+## -----------
+## 1-cluster.conf:
+## ssd
+## 2-datacenter.conf:
+## dell1:1117:GATE
+## hd6:1117:GATE
+## ssd:1117:GATE
+## hp1:1117:HOST|hp2:1117:HOST
+## 3-server.conf:
+## IS_GATE=yes
+## REPLICATION=2
+## SERVER_TOKEN=lNIhMFGpzqbjkMQIFnN1HXmn0vTJJdK9
+=============================================
+
+ssh [hp1]
+-----------
+1-cluster.conf:
+hp1
+hp2
+2-datacenter.conf:
+ssd:1117:GATE
+3-server.conf:
+REPLICATION=2
+SERVER_TOKEN=lNIhMFGpzqbjkMQIFnN1HXmn0vTJJdK9
+=============================================
 
 ###################################################################################
 
