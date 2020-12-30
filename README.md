@@ -1,4 +1,4 @@
-# JaguarDB Test Automation Framework (for both Linux and Windows)
+# JaguarDB Test Automation Framework (for Linux)
 
 This automation framework enables automated testing for regression, new feature testing and performance testing, etc for Jaguar database. More technical info regarding to jaguar database, please refer to: http://datajaguar.com/doc/JaguarUserManual.pdf
 
